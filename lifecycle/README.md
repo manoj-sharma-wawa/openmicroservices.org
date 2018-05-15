@@ -4,8 +4,12 @@ A service **MAY** define custom lifecycle hooks for startup and shutdown.
 
 ```yaml
 lifecycle:
-  startup: ./startup.sh
-  shutdown: ./shutdown.sh
+  startup:
+    command: ./startup.sh
+    timeout: 300
+  shutdown:
+    command: ./shutdown.sh
+    timeout: 300
 ```
 
 *Lifecycle commands **MUST** exit status zero.*
