@@ -14,7 +14,7 @@ Stream service output to a destination listening for `HTTP POST` requests:
 streaming:
   http:
     method: post
-      endpoint: $MSG_STREAM_ENDPOINT
+      endpoint: $STREAM_ENDPOINT
       port: $STREAM_PORT
       uri: $STREAM_URI
       ssl: $STREAM_SSL
