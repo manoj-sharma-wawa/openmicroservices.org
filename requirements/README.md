@@ -7,9 +7,9 @@ system:
   requests:
     cpu: 1         # default
     gpu: 0         # default
-    memory: 256GB  # default
+    memory: 32MB   # default
   limits:
-    cpu: 2
-    gpu: 1
-    memory: 512GB
+    cpu: 2         # default
+    gpu: 0         # default
+    memory: 64MB   # default
 ```
