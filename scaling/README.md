@@ -2,8 +2,6 @@
 
 Define scaling schedules.
 
-## Target
-
 ```yaml
 scale:
   metric_type: cpu  # cpu or mem
