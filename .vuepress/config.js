@@ -11,7 +11,6 @@ module.exports = {
       '/overview/',
       '/commands/',
       '/interface/',
-      '/output/',
       '/environment/',
       '/volumes/',
       '/metrics/',
