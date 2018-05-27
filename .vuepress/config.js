@@ -8,18 +8,31 @@ module.exports = {
     editLinkText: 'Edit in GitHub',
     editLinks: true,
     sidebar: [
-      '/overview/',
-      '/commands/',
-      '/interface/',
-      '/environment/',
-      '/volumes/',
-      '/metrics/',
-      '/logs/',
-      '/requirements/',
-      '/health/',
-      '/scaling/',
-      '/lifecycle/',
-      '/capacities/',
+      {
+        title: 'Documentation',
+        collapsable: false,
+        children: [
+          '/overview/',
+          '/commands/',
+          '/interface/',
+          '/environment/',
+          '/volumes/',
+          '/metrics/',
+          '/logs/',
+          '/requirements/',
+          '/health/',
+          '/scaling/',
+          '/lifecycle/',
+          '/capacities/'
+        ]
+      },
+      {
+        title: 'Examples',
+        collapsable: false,
+        children: [
+          '/http/'
+        ]
+      }
     ]
   }
 }
