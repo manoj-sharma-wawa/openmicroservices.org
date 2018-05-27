@@ -17,9 +17,9 @@ Services **SHOULD** define commands and arguments that can be used.
 commands:
   foobar:
     arguments:
-      - name: foo
+      foo:
         type: string
-      - name: bar
+      bar:
         type: json
 ```
 
@@ -43,12 +43,12 @@ Arguments **MUST** provide a data type.
 
 Arguments **SHOULD** provide a short description of the command and any arguments that can provide clarity to end users.
 
-```yaml{3}
+```yaml{3,7}
 commands:
   fly:
     help: "Jump on a spaceship."
     arguments:
-      - name: dest
+      dest:
         type: int
         help: "Choose a destination."
 ```
@@ -63,7 +63,7 @@ Arguments **SHOULD** provide variable checks.
 commands:
   foobar:
     arguments:
-      - name: color
+      color:
         type: string
         pattern: '^\#?\w{6}$'
 ```
@@ -74,7 +74,7 @@ commands:
 commands:
   foobar:
     arguments:
-      - name: choose
+      choose:
         type: string
         enum:
         - thing_one
@@ -83,11 +83,11 @@ commands:
 
 ### Range
 
-```yaml{6}
+```yaml{6,7,8}
 commands:
   foobar:
     arguments:
-      - name: choose
+      choose:
         type: number
         range:
         - 10
@@ -100,7 +100,7 @@ commands:
 commands:
   foobar:
     arguments:
-      - name: choose
+      action:
         type: string
         required: true
 ```
@@ -110,11 +110,10 @@ By default, arguments are **optional**.
 
 ## Entrypoint
 
-```yaml
+```yaml{2}
 commands:
   entrypoint:
-    arguments:
-      # ...
+    # ...
 ```
 
 Services **MAY** use the reserved keyword `entrypoint` which is used when no command is provided.
