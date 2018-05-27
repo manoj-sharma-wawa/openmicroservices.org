@@ -49,7 +49,7 @@ $ curl -X GET http://service:5000/concat?left=a&right=b
 ab
 ```
 
-## Post Arguments
+## Post Body
 
 Using [PostGraphile](https://github.com/graphile/postgraphile) as the GraphQL service.
 

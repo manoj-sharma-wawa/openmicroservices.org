@@ -34,6 +34,7 @@ Arguments **MUST** provide a data type.
 | `int`     | literal         |
 | `float`   | literal         |
 | `string`  | literal         |
+| `uuid`    | literal         |
 | `list`    | JSON            |
 | `object`  | JSON            |
 | `boolean` | `true`, `false` |
