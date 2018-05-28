@@ -41,26 +41,26 @@ The Service **MAY** exit with code `2` which indicates a failure and the Platfor
 commands:
   count:
     arguments:
-      - name: word
+      word:
         type: string
 ```
 
 ```bash
-+----------+               +------------+                             +----------------------+
-|          |               |            |                             |                      |
-|  Caller  |               |  Platform  |                             |  Interface via Exec  |
-|          |               |            |                             |                      |
-+----+-----+               +-----+------+                             +----------+-----------+
-     |                           |                                               |
-     |    {"word": "foobar"}     |                                               |
-     | ------------------------> |                                               |
-     |                           |   docker exec service count --word 'foobar'   |
-     |                           |  ------------------------------------------>  |
-     |                           |                     6                         |
-     |                           |  <------------------------------------------  |
-     |      {"length": 6}        |                                               |
-     | <------------------------ |                                               |
-     |                           |                                               |
++----------+               +------------+                                +----------------------+
+|          |               |            |                                |                      |
+|  Caller  |               |  Platform  |                                |  Interface via Exec  |
+|          |               |            |                                |                      |
++----+-----+               +-----+------+                                +----------+-----------+
+     |                           |                                                  |
+     |    {"word": "foobar"}     |                                                  |
+     | ------------------------> |                                                  |
+     |                           |   docker exec service count '{"word":"foobar"}'  |
+     |                           |  --------------------------------------------->  |
+     |                           |                     6                            |
+     |                           |  <---------------------------------------------  |
+     |      {"length": 6}        |                                                  |
+     | <------------------------ |                                                  |
+     |                           |                                                  |
 ```
 
 
@@ -68,13 +68,13 @@ commands:
 ## HTTP
 The Service **MAY** communicate through an HTTP server.
 
-The Service **MUST** define how to start the HTTP server by providing the `httpserver` configuration.
+The Service **MUST** define how to start the HTTP server by changing the `lifecycle` startup.
 
 ```yaml
-server:
-  type: http
-  port: 8080
-  command: ["/bin/server", "-p", "8080"]
+lifecycle:
+  startup:
+    command: ["/bin/server", "-p", "8080"]
+    port: 8080
 ```
 
 The `port` of where the server is binding to **MUST** be specified.
@@ -110,7 +110,7 @@ The connection **MUST** be closed after the request completes.
 commands:
   foobar:
     arguments:
-      - name: data
+      data:
         type: string
     http:
       method: get
@@ -133,7 +133,7 @@ The body is encoded as `json`.
 commands:
   something:
     arguments:
-      - name: data
+      data:
         type: string
     http:
       method: post
@@ -175,12 +175,11 @@ The Service **MUST** provide the following details to start the http server.
 commands:
   something:
     arguments:
-      - name: data
+      data:
         type: string
-    server:
-      type: http
-      port: 8888
+    startup:
       command: ["/bin/server", "--key", "{data}"]
+      port: 8888
 ```
 
 The http server **WILL** be started when when the command is triggered by the Platform.
@@ -202,7 +201,6 @@ $ curl -X POST -d '{"name": "Einstein"}' $MG_ENDPOINT
 ```
 
 The server **MAY** receive data in the http request connection from the Platform.
-
 
 
 ## RPC
