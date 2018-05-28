@@ -34,48 +34,6 @@ An `exit 1` will inform the Platform *not* to process the command as the failure
 #### Retry Failure
 The Service **MAY** exit with code `2` which indicates a failure and the Platform **SHOULD** retry.
 
-
-### Formatting Arguments
-
-Commands **MAY** provide a custom `format`. The default format is `{$} {*}` where `{$}` is replaced with the command keyword and `{*}` is replaced with the arguments.
-
-
-Command arguments **MAY** provide a custom `format`. The placeholder (`{}`) is replaced with the value specified by the user.
-| Format | Result | Default |
-| ------ | ------ | ------- |
-| `{}` | `result` | Default |
-| `--foobar '{}'` | `--foobar 'result'` | |
-| `-a` | `-a` | |
-
-
-The default format is `--{name} '{value}'`.
-
-```yaml{3,11}
-commands:
-  echo:
-    format: '{$} {*} {data}'
-    arguments:
-      - name: data
-        type: string
-      - name: newline
-        type: boolean
-        help: Do not print the trailing newline character.
-        default: false
-        format: '-n'
-```
-
-```json
-{
-  "data": "Hello World",
-  "newline": true
-}
-```
-
-```bash
-$ docker run --rm alpine echo -n 'Hello World'
-Hello World
-```
-
 ### Example Usage
 
 
