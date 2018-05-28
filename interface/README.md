@@ -23,7 +23,7 @@ exit 0
 ```
 
 ### Fail and Traceback
-If the Service failes to process the request it **MUST** exit with `1` or `2`.
+If the Service fails to process the request it **MUST** exit with `1` or `2`.
 Data written to `stdout` is ignored when the exit code is greater than `0`.
 Data written to `stderr` **SHOULD** be traceback details.
 
