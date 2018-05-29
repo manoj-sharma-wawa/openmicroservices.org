@@ -4,9 +4,12 @@ Define scaling schedules.
 
 ```yaml
 scale:
-  metric_type: cpu  # cpu or mem
-  metric_agg: avg
-  value: 80
+  metric:
+    type: cpu  # cpu or mem
+    agg: avg
+    period: 20000
+    scale_up: 80
+    scale_down: 20
   min: 1
   max: 5
   desired: 5
