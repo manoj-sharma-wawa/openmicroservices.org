@@ -23,7 +23,7 @@ module.exports = {
           '/health/',
           '/scaling/',
           '/lifecycle/',
-          '/capacities/'
+          '/capabilities/'
         ]
       },
       {
