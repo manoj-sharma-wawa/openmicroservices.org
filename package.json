@@ -18,6 +18,6 @@
   "homepage": "https://github.com/microservice-guide/microservice.guide#readme",
   "devDependencies": {
     "markdown-it-highlightjs": "^3.0.0",
-    "vuepress": "github:vuejs/vuepress"
+    "vuepress": "0.10.0"
   }
 }
