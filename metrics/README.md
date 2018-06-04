@@ -14,13 +14,15 @@ Containers can send metrics to StatsD for aggregation and delivery.
 > StatsD basic usage
 
 ```shell
-echo "accounts.authentication.password.failure.no_email_found:1|c" | nc -u -w1 $MSG_STATSD_HOSTNAME $MSG_STATSD_PORT
+echo "accounts.authentication.password.failure.no_email_found:1|c" \
+| nc -u -w1 $MSG_STATSD_HOSTNAME $MSG_STATSD_PORT
 ```
 
 > StatsD with tag support
 
 ```shell
-echo "accounts.authentication.password.failure.no_email_found:1|c|#tag:value,another_tag:another_value" | nc -u -w1 $MSG_STATSD_HOSTNAME $MSG_STATSD_PORT
+echo "accounts.authentication.password.failure.no_email_found:1|c|#tag:value,another_tag:another_value" \
+| nc -u -w1 $MSG_STATSD_HOSTNAME $MSG_STATSD_PORT
 ```
 
 
