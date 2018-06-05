@@ -1,6 +1,6 @@
 # Overview
 
-*This guide assumes you're using the latest version of Docker*
+*This guide assumes you're using at least Docker version 18*
 
 Follow the [Docker Docs](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) for Dockerfile best practices
 
