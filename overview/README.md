@@ -18,3 +18,5 @@ A `microservice.yml` file should be provided which outlines the command structur
 - **MUST** - Required for a service to contain this functionality
 - **SHOULD** - Recommended for a service to contain this functionality
 - **MAY** - Optional for a service to contain this functionality
+
+See [RFC 2119](https://tools.ietf.org/html/rfc2119) for details
