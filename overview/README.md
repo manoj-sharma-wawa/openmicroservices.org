@@ -7,7 +7,7 @@ This guide is to be used as a blueprint to build services. It can be applied to 
 If you'd like to contribute, please feel free to [reach out](https://microservice.guide/#contact)!
 
 ## Microservice Definition
-A `microservice.yml` file should be provided which outlines the command structure and operations of the container as seen below in the documentation.
+A `microservice.yml` file **MUST** be provided which outlines the command structure and operations of the container as seen below in the documentation.
 
 ## Keywords
 

@@ -71,7 +71,7 @@ Syslog environment variables:
 
 ### Logging Levels
 
-Levels should be one of the following.
+Levels **SHOULD** be one of the following.
 
 | Level    |
 |----------|
