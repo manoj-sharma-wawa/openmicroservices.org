@@ -61,7 +61,7 @@ meta: {
 Define your metrics path in `microservice.yml`
 ```yaml
 metrics:
-  ssl: false
+  tls: false
   port: 8080
   uri: /metrics
 ```
