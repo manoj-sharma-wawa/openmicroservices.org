@@ -13,6 +13,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/overview/',
+          '/container/',
           '/commands/',
           '/interface/',
           '/environment/',

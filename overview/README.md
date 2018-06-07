@@ -1,23 +1,13 @@
 # Overview
 
-The Microservice Guide is an open standard for reusable microservices.
+The Microservice Guide is an open standard for reusable microservices. The intent of this guide is to provide developers and operators with a framework to build, deploy, and operate microservices.
+
+This guide is to be used as a framework to build services. It can be applied to various technologies like Docker, Rocket, Spring, etc. It's on the developer to decide on underlying infrastructure.
 
 If you'd like to contribute, please feel free to [reach out](https://microservice.guide/#contact)!
 
 ## Microservice Definition
 A `microservice.yml` file should be provided which outlines the command structure and operations of the container as seen below in the documentation.
-
-## Docker
-*This guide is not dependent on Docker. If you are using Docker, there are general recommendations that should be applied to your microservice.*
-
-Follow the [Docker Docs](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) for Dockerfile best practices
-
-A container can accept input and write output (like a traditional function) or stream output (e.g., web servers, chatbots, social media streams).
-
-* Keep images to a bare minimum
-    * Consider using a parent image from `alpine` or a base image `FROM scratch`
-* Include an `EXPOSE` instruction for external access
-* Include an `ENTRYPOINT`
 
 ## Keywords
 
