@@ -207,7 +207,7 @@ The server **MAY** receive data in the http request connection from the Platform
 
 The Service **MAY** communicate via RPC.
 
-The Service **MUST** define server attributes.
+The Service **MUST** define server and framework attributes.
 
 ```yaml
 rpc:
