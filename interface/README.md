@@ -223,4 +223,4 @@ rpc:
     tls: true
 ```
 
-*See the [authentication](/authentication) section for server TLS configuration.*
+*TLS configuration is defined separately. See the [authentication](/authentication) section for details.*
