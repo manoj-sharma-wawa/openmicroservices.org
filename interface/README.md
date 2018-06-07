@@ -203,6 +203,24 @@ $ curl -X POST -d '{"name": "Einstein"}' $MG_ENDPOINT
 The server **MAY** receive data in the http request connection from the Platform.
 
 
-## RPC
+## gRPC
 
-[ TODO ]
+The Service **MAY** communicate via gRPC.
+
+The Service **MUST** define server attributes.
+
+```yaml
+rpc:
+  port: 8080
+  framework:
+    grpc:
+      version: 2
+      proto:
+        path: git@github-server:project/repo.git/path/to/api.proto # Any valid URI path can be used
+  client:
+    endpoint: service
+    port: 8080
+    tls: true
+```
+
+*See the [authentication](authentication) section for server TLS configuration.*
