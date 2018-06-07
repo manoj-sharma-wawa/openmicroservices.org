@@ -17,6 +17,7 @@ module.exports = {
           '/interface/',
           '/environment/',
           '/volumes/',
+          '/authentication/',
           '/metrics/',
           '/logs/',
           '/requirements/',
