@@ -203,9 +203,9 @@ $ curl -X POST -d '{"name": "Einstein"}' $MG_ENDPOINT
 The server **MAY** receive data in the http request connection from the Platform.
 
 
-## gRPC
+## RPC
 
-The Service **MAY** communicate via gRPC.
+The Service **MAY** communicate via RPC.
 
 The Service **MUST** define server attributes.
 
