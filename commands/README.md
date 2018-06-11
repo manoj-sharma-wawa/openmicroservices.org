@@ -20,7 +20,7 @@ commands:
       foo:
         type: string
       bar:
-        type: json
+        type: object
 ```
 
 # Advanced Usage
