@@ -7,14 +7,21 @@ lifecycle:
   startup:
     command: ./startup.sh
     timeout: 300
+    method: run_once
   shutdown:
     command: ./shutdown.sh
     timeout: 300
+    method: run_many
 ```
+
+* **method**:
+
+    `run_once`: Single global execution
+
+    `run_many`: Executed by every service instantiation
 
 ## Startup
 The `command` **MAY** start a service which is blocking (e.g., HTTP or RPC server). Exclude the `timeout` and include the `port` in which to bind to.
-
 
 ```yaml{3,4}
 lifecycle:
