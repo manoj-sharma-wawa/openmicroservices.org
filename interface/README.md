@@ -72,7 +72,7 @@ The Service **MUST** define how to start the HTTP server by changing the `lifecy
 
 ```yaml
 lifecycle:
-  startup:
+  run:
     command: ["/bin/server", "-p", "8080"]
     port: 8080
 ```
