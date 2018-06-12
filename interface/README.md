@@ -101,51 +101,51 @@ The connection **MUST** be closed after the request completes.
       |                      |
 ```
 
+### Location of arguments in the HTTP request
 
-#### Query
+All types of HTTP requests will apply arguments based on the specified `location` of the argument.
 
-`GET`, `DELETE`, `HEAD`, `OPTIONS` requests will apply arguments as the http query. Body is not permitted for these types of HTTP requests.
+The below example shows a `GET` request with a query and path parameter.
 
 ```yaml{6,7,8}
 commands:
   foobar:
     arguments:
-      data:
-        type: string
+      isMale:
+        type: boolean
+        location: query
+      person_id:
+        type: int
+        location: path
     http:
       method: get
-      endpoint: /path
+      endpoint: /path/:person_id
 ```
-
-The example above shows how arguments can be applied in the request query.
 
 ```bash
-curl -X GET http://service:8080/path?data=foobar
+curl -X GET http://service:8080/path/12?isMale=false
 ```
 
-
-#### Body
-
-`POST`, `PUT`, `PATCH` requests will encode the data in the request body.
-The body is encoded as `json`.
+This next example is a `POST` where data is passed via the body.
 
 ```yaml{6,7,8}
 commands:
-  something:
+  foobar:
     arguments:
-      data:
+      foo:
+        type: int
+        location: body
+      bar:
         type: string
+        location: body
     http:
       method: post
-      endpoint: /somewhere
+      endpoint: /path
 ```
-
-The Service will accept arguments posted to `/somewhere` in the body of the request, like this:
 
 ```bash
-curl -X POST -d '{"data":"foobar"}' http://service:8080/somewhere
+curl -X POST http://service:8080/path -H "Content-Type: application/json" -d '{foo: 2, bar: "baz"}'
 ```
-
 
 ### Server to Platform
 
