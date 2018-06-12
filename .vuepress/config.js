@@ -24,8 +24,7 @@ module.exports = {
           '/requirements/',
           '/health/',
           '/scaling/',
-          '/lifecycle/',
-          '/capabilities/'
+          '/lifecycle/'
         ]
       },
       {
