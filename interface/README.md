@@ -107,7 +107,7 @@ All types of HTTP requests will apply arguments based on the specified `location
 
 The below example shows a `GET` request with a query and path parameter.
 
-```yaml{6,7,8}
+```yaml{4,5,6,7,8,9,12}
 commands:
   foobar:
     arguments:
@@ -119,7 +119,7 @@ commands:
         location: path
     http:
       method: get
-      endpoint: /path/:person_id
+      endpoint: /path/{{person_id}}
 ```
 
 ```bash
@@ -128,7 +128,7 @@ curl -X GET http://service:8080/path/12?isMale=false
 
 This next example is a `POST` where data is passed via the body.
 
-```yaml{6,7,8}
+```yaml{4,5,6,7,8,9}
 commands:
   foobar:
     arguments:
@@ -177,7 +177,7 @@ commands:
     arguments:
       data:
         type: string
-    startup:
+    run:
       command: ["/bin/server", "--key", "{data}"]
       port: 8888
 ```
