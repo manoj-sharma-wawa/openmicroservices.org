@@ -1,6 +1,6 @@
 # Lifecycle
 
-A service **MAY** define custom lifecycle commands for startup and shutdown.
+A service **MAY** define custom lifecycle commands for startup and shutdown. If the service interfaces with HTTP or RPC the lifecycle **MUST** define a run command.
 
 ```yaml
 lifecycle:
@@ -8,24 +8,26 @@ lifecycle:
     command: ./startup.sh
     timeout: 300
     method: run_once
+  run:
+    command: ["/bin/server", "-p", "5000"]
+    port: 8080
   shutdown:
     command: ./shutdown.sh
     timeout: 300
     method: run_many
 ```
-
 * **method**:
 
     `run_once`: Single global execution
 
     `run_many`: Executed by every service instantiation
 
-## Startup
+## Run
 The `command` **MAY** start a service which is blocking (e.g., HTTP or RPC server). Exclude the `timeout` and include the `port` in which to bind to.
 
 ```yaml{3,4}
 lifecycle:
-  startup:
+  run:
     command: ["/bin/server", "-p", "5000"]
     port: 5000
 ```
