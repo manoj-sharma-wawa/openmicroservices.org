@@ -10,12 +10,13 @@ commands:
         type: string
       right:
         type: string
+    output: string
     http:
       method: get
       endpoint: /concat
 
 lifecycle:
-  startup:
+  run:
     command: ["FLASK_APP=example.py", "flask", "run", "--host=0.0.0.0"]
     port: 5000
 ```

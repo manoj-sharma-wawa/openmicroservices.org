@@ -21,6 +21,7 @@ commands:
         type: string
       bar:
         type: object
+    output: string
 ```
 
 # Advanced Usage
@@ -52,6 +53,7 @@ commands:
       dest:
         type: int
         help: "Choose a destination."
+    output: int
 ```
 
 ## Checks
@@ -67,6 +69,7 @@ commands:
       color:
         type: string
         pattern: '^\#?\w{6}$'
+    output: boolean
 ```
 
 ### Enums
@@ -80,6 +83,7 @@ commands:
         enum:
         - thing_one
         - thing_two
+    output: object
 ```
 
 ### Range
@@ -93,6 +97,7 @@ commands:
         range:
         - 10
         - 100
+    output: int
 ```
 
 ## Required
@@ -104,6 +109,7 @@ commands:
       action:
         type: string
         required: true
+    output: array
 ```
 
 By default, arguments are **optional**.
