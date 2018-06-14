@@ -15,20 +15,20 @@ Containers can send metrics to StatsD for aggregation and delivery.
 
 ```shell
 echo "accounts.authentication.password.failure.no_email_found:1|c" \
-| nc -u -w1 $MSG_STATSD_HOSTNAME $MSG_STATSD_PORT
+| nc -u -w1 $OMG_STATSD_HOSTNAME $OMG_STATSD_PORT
 ```
 
 > StatsD with tag support
 
 ```shell
 echo "accounts.authentication.password.failure.no_email_found:1|c|#tag:value,another_tag:another_value" \
-| nc -u -w1 $MSG_STATSD_HOSTNAME $MSG_STATSD_PORT
+| nc -u -w1 $OMG_STATSD_HOSTNAME $OMG_STATSD_PORT
 ```
 
 
 | Endpoint | Port | Protocol |
 | --- | --- | --- |
-| `$MSG_STATSD_HOSTNAME` (typically `statsd`) | `$MSG_STATSD_PORT` (typically `8125`) | `tcp` + `udp` |
+| `$OMG_STATSD_HOSTNAME` (typically `statsd`) | `$OMG_STATSD_PORT` (typically `8125`) | `tcp` + `udp` |
 
 
 See [https://github.com/etsy/statsd](https://github.com/etsy/statsd) for usage details.
