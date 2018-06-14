@@ -12,25 +12,26 @@ features:
 footer: MIT Licensed
 ---
 
-## Why Microservice.Guide
+## Why OMG?
 
 Microservices, by design, are intended to be highly reusable, operational-specific and language-agnostic. This guide defines the standard that defines how to interface with microservices to provide a blueprint for consistency and reusability. By following this documentation, developers will be able to create a platform that is well-documented and portable while not compromising flexibility.
 
-The old way of communicating software architecture and design through whiteboards and diagrams is immediately out of date and often times difficult to read and understand. By mapping your microservice architecture using pre-defined yaml by Microservice.Guide, developers are given a way to describe architecture and operational requirements as human-readable structured data.
+The old way of communicating software architecture and design through whiteboards and diagrams is immediately out of date and often times difficult to read and understand. By mapping your microservice architecture using pre-defined yaml by OMG, developers are given a way to describe architecture and operational requirements as human-readable structured data.
 
 Having these models in plain text files gives developers a framework to effectively communicate architecture, service to service communication, and operational complexities to many different audiences.
 
-## Using Microservice.Guide
+## OMG Supporters
 
-Below are products and companies that uphold the standards defined in Microservice.Guide.
+Below are products and companies that uphold the OMG standards.
 
 [![Asyncy](https://avatars0.githubusercontent.com/u/34162468?s=100&v=4 "Asyncy")](https://asyncy.com)
 
-> Add your company or product. Contact us below or make a [pull request](https://github.com/microservice-guide/microservice.guide).
+> Add your company or product. Contact us below or make a [pull request](https://github.com/microservices/microservice.guide).
+
 
 ## Contact
 
-Have feedback, questions or would like to support Microservice.Guide. Please drop your email in below.
+Have feedback, questions or would like to support OMG. Please drop your email in below.
 
 <form name="contact" method="POST" netlify>
   <p>

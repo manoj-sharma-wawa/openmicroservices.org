@@ -1,9 +1,8 @@
 module.exports = {
-  title: 'Microservice.Guide',
-  description: 'The open standard for resusable microservices.',
-  ga: 'UA-119018759-1',
+  title: 'Open Microservice Guide',
+  description: 'The open standard for resusable microservices',
   themeConfig: {
-    repo: 'microservice/microservice.guide',
+    repo: 'microservices/microservice.guide',
     repoLabel: 'Edit in GitHub',
     editLinkText: 'Edit in GitHub',
     editLinks: true,
