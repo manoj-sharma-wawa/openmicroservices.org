@@ -169,7 +169,7 @@ The http server will then make http requests to the Platform of new data and han
       |                              |
 ```
 
-The Service **MUST** provide the following details to start the http server.
+The Service **MUST** provide the following details to start the streaming server.
 
 ```yaml{6,7,8,9}
 commands:
@@ -179,7 +179,6 @@ commands:
         type: string
     run:
       command: ["/bin/server", "--key", "{data}"]
-      port: 8888
 ```
 
 The http server **WILL** be started when when the command is triggered by the Platform.
