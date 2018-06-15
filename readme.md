@@ -1,5 +1,5 @@
-# Microservice.Guide
+# Open Microservice Guide
 
-> The open standard for resusable microservices.
+> OMG it's the open standard for resusable microservices.
 
 Learn more at https://microservice.guide

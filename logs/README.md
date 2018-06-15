@@ -15,8 +15,8 @@ import logging
 import logging.handlers
 import os
 
-syslog_host = os.environ['MSG_LOG_HOST']
-syslog_port = os.environ['MSG_LOG_PORT']
+syslog_host = os.environ['OMG_LOG_HOST']
+syslog_port = os.environ['OMG_LOG_PORT']
 
 # define the logger and set the logging level
 logger = logging.getLogger('root')
@@ -59,14 +59,14 @@ Write logs to `syslog` or to `/var/log/microservice.log`
 
 Containers are passed the following environment variables to be used in logging:
 
-- `MSG_APP_ID`
-- `MSG_STORY_ID`
-- `MSG_LOG_HASH`
+- `OMG_APP_ID`
+- `OMG_STORY_ID`
+- `OMG_LOG_HASH`
 
 Syslog environment variables:
 
-- `MSG_LOG_HOST`
-- `MSG_LOG_PORT`
+- `OMG_LOG_HOST`
+- `OMG_LOG_PORT`
 
 
 ### Logging Levels

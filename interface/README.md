@@ -43,6 +43,7 @@ commands:
     arguments:
       word:
         type: string
+    output: int
 ```
 
 ```bash
@@ -107,7 +108,7 @@ All types of HTTP requests will apply arguments based on the specified `location
 
 The below example shows a `GET` request with a query and path parameter.
 
-```yaml{4,5,6,7,8,9,12}
+```yaml{4,5,6,7,8,9,13}
 commands:
   foobar:
     arguments:
@@ -117,6 +118,7 @@ commands:
       person_id:
         type: int
         location: path
+    output: object
     http:
       method: get
       endpoint: /path/{{person_id}}
@@ -138,6 +140,7 @@ commands:
       bar:
         type: string
         location: body
+    output: object
     http:
       method: post
       endpoint: /path
@@ -171,12 +174,13 @@ The http server will then make http requests to the Platform of new data and han
 
 The Service **MUST** provide the following details to start the streaming server.
 
-```yaml{6,7,8,9}
+```yaml{7,8,9,10}
 commands:
   something:
     arguments:
       data:
         type: string
+    output: object
     run:
       command: ["/bin/server", "--key", "{data}"]
 ```
