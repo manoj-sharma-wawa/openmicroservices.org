@@ -39,6 +39,64 @@ Arguments **MUST** provide a data type.
 | `list`    | JSON            |
 | `object`  | JSON            |
 | `boolean` | `true`, `false` |
+| `path`    | literal         |
+
+
+## Format
+
+A command **MAY** define a `format` attribute. The following methods exist:
+
+* `$arg`
+* `$json`
+* *user-defined*
+
+### Usage
+
+Example usage describing a simple microservice that calculates the sum of two numbers
+
+:bulb: The `$json` method is used by default
+
+#### $args
+```yaml
+commands:
+  sum:
+    format: '$args'
+    arguments:
+      x:
+        type: int
+      y:
+        type: int
+```
+
+`docker run sum --x 4 --y 7`
+
+#### $json
+```yaml
+commands:
+  sum:
+    format: '$json'
+    arguments:
+      x:
+        type: int
+      y:
+        type: int
+```
+`docker run sum '{x: 4, y: 7}'`
+
+#### user-defined
+```yaml
+commands:
+  sum:
+    format: 'x_val={{x}} y_val={{y}}'
+    arguments:
+      x:
+        type: int
+      y:
+        type: int
+```
+``docker run sum x_val=4 y_val=7``
+
+:warning: *All arguments **MUST** be specified in the `format` value. Extra values will result in a failure.*
 
 
 ## Help
@@ -95,10 +153,12 @@ commands:
       choose:
         type: number
         range:
-        - 10
-        - 100
+          min: 10
+          max: 20
     output: int
 ```
+
+:bulb: By default there are no bounds for min and max.
 
 ## Required
 
@@ -112,7 +172,7 @@ commands:
     output: array
 ```
 
-By default, arguments are **optional**.
+:bulb: By default, **false**.
 
 
 ## Entrypoint
