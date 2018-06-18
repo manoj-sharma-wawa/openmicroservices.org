@@ -36,6 +36,7 @@ The Service **MAY** exit with code `2` which indicates a failure and the Platfor
 
 ### Example Usage
 
+#### `microservice.yml`
 
 ```yaml
 commands:
@@ -46,6 +47,7 @@ commands:
     output: int
 ```
 
+#### Data Flow
 ```bash
 +----------+               +------------+                                +----------------------+
 |          |               |            |                                |                      |
@@ -69,7 +71,9 @@ commands:
 ## HTTP
 The Service **MAY** communicate through an HTTP server.
 
-The Service **MUST** define how to start the HTTP server by changing the `lifecycle` startup.
+The Service **MUST** define how to start the HTTP server by changing the `lifecycle` run.
+
+*See [lifecycle](/lifecycle/#lifecycle) for additional capabilities*
 
 ```yaml
 lifecycle:
@@ -123,6 +127,7 @@ commands:
       method: get
       endpoint: /path/{{person_id}}
 ```
+*Path parameters **MUST** be specified in the `endpoint`*
 
 ```bash
 curl -X GET http://service:8080/path/12?isMale=false
@@ -153,7 +158,7 @@ curl -X POST http://service:8080/path -H "Content-Type: application/json" -d '{f
 ### Server to Platform
 
 In this communication method the Service will start a new http server and provide it with an endpoint to communicate back to the Platform.
-The http server will then make http requests to the Platform of new data and handle the response from the server.
+The http server will then make `HTTP POST` requests to the Platform of new data and handle the response from the server.
 
 ```bash
 +------------+                  +----------+
@@ -174,7 +179,7 @@ The http server will then make http requests to the Platform of new data and han
 
 The Service **MUST** provide the following details to start the streaming server.
 
-```yaml{7,8,9,10}
+```yaml{7,8}
 commands:
   something:
     arguments:
@@ -182,20 +187,9 @@ commands:
         type: string
     output: object
     run:
-      command: ["/bin/server", "--key", "{data}"]
+      command: ["/bin/server"]
+    format: '{{data}}'
 ```
-
-The http server **WILL** be started when when the command is triggered by the Platform.
-The server `command` **MAY** format the data provided in `arguments`.
-
-```bash
-$ docker run -d --network $PLATFORM_NETWORK \
-             -p $PLATFORM_PICKED_PORT:8888 \
-             -e "MG_ENDPOINT=http://$ENDPOINT:$PORT" \
-             --entrypoint /bin/server \
-             IMAGE --key foobar
-```
-> <small>This is an example using `docker run`. The Platform may start the container in other ways.</small>
 
 The server **MUST** make `HTTP POST` requests to the url provided in the environment variable `MG_ENDPOINT`.
 
