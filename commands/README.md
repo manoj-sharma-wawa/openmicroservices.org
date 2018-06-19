@@ -57,7 +57,9 @@ commands:
         type: int
 ```
 
-`$ docker run calc sum '{"num_one": 1, "num_two": 3}'`
+```sh
+$ docker run calc sum '{"num_one": 1, "num_two": 3}'
+```
 
 *The service must be able to interpret arguments as javascript objects.*
 
