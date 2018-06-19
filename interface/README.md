@@ -130,7 +130,7 @@ commands:
 *Path parameters **MUST** be specified in the `endpoint`*
 
 ```sh
-curl -X GET http://service:8080/path/12?isMale=false
+$ curl -X GET http://service:8080/path/12?isMale=false
 ```
 
 This next example is a `POST` where data is passed via the body.
@@ -152,7 +152,7 @@ commands:
 ```
 
 ```sh
-curl -X POST http://service:8080/path -H "Content-Type: application/json" -d '{foo: 2, bar: "baz"}'
+$ curl -X POST http://service:8080/path -H "Content-Type: application/json" -d '{foo: 2, bar: "baz"}'
 ```
 
 ### Server to Platform
