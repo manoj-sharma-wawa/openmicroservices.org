@@ -8,7 +8,7 @@ Services **MUST** provide an interface in one of the following ways:
 
 Docker run/exec can be used as an interface for execution **and** communication. Data is transmitted using standard output. Arguments can be used to pass values to the container.
 
-```bash
+```sh
 $ docker run --rm alpine echo 'Hello World'
 Hello World
 ```
@@ -18,7 +18,7 @@ The Service **MAY** write data to `stdout` which is considered the result of the
 
 The Service **MUST** exit with code `0` if it performed the operations successfully.
 
-```bash
+```sh
 exit 0
 ```
 
@@ -48,7 +48,7 @@ commands:
 ```
 
 #### Data Flow
-```bash
+```sh
 +----------+               +------------+                                +----------------------+
 |          |               |            |                                |                      |
 |  Caller  |               |  Platform  |                                |  Interface via Exec  |
@@ -129,7 +129,7 @@ commands:
 ```
 *Path parameters **MUST** be specified in the `endpoint`*
 
-```bash
+```sh
 curl -X GET http://service:8080/path/12?isMale=false
 ```
 
@@ -151,7 +151,7 @@ commands:
       endpoint: /path
 ```
 
-```bash
+```sh
 curl -X POST http://service:8080/path -H "Content-Type: application/json" -d '{foo: 2, bar: "baz"}'
 ```
 
@@ -193,7 +193,7 @@ commands:
 
 The server **MUST** make `HTTP POST` requests to the url provided in the environment variable `MG_ENDPOINT`.
 
-```bash
+```sh
 $ curl -X POST -d '{"name": "Einstein"}' $MG_ENDPOINT
 ```
 
