@@ -41,63 +41,25 @@ Arguments **MUST** provide a data type.
 | `boolean` | `true`, `false` |
 | `path`    | literal         |
 
+## Arguments
 
-## Format
+All arguments will be passed into the container via a stringified javascript object.
 
-A command **MAY** define a `format` attribute. The following methods exist:
-
-* `$arg`
-* `$json`
-* *user-defined*
-
-### Usage
-
-Example usage describing a simple microservice that calculates the sum of two numbers
-
-:bulb: The `$json` method is used by default
-
-#### $args
 ```yaml
 commands:
   sum:
-    format: '$args'
     arguments:
-      x:
+      num_one:
         type: int
-      y:
+      num_two:
+        type: int
+    output:
         type: int
 ```
 
-`docker run sum --x 4 --y 7`
+`$ docker run calc sum '{"num_one": 1, "num_two": 3}'`
 
-#### $json
-```yaml
-commands:
-  sum:
-    format: '$json'
-    arguments:
-      x:
-        type: int
-      y:
-        type: int
-```
-`docker run sum '{x: 4, y: 7}'`
-
-#### user-defined
-```yaml
-commands:
-  sum:
-    format: 'x_val={{x}} y_val={{y}}'
-    arguments:
-      x:
-        type: int
-      y:
-        type: int
-```
-``docker run sum x_val=4 y_val=7``
-
-:warning: *All arguments **MUST** be specified in the `format` value. Extra values will result in a failure.*
-
+*The service must be able to interpret arguments as javascript objects.*
 
 ## Help
 
