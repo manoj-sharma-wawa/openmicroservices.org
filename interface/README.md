@@ -14,25 +14,20 @@ Hello World
 ```
 
 ### Output
-The Service **MAY** write data to `stdout` which is considered the result of the operation.
-
-The Service **MUST** exit with code `0` if it performed the operations successfully.
-
-```sh
-exit 0
-```
+- The Service **MAY** write data to `stdout` which is considered the result of the operation.
+- The Service **MUST** `exit 0` if it performed the operations successfully.
 
 ### Fail and Traceback
-If the Service fails to process the request it **MUST** exit with `1` or `2`.
-Data written to `stdout` is ignored when the exit code is greater than `0`.
-Data written to `stderr` **SHOULD** be traceback details.
+- If the Service fails to process the request, it **MUST** `exit 1` or `exit 2`.
+- Data written to `stdout` is ignored when the exit code is greater than `0`.
+- Data written to `stderr` **SHOULD** be traceback details.
 
 #### Deterministic Failure
-The Service **MAY** exit with code `1` if it failed to performed the operation.
-An `exit 1` will inform the Platform *not* to process the command as the failure is deterministic.
+- The Service **MAY** exit with code `1` if it failed to performed the operation.
+- An `exit 1` will inform the Platform *not* to process the command as the failure is deterministic.
 
 #### Retry Failure
-The Service **MAY** exit with code `2` which indicates a failure and the Platform **SHOULD** retry.
+- The Service **MAY** exit with code `2` which indicates a failure and the Platform **SHOULD** retry.
 
 ### Example Usage
 
@@ -83,6 +78,7 @@ lifecycle:
 ```
 
 The `port` of where the server is binding to **MUST** be specified.
+
 The Service **MAY** specify a `command` which will override the `entrypoint` of the service.
 
 ### Platform to Server
@@ -188,7 +184,6 @@ commands:
     output: object
     run:
       command: ["/bin/server"]
-    format: '{{data}}'
 ```
 
 The server **MUST** make `HTTP POST` requests to the url provided in the environment variable `MG_ENDPOINT`.
@@ -220,4 +215,6 @@ rpc:
     tls: true
 ```
 
-*TLS configuration is defined separately. See the [authentication](/authentication) section for details.*
+::: tip Heads Up!
+TLS configuration is defined separately. See the [authentication](/authentication) section for details.
+:::
