@@ -1,8 +1,8 @@
 # Lifecycle
 
-A service **MAY** define custom lifecycle commands for startup and shutdown.
+A service **MAY** define custom lifecycle commands for each state of your microservice.
 
-If the service interfaces with HTTP or RPC, the lifecycle **MUST** define a run command.
+*If the service interfaces with HTTP or RPC, the lifecycle **MUST** define a run command.*
 
 ```yaml
 lifecycle:
