@@ -32,6 +32,16 @@ module.exports = {
         children: [
           '/http/'
         ]
+      },
+      {
+        title: 'CLI',
+        collapsable: false,
+        children: [
+          '/cli/overview/',
+          '/cli/validate/',
+          '/cli/test/',
+          '/cli/debug/'
+        ]
       }
     ]
   }
