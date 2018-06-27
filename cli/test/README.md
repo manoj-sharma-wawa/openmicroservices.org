@@ -21,7 +21,7 @@ environment variables can be passed as follows: `-e FOO='bar'`. If a required en
 
 ### Example `exec` call
 ```sh
-microservice-guide-cli exec -e BOT_TOKEN='xoxb-****' send message:'Hello, World!' to:CAFAF9C
+omg exec -e BOT_TOKEN='xoxb-****' send message:'Hello, World!' to:CAFAF9C
 ```
 ```sh
 ✔ Built Docker image with name: 067a8912-a1fe-4e00-ba4b-ffcc363ca0ab
