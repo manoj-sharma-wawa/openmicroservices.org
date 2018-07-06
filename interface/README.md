@@ -186,10 +186,10 @@ commands:
       command: ["/bin/server"]
 ```
 
-The server **MUST** make `HTTP POST` requests to the url provided in the environment variable `MG_ENDPOINT`.
+The server **MUST** make `HTTP POST` requests to the url provided in the environment variable `OMG_ENDPOINT`.
 
 ```sh
-$ curl -X POST -d '{"name": "Einstein"}' $MG_ENDPOINT
+$ curl -X POST -d '{"name": "Einstein"}' $OMG_ENDPOINT
 ```
 
 The server **MAY** receive data in the http request connection from the Platform.
