@@ -137,14 +137,3 @@ commands:
 ```
 
 :bulb: By default, **false**.
-
-
-## Entrypoint
-
-```yaml{2}
-commands:
-  entrypoint:
-    # ...
-```
-
-Services **MAY** use the reserved keyword `entrypoint` which is used when no command is provided.
