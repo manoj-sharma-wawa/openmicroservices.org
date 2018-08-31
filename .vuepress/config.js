@@ -12,6 +12,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/overview/',
+          '/overview/comparisons/openapi/',
           '/anatomy/',
           '/container/',
           '/commands/',
