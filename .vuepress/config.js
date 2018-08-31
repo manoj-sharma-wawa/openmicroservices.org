@@ -20,6 +20,7 @@ module.exports = {
         title: 'Schema',
         collapsable: false,
         children: [
+          '/schema/info/',
           '/schema/lifecycle/',
           '/schema/container/',
           '/schema/commands/',
