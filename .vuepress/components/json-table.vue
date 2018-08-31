@@ -16,7 +16,7 @@
             }
 
             table.children.push(create('tr', [
-                create('td', key),
+                create('td', [create('code', key)]),
                 desc,
                 create('td', row.required)
             ]));
