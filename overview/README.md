@@ -16,3 +16,6 @@ A `microservice.yml` file **MUST** be provided which outlines the command struct
 - **MAY** - Optional for a service to contain this functionality
 
 See [RFC 2119](https://tools.ietf.org/html/rfc2119) for details
+
+## Next
+Create your first `microservice.yml` by referring to it's [anatomy](/anatomy/).

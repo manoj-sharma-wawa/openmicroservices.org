@@ -12,6 +12,7 @@ module.exports = {
         collapsable: false,
         children: [
           '/overview/',
+          '/anatomy/',
           '/container/',
           '/commands/',
           '/interface/',
