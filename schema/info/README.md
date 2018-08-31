@@ -32,19 +32,19 @@ info:
   },
   "contact": {
     "required": false,
-    "desc": "A contact object, describing the person/company to contact.",
+    "desc": "A contact object, describing the person or company to contact.",
     "$block": {
       "name": {
         "required": false,
-        "desc": "The name of the person/company"
+        "desc": "The name of the person or company."
       },
       "url": {
         "required": false,
-        "desc": "The homepage URL of the person/company"
+        "desc": "The homepage URL of the person or company."
       },
       "email": {
         "required": false,
-        "desc": "The email address of the person/company"
+        "desc": "The email address of the person or company."
       }
     }
   }
