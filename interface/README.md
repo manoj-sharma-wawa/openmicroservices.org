@@ -215,6 +215,6 @@ rpc:
     tls: true
 ```
 
-::: tip Heads Up!
+::: tip 💡 Heads up!
 TLS configuration is defined separately. See the [authentication](/authentication) section for details.
 :::
