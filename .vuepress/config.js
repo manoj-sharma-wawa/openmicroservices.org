@@ -8,24 +8,30 @@ module.exports = {
     editLinks: true,
     sidebar: [
       {
-        title: 'Documentation',
+        title: 'Overview',
         collapsable: false,
         children: [
           '/overview/',
           '/overview/comparisons/openapi/',
-          '/anatomy/',
-          '/container/',
-          '/commands/',
-          '/interface/',
-          '/environment/',
-          '/volumes/',
-          '/authentication/',
-          '/metrics/',
-          '/logs/',
-          '/requirements/',
-          '/health/',
-          '/scaling/',
-          '/lifecycle/'
+          '/anatomy/'
+        ]
+      },
+      {
+        title: 'Schema',
+        collapsable: false,
+        children: [
+            '/lifecycle/',
+            '/container/',
+            '/commands/',
+            '/interface/',
+            '/environment/',
+            '/volumes/',
+            '/authentication/',
+            '/metrics/',
+            '/logs/',
+            '/requirements/',
+            '/health/',
+            '/scaling/'
         ]
       },
       {
@@ -47,4 +53,4 @@ module.exports = {
       }
     ]
   }
-}
+};
