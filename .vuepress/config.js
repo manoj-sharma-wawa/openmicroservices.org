@@ -3,8 +3,8 @@ module.exports = {
   description: 'The open standard for reusable microservices',
   themeConfig: {
     repo: 'microservices/microservice.guide',
-    repoLabel: 'Edit in GitHub',
-    editLinkText: 'Edit in GitHub',
+    repoLabel: 'Contribute',
+    editLinkText: 'Edit this page on GitHub',
     editLinks: true,
     sidebar: [
       {
