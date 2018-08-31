@@ -9,8 +9,12 @@
         ]);
         Object.keys(raw).forEach(key => {
             let row = raw[key];
+            let descText = row.desc;
 
-            let desc = create('td', row.desc);
+            if (descText.endsWith('.')) {
+                descText = descText.substring(0, descText.length - 1);
+            }
+            let desc = create('td', descText);
             if (row['$block']) {
                 desc.children.push(createTable(create, row['$block']));
             }
