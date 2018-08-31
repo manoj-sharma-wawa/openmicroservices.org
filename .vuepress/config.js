@@ -13,32 +13,32 @@ module.exports = {
         children: [
           '/overview/',
           '/overview/comparisons/openapi/',
-          '/anatomy/'
+          '/overview/anatomy/'
         ]
       },
       {
         title: 'Schema',
         collapsable: false,
         children: [
-          '/lifecycle/',
-          '/container/',
-          '/commands/',
-          '/interface/',
-          '/environment/',
-          '/volumes/',
-          '/authentication/',
-          '/metrics/',
-          '/logs/',
-          '/requirements/',
-          '/health/',
-          '/scaling/'
+          '/schema/lifecycle/',
+          '/schema/container/',
+          '/schema/commands/',
+          '/schema/interface/',
+          '/schema/environment/',
+          '/schema/volumes/',
+          '/schema/authentication/',
+          '/schema/metrics/',
+          '/schema/logs/',
+          '/schema/requirements/',
+          '/schema/health/',
+          '/schema/scaling/'
         ]
       },
       {
         title: 'Examples',
         collapsable: false,
         children: [
-          '/http/'
+          '/examples/http/'
         ]
       },
       {

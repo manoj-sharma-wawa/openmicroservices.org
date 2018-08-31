@@ -18,4 +18,4 @@ A `microservice.yml` file **MUST** be provided which outlines the command struct
 See [RFC 2119](https://tools.ietf.org/html/rfc2119) for details
 
 ## Next
-Create your first `microservice.yml` by referring to it's [anatomy](/anatomy/).
+Create your first `microservice.yml` by referring to it's [anatomy](/overview/anatomy/).

@@ -68,7 +68,7 @@ The Service **MAY** communicate through an HTTP server.
 
 The Service **MUST** define how to start the HTTP server by changing the `lifecycle` run.
 
-*See [lifecycle](/lifecycle/#lifecycle) for additional capabilities*
+*See [lifecycle](/schema/lifecycle/#lifecycle) for additional capabilities*
 
 ```yaml
 lifecycle:
@@ -216,5 +216,5 @@ rpc:
 ```
 
 ::: tip 💡 Heads up!
-TLS configuration is defined separately. See the [authentication](/authentication) section for details.
+TLS configuration is defined separately. See the [authentication](/schema/authentication) section for details.
 :::
