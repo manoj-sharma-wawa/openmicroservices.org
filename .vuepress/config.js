@@ -20,18 +20,18 @@ module.exports = {
         title: 'Schema',
         collapsable: false,
         children: [
-            '/lifecycle/',
-            '/container/',
-            '/commands/',
-            '/interface/',
-            '/environment/',
-            '/volumes/',
-            '/authentication/',
-            '/metrics/',
-            '/logs/',
-            '/requirements/',
-            '/health/',
-            '/scaling/'
+          '/lifecycle/',
+          '/container/',
+          '/commands/',
+          '/interface/',
+          '/environment/',
+          '/volumes/',
+          '/authentication/',
+          '/metrics/',
+          '/logs/',
+          '/requirements/',
+          '/health/',
+          '/scaling/'
         ]
       },
       {
