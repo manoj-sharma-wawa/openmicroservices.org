@@ -1,5 +1,6 @@
 # Commands
-Defining commands give developers a way to organize which microservices are exposed and how they are used within an application or platform.
+Defining commands give developers a way to organize which APIs are exposed 
+and how they are used within an application or platform.
 
 Properly defining commands can assist with the following:
   - Service discovery
@@ -7,6 +8,8 @@ Properly defining commands can assist with the following:
   - Operational insight
 
 Services **SHOULD** define commands and arguments that can be used.
+
+<!-- todo revisit after the command/action decision has been made -->
 
 [[toc]]
 
