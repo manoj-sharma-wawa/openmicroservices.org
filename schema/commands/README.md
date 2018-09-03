@@ -30,16 +30,16 @@ commands:
 
 Arguments **MUST** provide a data type.
 
-| Types     | Encoding        |
-| --------- | --------------- |
-| `int`     | literal         |
-| `float`   | literal         |
-| `string`  | literal         |
-| `uuid`    | literal         |
-| `list`    | JSON            |
-| `object`  | JSON            |
-| `boolean` | `true`, `false` |
-| `path`    | literal         |
+| Types     |
+| --------- |
+| `int`     |
+| `float`   |
+| `string`  |
+| `uuid`    |
+| `list`    |
+| `object`  |
+| `boolean` |
+| `path`    |
 
 ## Arguments
 
@@ -137,14 +137,3 @@ commands:
 ```
 
 :bulb: By default, **false**.
-
-
-## Entrypoint
-
-```yaml{2}
-commands:
-  entrypoint:
-    # ...
-```
-
-Services **MAY** use the reserved keyword `entrypoint` which is used when no command is provided.
