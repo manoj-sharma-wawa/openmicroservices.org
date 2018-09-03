@@ -1,6 +1,8 @@
 # Info
 
-This is present in the root of the document, and looks like this:
+This is present in the root of the document, and contains general information regarding your service.
+
+**Sample**
 ```yaml
 info:
   version: 1.0.1
@@ -45,6 +47,20 @@ info:
       "email": {
         "required": false,
         "desc": "The email address of the person or company."
+      }
+    }
+  },
+  "license": {
+    "required": true,
+    "desc": "A license object, describing the use of your service by others",
+    "$block": {
+      "name": {
+        "desc": "The name of the license",
+        "required": true
+      },
+      "url": {
+        "desc": "The URL to to your license for an in-depth explanation",
+        "required": true
       }
     }
   }
