@@ -22,8 +22,8 @@ module.exports = {
         children: [
           '/schema/info/',
           '/schema/lifecycle/',
-          '/schema/container/',
           '/schema/commands/',
+          '/schema/container/',
           '/schema/interface/',
           '/schema/environment/',
           '/schema/volumes/',
