@@ -1,5 +1,6 @@
 <script>
-
+    let md = require('markdown-it')();
+    
     /**
      * Expects raw to be of the following structure:
      * {
@@ -32,7 +33,8 @@
             if (descText.endsWith('.')) {
                 descText = descText.substring(0, descText.length - 1);
             }
-            let desc = create('td', descText);
+            let descRendered = md.render(descText);
+            let desc = create('td', {domProps:{innerHTML: descRendered}}, []);
             if (row['$block']) {
                 desc.children.push(createTable(create, row['$block']));
             }
