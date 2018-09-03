@@ -23,8 +23,7 @@
         let table = create('table', [
             create('tr', [
                 create('th', 'Field'),
-                create('th', 'Description'),
-                create('th', 'Required')])
+                create('th', 'Description')])
         ]);
         Object.keys(raw).forEach(key => {
             let row = raw[key];
@@ -33,16 +32,22 @@
             if (descText.endsWith('.')) {
                 descText = descText.substring(0, descText.length - 1);
             }
-            let descRendered = md.render(descText);
-            let desc = create('td', {domProps:{innerHTML: descRendered}}, []);
+
+            if (row.required) {
+                descText = "**Required**. " + descText;
+            }
+
+            let descRendered = md.renderInline(descText);
+
+            let descContainer = create('span', {domProps:{innerHTML: descRendered}}, []);
+            let desc = create('td', [descContainer]);
             if (row['$block']) {
                 desc.children.push(createTable(create, row['$block']));
             }
 
             table.children.push(create('tr', [
                 create('td', [create('code', key)]),
-                desc,
-                create('td', row.required)
+                desc
             ]));
         });
         return table;
