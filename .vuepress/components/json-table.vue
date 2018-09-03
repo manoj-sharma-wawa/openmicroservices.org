@@ -1,5 +1,23 @@
 <script>
 
+    /**
+     * Expects raw to be of the following structure:
+     * {
+     *     "contact": {
+     *     "required": false,
+     *     "desc": "foo",
+     *     "$block": {
+     *       "name": {
+     *         "required": true,
+     *         "desc": "bar"
+     *       }
+     *     }
+     *   }
+     * }
+     * @param create
+     * @param raw
+     * @returns {table}
+     */
     let createTable = function (create, raw) {
         let table = create('table', [
             create('tr', [
