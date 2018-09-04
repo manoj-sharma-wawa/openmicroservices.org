@@ -70,5 +70,7 @@
 </script>
 
 <style scoped>
-
+    table {
+        line-height: 22px;
+    }
 </style>
