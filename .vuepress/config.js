@@ -31,8 +31,7 @@ module.exports = {
           '/schema/logs/',
           '/schema/requirements/',
           '/schema/health/',
-          '/schema/scaling/',
-          '/schema/container/'
+          '/schema/scaling/'
         ]
       },
       {
