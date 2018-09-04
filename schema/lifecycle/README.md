@@ -1,6 +1,6 @@
 # Lifecycle
 
-A service **MUST** define a startup command to initialise itself.
+A service **SHOULD** define a startup command if it needs to initialise itself (for example, start an HTTP server).
 
 **Sample**
 ```yaml
