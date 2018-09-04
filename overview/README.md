@@ -22,5 +22,5 @@ of the container as in the [anatomy](/overview/anatomy/).
 
 See [RFC 2119](https://tools.ietf.org/html/rfc2119) for details
 
-## Next
+### Next
 Create your first `microservice.yml` by referring to it's [anatomy](/overview/anatomy/).
