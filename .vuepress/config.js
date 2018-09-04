@@ -8,7 +8,7 @@ module.exports = {
     editLinks: true,
     sidebar: [
       {
-        title: 'Overview',
+        title: 'Introduction',
         collapsable: false,
         children: [
           '/overview/',
