@@ -3,7 +3,7 @@
 ## Query Arguments
 
 ```yaml
-commands:
+actions:
   concat:
     arguments:
       left:
@@ -55,7 +55,7 @@ ab
 Using [PostGraphile](https://github.com/graphile/postgraphile) as the GraphQL service.
 
 ```yaml
-commands:
+actions:
   query:
     arguments:
       query:

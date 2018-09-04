@@ -18,7 +18,7 @@ info:
 lifecycle:
   startup:
     command: ["java", "-jar", "CurrencyApp.jar"]
-commands:
+actions:
   convert:
     help: Convert a currency into another currency
     http:
@@ -49,13 +49,13 @@ commands:
 ```
 
 Let's break it down a bit.
-## omg
+### omg
 ```yaml
 omg: 1
 ```
 The `omg` field specifies which version of the OMG revision this file is written in.
 
-## info
+### info
 ```yaml
 info:
   version: 1.0.1
@@ -77,7 +77,7 @@ version.
 More information about the `info` field may be found [here](/schema/info/).  
 :::
 
-## lifecycle
+### lifecycle
 
 ```yaml
 lifecycle:
@@ -92,9 +92,9 @@ instead of the ENTRYPOINT value in the Dockerfile.
 More information about the `lifecycle` field may be found [here](/schema/lifecycle/).
 :::
 
-## commands
+### actions
 ```yaml
-commands:
+actions:
   convert:
     help: Convert a currency into another currency
     http:
@@ -109,11 +109,11 @@ commands:
       properties:
         ...
 ```
-The `commands` field describes how to interact with this service. It's important to note that 
-every command specified here might have a different underlying execution strategy. In the case
-above, the command `convert` uses the `http` execution strategy, i.e. the Platform **MUST** make a
+The `actions` field describes how to interact with this service. It's important to note that 
+every action specified here might have a different underlying execution strategy. In the case
+above, the action `convert` uses the `http` execution strategy, i.e. the Platform **MUST** make a
 HTTP call to the to the service, respecting the configuration under the `http` section.
 
 ::: tip 💡 Heads up!
-More information about the `commands` field may be found [here](/schema/commands/).
+More information about the `actions` field may be found [here](/schema/actions/).
 :::

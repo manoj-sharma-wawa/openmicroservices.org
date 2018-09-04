@@ -9,7 +9,7 @@ The table below highlights the key differences between OpenAPI and the OMG:
 |------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | Focuses on defining and documenting REST APIs for a particular service | Focuses on defining and documenting the deployment of a service, right from its lifecycle, to the APIs exposed        |
 | Built for HTTP only                                                    | Completely agnostic of the underlying data exchange protocol                                                          |
-| APIs are expressed as HTTP paths                                       | APIs are expressed as commands - a command can be executed via a HTTP request, or a shell command within that service |
+| APIs are expressed as HTTP paths                                       | APIs are expressed as actions - an action can be executed via a HTTP request, or a shell command within that service |
 
 <!--  
 The table above is generated from https://www.tablesgenerator.com/markdown_tables

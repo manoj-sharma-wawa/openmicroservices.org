@@ -22,8 +22,7 @@ module.exports = {
         children: [
           '/schema/info/',
           '/schema/lifecycle/',
-          '/schema/commands/',
-          '/schema/container/',
+          '/schema/actions/',
           '/schema/interface/',
           '/schema/environment/',
           '/schema/volumes/',
@@ -32,7 +31,8 @@ module.exports = {
           '/schema/logs/',
           '/schema/requirements/',
           '/schema/health/',
-          '/schema/scaling/'
+          '/schema/scaling/',
+          '/schema/container/'
         ]
       },
       {
