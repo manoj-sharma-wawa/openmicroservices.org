@@ -10,7 +10,10 @@ Properly defining actions can assist with the following:
 Services **MUST** define actions and arguments that can be used.
 
 At a high level, services **SHOULD** define the following about themselves:
-[[toc]]
+
+- Execution strategy
+- Arguments
+- Output 
 
 
 **Sample**
