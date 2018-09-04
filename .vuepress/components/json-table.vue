@@ -1,19 +1,20 @@
 <script>
     let md = require('markdown-it')();
-    
+
     /**
      * Expects raw to be of the following structure:
      * {
      *     "contact": {
-     *     "required": false,
-     *     "desc": "foo",
-     *     "$block": {
-     *       "name": {
-     *         "required": true,
-     *         "desc": "bar"
-     *       }
-     *     }
-     *   }
+     *         "required": false,
+     *         "desc": "foo",
+     *         "$block": {
+     *           "name": {
+     *             "required": true,
+     *             "desc": "bar"
+     *           }
+     *         }
+     *     },
+     *     "simple": "Simple description with required as false"
      * }
      * @param create
      * @param raw
