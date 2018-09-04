@@ -70,7 +70,7 @@ curl -X POST \
      http://service:5000/subscribe
 ```
 
-## Deliver events
+## Delivering events
 After the Platform has subscribed to events via the subscription HTTP request above,
 it's time for the service to deliver these events to the Platform. 
 The service MUST make an HTTP request to the platform, to the endpoint
@@ -87,8 +87,8 @@ curl -X POST \
         "source": "/context", \
         "eventID": "1234-1234-1234", \
         "eventTime": "2018-08-06T17:53:09Z" \
-        "contentType": "application/json", \ 
-        "data": {"foo": "bar"} \
+        "contentType": "application/vnd.omg.object+json", \ 
+        "data": {"data": {"foo": "bar"}} \
         }' \
      -H 'Content-Type: application/json; charset=utf-8' \ 
      http://platform:8000/foo/bar/event
