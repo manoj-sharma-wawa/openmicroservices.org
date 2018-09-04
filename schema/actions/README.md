@@ -56,13 +56,13 @@ Within a named action, the following fields are available:
         "desc": "A human friendly description for this action"    
     }, 
     "http": {
-        "desc": "This is described in depth [here](/schema/interface/#http)"
+        "desc": "[Read more](/schema/interface/#http)"
     },
     "format": {
-        "desc": "This is described in depth [here](/schema/interface/#command)"
+        "desc": "[Read more](/schema/interface/#command)"
     },
     "rpc": {
-        "desc": "This is described in depth [here](/schema/interface/#rpc)"
+        "desc": "[Read more](/schema/interface/#rpc)"
     },
     "arguments": {
         "desc": "An action **MAY** have named arguments. Each argument, may have the following information about them",
