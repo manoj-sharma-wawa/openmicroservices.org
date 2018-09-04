@@ -7,7 +7,7 @@ Properly defining actions can assist with the following:
   - Documentation
   - Operational insight
 
-Services **MUST** define actions and arguments that can be used.
+Services **MUST** list actions that can be executed.
 
 At a high level, services **SHOULD** define the following about themselves:
 
