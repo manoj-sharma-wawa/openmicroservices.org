@@ -37,7 +37,8 @@ module.exports = {
         title: 'Examples',
         collapsable: false,
         children: [
-          '/examples/http/'
+          '/examples/http/',
+          '/examples/http/pubsub/'
         ]
       },
       {
