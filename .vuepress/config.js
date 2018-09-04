@@ -27,11 +27,10 @@ module.exports = {
           '/schema/environment/',
           '/schema/volumes/',
           '/schema/authentication/',
+          '/schema/health/',
+          '/schema/requirements/',
           '/schema/metrics/',
           '/schema/logs/',
-          '/schema/requirements/',
-          '/schema/health/',
-          '/schema/scaling/'
         ]
       },
       {
