@@ -22,7 +22,7 @@ At a high level, services **SHOULD** define the following about themselves:
 actions:
   convert:
     help: Convert a currency into another currency
-    http/format:
+    http:  # choose: http, format, rpc
       ...
     arguments:
       units:
