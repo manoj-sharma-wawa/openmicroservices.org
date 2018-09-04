@@ -11,7 +11,7 @@ Services **MUST** define actions and arguments that can be used.
 
 At a high level, services **SHOULD** define the following about themselves:
 
-- Execution strategy
+- Interface
 - Arguments
 - Output 
 
@@ -56,30 +56,13 @@ Within a named action, the following fields are available:
         "desc": "A human friendly description for this action"    
     }, 
     "http": {
-        "desc": "When the HTTP execution strategy is to be used, this specifies the HTTP connection settings",
-        "$block": {
-            "method": {                                                          
-                "desc": "The HTTP method to be used - one of get/post/put/delete/patch",
-                "required": true
-            },
-            "port": {                                                          
-                "desc": "The port on which the connection must be established.",
-                "required": true
-            },
-            "path": {                                                          
-                "desc": "The path for this action to be executed",
-                "required": true
-            }
-        }    
+        "desc": "This is described in depth [here](/schema/interface/#http)"
     },
     "format": {
-        "desc": "When the command execution strategy is to be used, this specifies the command to be executed",
-        "$block": {
-            "command": {                                                          
-                "desc": "The command to be executed. This may either be an array of strings, or a single string instead. An array of strings is **RECOMMENDED**",
-                "required": true
-            }
-        }        
+        "desc": "This is described in depth [here](/schema/interface/#command)"
+    },
+    "rpc": {
+        "desc": "This is described in depth [here](/schema/interface/#rpc)"
     },
     "arguments": {
         "desc": "An action **MAY** have named arguments. Each argument, may have the following information about them",
@@ -99,77 +82,35 @@ Within a named action, the following fields are available:
                 "desc": "Whether this argument is required or not. The default value for this is false"
             } 
         }
+    },
+    "output": {
+        "desc": "If your action returns data, it's output **SHOULD** be described here",
+        "$block": {
+            "type": {
+                "desc": "The type of output. It must be one of `int`, `float`, `string`, `list`, `map`, `boolean`, `object`"
+            },
+            "contentType": {
+                "desc": "If the `type` is specified as `object`, this **MUST** indicate the Content-Type of the response"
+            },
+            "properties": {
+                "desc": "The properties which are available to the user. For example, if this action returns `{\"units\": 100, \"currency\": \"eur\"}`, you **SHOULD** declare `units` and `currency` as two properties. Each property mentioned here, may have the following information about it:",
+                "$block": {
+                    "type": {
+                        "desc": "The type of this attribute. It must be one of `int`, `float`, `string`, `list`, `map`, `boolean`, `object`",
+                        "required": true
+                    }
+                }
+            }
+        }
     }
 }
 </p>
 </json-table>
 
-# Execution Strategy
-## HTTP
+::: tip 💡 Heads up!
+The various types of interfaces (such as `http`, `command`, `rpc`) for actions are described [here](/schema/interface/).  
+:::
 
-## Command
-If the container provider is Docker, then `docker exec` is used:
-
-### Docker Run/Exec
-Docker run/exec can be used as an interface for execution **and** communication.
-Data is transmitted using standard output. Arguments can be used to pass values to the container.
-
-**Sample**
-
-```yaml
-actions:
-  count:
-    format:
-      command: ["/app/count.sh"]
-    arguments:
-      word:
-        type: string
-    output:
-      type: int
-```
-
-
-```sh
-$ docker run --rm alpine /app/count.sh '{"word": "hello"}'
-5
-```
-
-#### Output
-- The Service **MAY** write data to `stdout` which is considered the result of the operation.
-- The Service **MUST** `exit 0` if it performed the operations successfully.
-
-#### Fail and Traceback
-- If the Service fails to process the request, it **MUST** `exit 1` or `exit 2`.
-- Data written to `stdout` is ignored when the exit code is greater than `0`.
-- Data written to `stderr` **SHOULD** be traceback details.
-
-##### Deterministic Failure
-- The Service **MAY** exit with code `1` if it failed to performed the operation.
-- An `exit 1` will inform the Platform *not* to process the command as the failure is deterministic.
-
-##### Retry Failure
-- The Service **MAY** exit with code `2` which indicates a failure and the Platform **SHOULD** retry.
-
-
-##### Data Flow
-
-```sh
-+----------+               +------------+                                +----------------------+
-|          |               |            |                                |                      |
-|  Caller  |               |  Platform  |                                |  Interface via Exec  |
-|          |               |            |                                |                      |
-+----+-----+               +-----+------+                                +----------+-----------+
-     |                           |                                                  |
-     |    {"word": "hello"}      |                                                  |
-     | ------------------------> |                                                  |
-     |                           |   docker exec service count '{"word":"hello"}'   |
-     |                           |  --------------------------------------------->  |
-     |                           |                     5                            |
-     |                           |  <---------------------------------------------  |
-     |      {"length": 5}        |                                                  |
-     | <------------------------ |                                                  |
-     |                           |                                                  |
-```
 
 ## Checks
 
