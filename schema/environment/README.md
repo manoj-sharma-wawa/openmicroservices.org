@@ -26,15 +26,9 @@ Each environment variable under `environment` may have the following information
         "desc": "The data type for this environment variable. It must be one of `int`, `float`, `string`, `boolean`",
         "required": true
     },
-    "pattern": {
-        "desc": "Validations for strings, if required."
-    },
-    "required": {
-        "desc": "Whether this variable is required or not. If not specified, this field defaults to `false`"
-    },
-    "help": {
-        "desc": "Description of how the user should produce this variable"
-    }
+    "pattern": "Validations for strings, if required.",
+    "required": "Whether this variable is required or not. If not specified, this field defaults to `false`",
+    "help": "Description of how the user should produce this variable"
 }
 </p>
 </json-table>

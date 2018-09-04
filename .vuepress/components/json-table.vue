@@ -27,6 +27,14 @@
         ]);
         Object.keys(raw).forEach(key => {
             let row = raw[key];
+
+            // Allow short hands.
+            if (typeof row === 'string') {
+                row = {
+                    desc: row
+                }
+            }
+
             let descText = row.desc;
 
             if (descText.endsWith('.')) {
