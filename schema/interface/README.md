@@ -111,50 +111,6 @@ actions:
 ```sh
 $ curl -X POST http://service:8080/path -H "Content-Type: application/json" -d '{"currency": "eur", "units": 100}'
 ```
-<!-- todo: @steve there's already some info about events here - we should move it to it's own page -->
-
-### Server to Platform
-
-In this communication method the Service will start a new http server and provide it with an endpoint to communicate back to the Platform.
-The http server will then make `HTTP POST` requests to the Platform of new data and handle the response from the server.
-
-```bash
-+------------+                  +----------+
-|            |                  |          |
-|  Platform  |                  |  Server  |
-|            |                  |          |
-+-----+------+                  +----+-----+
-      |                              |
-      |     {"name": "Einstein"}     |
-      | <--------------------------- |
-      | ---------------------------> |
-      |                              |
-      |      {"name": "Tesla"}       |
-      | <--------------------------- |
-      | ---------------------------> |
-      |                              |
-```
-
-The Service **MUST** provide the following details to start the streaming server.
-
-```yaml{7,8}
-actions:
-  something:
-    arguments:
-      data:
-        type: string
-    output: object
-    run:
-      command: ["/bin/server"]
-```
-
-The server **MUST** make `HTTP POST` requests to the url provided in the environment variable `OMG_ENDPOINT`.
-
-```sh
-$ curl -X POST -d '{"name": "Einstein"}' $OMG_ENDPOINT
-```
-
-The server **MAY** receive data in the http request connection from the Platform.
 
 ## Command
 If the container provider is Docker, then `docker exec` is used:
