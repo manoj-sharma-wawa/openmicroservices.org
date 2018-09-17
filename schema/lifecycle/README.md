@@ -6,9 +6,9 @@ A service **SHOULD** define a startup command if it needs to initialise itself (
 ```yaml
 lifecycle:
   startup:
-    command: ["/bin/server", "-p", "5000"]
+    command: ["/app/server", "-p", "5000"]
   shutdown:
-    command: /app/shutdown.sh
+    command: ["/app/shutdown", "-p", "5000"]
     timeout: 300
 ```
 
@@ -16,11 +16,10 @@ lifecycle:
 <p>
 {
   "startup": {
-    "required": true,
     "desc": "Startup configuration for your service",
     "$block": {
       "command": {
-        "desc": "The startup command to be executed. This command **SHOULD** open on a `tcp` port for incoming HTTP connections - the desired way to communicate with your service"
+        "desc": "The startup command to be executed. This command **SHOULD** open a `tcp` port for incoming HTTP connections - the desired way to communicate with your service. It may be either a string, or an array of strings. If absent, this defaults to `tail -f /dev/null`"
       }
     }
   },
