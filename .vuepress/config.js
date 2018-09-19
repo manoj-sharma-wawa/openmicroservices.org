@@ -23,6 +23,7 @@ module.exports = {
           '/schema/info/',
           '/schema/lifecycle/',
           '/schema/actions/',
+          '/schema/events/',
           '/schema/interface/',
           '/schema/environment/',
           '/schema/volumes/',
