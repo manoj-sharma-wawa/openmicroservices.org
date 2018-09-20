@@ -119,16 +119,18 @@ More information about the `actions` field is found [here](/schema/actions/).
 :::
 
 ### events
-```yaml
-event:
-  signup:
-    help: A new user signed event
-    arguments:
-      ...
-    output:
-      ...
+```yaml{3}
+actions:
+  user:
+    events:
+      signup:
+        help: A new user signed event
+        arguments:
+          ...
+        output:
+          ...
 ```
-The `events` field describes the various events that the service command can publish.
+The `events` field describes various events that an action can publish.
 
 ::: tip 📖 Read more
 More information about the `events` field is found [here](/schema/events/).

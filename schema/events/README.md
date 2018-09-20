@@ -2,72 +2,24 @@
 
 <!-- TODO a nice svg illustration showing how this works -->
 
-A service **MAY** have a command that publishes many events asynchronously.
-A client would subscribe to events and the service will publish events back to the client.
+A Service **MAY** have an action that publishes events asynchronously.
+The Platform would subscribe to events and the Service will publish events back to the Platform.
 
 > <small>Great for webhooks, pubsub, user interactions and streaming IoT data.</small>
 
-Subscribing to an event **MAY** include `arguments` which can be used to define certain parameters concerning the subscription. For example, filtering the content before the event is published.
+Subscribing to an event **MAY** include `arguments` which can be used to define certain parameters
+concerning the subscription. For example, filtering the content before the event is published.
 
-Events **MUST** define an `output` which is the payload of the event sent to the client.
+Events **SHOULD** define an `output` when a payload is sent to the Platform.
 
-The service **MUST** maintain a registry of subscriptions.
+The Service **MUST** define all of its events in the `microservice.yml` file. 
 
 [[toc]]
-
-### How it works
-
-1. **Subscribe**. Client subscribes to an event by making an HTTP request.
-```shell
-# Client to Service
-POST http://SERVICE/subscribe {
-  "id": "9a8b0ad3-9bc0-4af5-890f-75b9acacf3ab",
-  "event": "signup",
-  "endpoint": "https://CLIENT/signups",
-  "data": { }  # This would be a map of arguments if the event has any.
-}
-```
-
-2. **Register**. The Service stores the subscription in a registry.
-```python
-registry = {}
-
-def subscribe(data):
-    registry[data['id']] = data
-```
-
-3. **Publish**. A new event is ready to be published by the Service.
-```python
-def publish(event, data):
-    for subscription in registry:
-        if subscription['event'] == event:
-            # ... see next step below ...
-```
-
-4. **Send**. The service will HTTP POST the event to client using the [CloudEvents spec](https://github.com/cloudevents/spec).
-```shell
-# Service to Client
-POST https://CLIENT/signups {
-  "cloudEventsVersion" : "0.1",
-  "eventType" : "com.user.signup",
-  "source" : "/signup",
-  "eventID" : "A234-1234-1234",
-  "eventTime" : "2018-04-05T17:31:00Z",
-  "contentType" : "text/json",
-  "data" : {  # event data
-    "name": "Steve",
-    "email": "no-reply@microservice.guide"
-  }
-}
-```
-
-> <small>This allows many clients to subscribe to many events. All clients have unique destinations to publish events.</small>
-
 
 ### Configuration
 
 ```yaml {14,24,27}
-commands:
+actions:
   user:
     help: Subscribe to user events
     http:
@@ -78,7 +30,7 @@ commands:
         contentType: application/json
       unsubscribe:
         path: /unsubscribe
-        method: delete
+        method: post
     events:
       signup:
         help: When a customer signs up
@@ -169,6 +121,58 @@ commands:
 </p>
 </json-table>
 
+### How it works
+
+1. **Subscribe**. The Platform subscribes to an event by making a HTTP request to the Service.
+```shell
+# Platform to Service
+POST http://SERVICE/subscribe {
+  "id": "9a8b0ad3-9bc0-4af5-890f-75b9acacf3ab",
+  "event": "signup",
+  "endpoint": "https://CLIENT/signups",
+  "data": { }  # This would be a map of arguments if the event has any.
+}
+```
+
+The Service **MUST** store this subscription information. Here's a Python snippet depicting this:
+```python
+subscriptions = {}
+
+def subscribe(data):
+    subscriptions[data['id']] = data
+```
+
+2. **Publish**. A new event is ready to be published by the Service.
+
+Here's a Python snippet which reads our previously declared `subscriptions` map:
+
+```python
+def publish(event, data):
+    for subscription in subscriptions:
+        if subscription['event'] == event:
+            # Make a HTTP POST request to subscription['endpoint']
+```
+
+The Service then makes a HTTP POST request to send the event to the Platform using the [CloudEvents spec](https://github.com/cloudevents/spec).
+
+```shell
+# Service to Platform
+POST https://CLIENT/signups {
+  "cloudEventsVersion" : "0.1",
+  "eventType" : "com.user.signup",
+  "source" : "/signup",
+  "eventID" : "A234-1234-1234",
+  "eventTime" : "2018-04-05T17:31:00Z",
+  "contentType" : "text/json",
+  "data" : {  # event data
+    "name": "Steve",
+    "email": "no-reply@microservice.guide"
+  }
+}
+```
+
+> <small>This allows the Platform to subscribe to many events. 
+All subscriptions will have a unique destination to publish events.</small>
 
 ### Example Services
 
