@@ -1,36 +1,45 @@
 module.exports = {
   title: 'Open Microservice Guide',
-  description: 'The open standard for resusable microservices',
+  description: 'The open standard for reusable microservices',
   themeConfig: {
     repo: 'microservices/microservice.guide',
-    repoLabel: 'Edit in GitHub',
-    editLinkText: 'Edit in GitHub',
+    repoLabel: 'Contribute',
+    editLinkText: 'Edit this page on GitHub',
     editLinks: true,
     sidebar: [
       {
-        title: 'Documentation',
+        title: 'Introduction',
         collapsable: false,
         children: [
           '/overview/',
-          '/container/',
-          '/commands/',
-          '/interface/',
-          '/environment/',
-          '/volumes/',
-          '/authentication/',
-          '/metrics/',
-          '/logs/',
-          '/requirements/',
-          '/health/',
-          '/scaling/',
-          '/lifecycle/'
+          '/overview/comparisons/openapi/',
+          '/overview/anatomy/'
+        ]
+      },
+      {
+        title: 'Schema',
+        collapsable: false,
+        children: [
+          '/schema/info/',
+          '/schema/lifecycle/',
+          '/schema/actions/',
+          '/schema/events/',
+          '/schema/interface/',
+          '/schema/environment/',
+          '/schema/volumes/',
+          '/schema/authentication/',
+          '/schema/health/',
+          '/schema/requirements/',
+          '/schema/metrics/',
+          '/schema/logs/',
         ]
       },
       {
         title: 'Examples',
         collapsable: false,
         children: [
-          '/http/'
+          '/examples/http/',
+          '/examples/http/pubsub/'
         ]
       },
       {
@@ -45,4 +54,4 @@ module.exports = {
       }
     ]
   }
-}
+};
