@@ -1,34 +1,87 @@
 <template>
-    <div class="feedback">
-        <div class="wrap-content">
-            <h1 id="feedback">Get Involved</h1>
-            <p>
-                Have feedback, questions or would like to support OMG. </br>
-                Please drop your email in below.
-            </p>
-            <form name="contact" method="POST">
-                <div>
-                    <input type="email" name="email" placeholder="Email">
-                </div>
-                <div>
-                    <textarea name="message" rows="7" cols="50" placeholder="Message(Optional)"></textarea>
-                </div>
-                <div>
-                    <button class="round-button" type="submit">Send</button>
-                </div> 
-            </form>
+  <div class="feedback">
+    <div class="wrap-content">
+      <h1 id="feedback">Get Involved</h1>
+      <p>
+        Have feedback, questions or would like to support OMG.<br />
+        Please drop your email in below.
+      </p>
+      <form name="contact" method="POST" @submit.prevent="handleSubmit">
+        <div v-if="form.sent" class="contact-message">
+          <p>Thank you for your message</p>
         </div>
-        <div class="feedback-img"></div>
+        <div v-if="form.error" class="contact-message error">
+          <p>Please, try again</p>
+        </div>
+        <div>
+          <input v-model="form.email" required type="email" name="email" placeholder="Email">
+        </div>
+        <div>
+          <textarea v-model="form.message" name="message" rows="7" cols="50" placeholder="Message (optional)"></textarea>
+        </div>
+        <div>
+          <button :disabled="form.sending" class="round-button" type="submit">Send</button>
+        </div> 
+      </form>
     </div>
+    <div class="feedback-img" />
+  </div>
 </template>
 
 <script>
-  export default {
+export default {
+  name: 'SubmitFeedback',
+  data: () => ({
+    form: {
+      email: '',
+      message: '',
+      sent: false,
+      error: false,
+      sending: false
+    }
+  }),
+  methods: {
+    handleSubmit: function () {
+      this.form.error = false
+      this.form.sent = false
+      this.form.sending = true
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: `form-name=contact&email=${encodeURIComponent(this.form.email)}&message=${encodeURIComponent(this.form.message)}`
+      }).then((res) => {
+        if (res.status !== 200) {
+          this.form.error = true
+        } else {
+          this.form.sent = true
+        }
+        this.form.sending = false
+      })
+    }
   }
+}
 </script>
 
 <style lang="stylus" scoped>
 @import "../config.styl"
+
+.contact-message.error
+  border-color #b94242
+
+.contact-message
+  width 460px
+  max-width 80%
+  background rgba(255,255,255,0.4)
+  border-radius 4px
+  padding 0.1rem 1.5rem
+  border-left-width 0.5rem
+  border-left-style solid
+  margin 1rem 0
+  border-color #42b983
+  p
+    color #000
+    margin 0
+
 .feedback 
     position relative
     background #111420
