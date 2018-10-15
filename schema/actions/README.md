@@ -75,7 +75,7 @@ Within a named action, the following fields are available:
                 "required": true
             },
             "in": {
-                "desc": "The location of this argument. Each execution strategy provides different possible values for this.",
+                "desc": "The location of this argument. Each execution strategy provides different possible values for this. Possible values are `requestBody`, `query`, and `path`",
                 "required": true
             },
             "required": {
