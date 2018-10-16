@@ -61,6 +61,7 @@ actions:
     "$block": {
       "port": "The port to make (un)subscribe requests to.",
       "subscribe": {
+        "required": true,
         "desc": "Describing how to subscribe to the event.",
         "$block": {
           "path": "A path used in the request url.",
