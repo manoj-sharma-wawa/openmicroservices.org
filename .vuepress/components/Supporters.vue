@@ -12,7 +12,7 @@
         <div class="supporter">
           <img src="/supporter-generic.png" alt="Contact" />
           <h2>Your company</h2>
-          <p>Contact us.</p>
+          <p>Open a PR or contact us if you'd like to be featured here.</p>
           <a href="#feedback" title="Contact">Contact</a>
         </div>
       </div>
