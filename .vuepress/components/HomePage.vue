@@ -36,12 +36,13 @@
     display flex
     padding 0.8rem 1.8rem
     background transparent
-    color $rBtnColor
-    border 1.5px solid $rBtnColor
+    color $green
+    border 1.5px solid $green
     border-radius 25px
     font-size $inputSize
     outline none
     cursor pointer
+    font-weight bold
 
 @media screen and (max-width: $SCLarge)
   #ms-guide

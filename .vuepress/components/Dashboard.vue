@@ -16,8 +16,7 @@
       </div>
       <div class="reusable-text">{{ $site.description }}</div>
       <button class="round-button" @click="getStarted()">
-          Get Started
-          <div class="forward-img" />
+          Get Started →
       </button>
     </div>
     <div class="header-graphic" />
@@ -50,12 +49,24 @@ export default {
 @import "../config.styl"
 
 .dash-background 
-  // position relative
+  position relative
   background-color $homeBg
   height 100vh
   min-height 40rem!important
   color white
   padding 3.5rem 4.5rem 0
+  &::before
+    content ''
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    background-image url('/grid.svg')
+    background-size 4% auto
+    background-position bottom center
+    display block
+    opacity 0.4
   .header 
     margin-bottom 2rem
     // padding 3.5rem 4.5rem 0 4.5rem

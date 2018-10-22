@@ -1,19 +1,18 @@
 <template>
   <div class="wrap-content">
       <h1>OMG Supporters</h1>
-      <p>Below are the products and companies that uphold the OMG standards.</p>
-      <p>Add your company or product by contacting us below or making a pull request.</p>
+      <p>Here are some of the top companies that uphold the OMG standard:</p>
       <div class="supporters">
         <div class="supporter">
           <img src="/supporter-asyncy.png" alt="Asyncy" />
           <h2>Asyncy</h2>
-          <p>Write smarter code to choregraph microservices.</p>
+          <p>Build smarter applications.</p>
           <a href="//asyncy.com" target="_blank" title="Asyncy">Visit Site →</a>
         </div>
         <div class="supporter">
           <img src="/supporter-generic.png" alt="Contact" />
-          <h2>Add your company</h2>
-          <p>Contact us.</p>
+          <h2>Your company</h2>
+          <p>Open a PR or contact us if you'd like to be featured here.</p>
           <a href="#feedback" title="Contact">Contact</a>
         </div>
       </div>
@@ -50,6 +49,11 @@
         margin-bottom 0
         border none
       a
-        color #00FF7E
-
+        color #0fc065
+        padding-bottom .2rem
+        &:hover
+          padding-bottom 4px
+          margin-bottom 3px
+          text-decoration underline
+          text-underline-position under
 </style>
