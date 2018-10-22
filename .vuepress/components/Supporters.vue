@@ -2,7 +2,6 @@
   <div class="wrap-content">
       <h1>OMG Supporters</h1>
       <p>Here are some of the top companies that uphold the OMG standard:</p>
-      <p>Add your company or product by contacting us below or making a pull request.</p>
       <div class="supporters">
         <div class="supporter">
           <img src="/supporter-asyncy.png" alt="Asyncy" />
