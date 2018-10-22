@@ -7,7 +7,7 @@
           <img src="/supporter-asyncy.png" alt="Asyncy" />
           <h2>Asyncy</h2>
           <p>Write smarter code to choregraph microservices.</p>
-          <a href="//asyncy.com" target="_blank" title="Asyncy">Visit Site →</a>
+          <p>Build smarter applications.</p>
         </div>
         <div class="supporter">
           <img src="/supporter-generic.png" alt="Contact" />
