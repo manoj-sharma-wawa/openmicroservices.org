@@ -4,7 +4,7 @@
       <h1 id="feedback">Get Involved</h1>
       <p>
         Do you have feedback, questions or an inquiry to support the OMG standard?<br />
-        Please drop your email in below.
+        Reach out to us.
       </p>
       <form name="contact" method="POST" @submit.prevent="handleSubmit">
         <div v-if="form.sent" class="contact-message">
