@@ -11,7 +11,7 @@
         </div>
         <div class="supporter">
           <img src="/supporter-generic.png" alt="Contact" />
-          <h2>Add your company</h2>
+          <h2>Your company</h2>
           <p>Contact us.</p>
           <a href="#feedback" title="Contact">Contact</a>
         </div>
