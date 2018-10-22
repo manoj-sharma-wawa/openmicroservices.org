@@ -1,7 +1,7 @@
 <template>
   <div class="wrap-content">
       <h1>OMG Supporters</h1>
-      <p>Below are the products and companies that uphold the OMG standards.</p>
+      <p>Here are some of the top companies that uphold the OMG standard:</p>
       <p>Add your company or product by contacting us below or making a pull request.</p>
       <div class="supporters">
         <div class="supporter">
