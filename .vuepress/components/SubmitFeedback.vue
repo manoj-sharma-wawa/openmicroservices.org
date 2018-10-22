@@ -3,7 +3,7 @@
     <div class="wrap-content">
       <h1 id="feedback">Get Involved</h1>
       <p>
-        Have feedback, questions or would like to support OMG.<br />
+        Do you have feedback, questions or an inquiry to support the OMG standard?<br />
         Please drop your email in below.
       </p>
       <form name="contact" method="POST" @submit.prevent="handleSubmit">
