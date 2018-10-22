@@ -55,6 +55,7 @@ export default {
   min-height 40rem!important
   color white
   padding 3.5rem 4.5rem 0
+  z-index 3
   &::before
     content ''
     position absolute
@@ -67,8 +68,10 @@ export default {
     background-position bottom center
     display block
     opacity 0.4
+    z-index -1
   .header 
     margin-bottom 2rem
+    z-index 3
     // padding 3.5rem 4.5rem 0 4.5rem
     // font-size 12px   
   .github-area 

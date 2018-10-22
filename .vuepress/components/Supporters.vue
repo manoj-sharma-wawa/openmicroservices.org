@@ -49,7 +49,6 @@
         margin-bottom 0
         border none
       a
-<<<<<<< HEAD
         color #0fc065
         padding-bottom .2rem
         &:hover
@@ -58,8 +57,3 @@
           text-decoration underline
           text-underline-position under
 </style>
-=======
-        color #00FF7E
-
-</style>
->>>>>>> 241f77e07a1196e2785e4b1c9de2b9acb7a380a4
