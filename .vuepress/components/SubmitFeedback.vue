@@ -8,7 +8,7 @@
       </p>
       <form name="contact" method="POST" @submit.prevent="handleSubmit">
         <div v-if="form.sent" class="contact-message">
-          <p>Thank you for your message</p>
+          <p>We'll get in touch with you shortly.</p>
         </div>
         <div v-if="form.error" class="contact-message error">
           <p>Please, try again</p>
