@@ -80,6 +80,8 @@ export default {
     font-size 1.1rem
     padding: 0.5rem 0
     cursor pointer
+    &:hover
+      border-bottom: 1px dashed #fff
     .github-img 
       width 1.5rem
       height $lnSize
@@ -109,7 +111,10 @@ export default {
       padding 0.5rem 0 0.5rem 3rem
       // line-height 2.4rem
       border-color #41434d
+      color #fefefe
       background transparent url(/search_icon.svg) 1rem 0.9rem no-repeat !important    
+      &:active, &:focus
+        border-color #fefefe
   .header-graphic 
     position absolute
     right 0px
