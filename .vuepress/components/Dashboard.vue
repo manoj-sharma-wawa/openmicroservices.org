@@ -79,8 +79,10 @@ export default {
     display: flex
     font-size 1.1rem
     padding: 0.5rem 0
+    opacity 0.8
     cursor pointer
-    &:hover
+    &:hover, &:active
+      opacity 1
       border-bottom: 1px dashed #fff
     .github-img 
       width 1.5rem

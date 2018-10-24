@@ -43,7 +43,6 @@
     outline none
     cursor pointer
     font-weight bold
-    transition all .1s ease
     &:hover
       background-color $green
       color #000
