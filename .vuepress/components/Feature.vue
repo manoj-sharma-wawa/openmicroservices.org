@@ -3,17 +3,17 @@
         <div class="wrap-content">
             <div class="features">
                 <div class="feature">
-                    <div class="f-circle"></div>
+                    <div class="f-circle reusability"></div>
                     <h4>Reusability</h4>
                     <p>Focus is stressed on services being highly reusable between applications and platforms.</p>
                 </div>
                 <div class="feature">
-                    <div class="f-circle"></div>
+                    <div class="f-circle management"></div>
                     <h4>Management</h4>
                     <p>Define how to interface with the service, lifecycle management, scaling, among other requirements.</p>
                 </div>
                 <div class="feature">
-                    <div class="f-circle"></div>
+                    <div class="f-circle doc"></div>
                     <h4>Documentation</h4>
                     <p>Services inherit documentation through a well defined configuration of commands, arguments
                         and output.
@@ -53,10 +53,16 @@
   .f-circle 
     width 70px
     height 70px
-    background-image url('/placeholder.svg')
+    // background-image url('/placeholder.svg')
+    &.reusability
+      background-image url('/features/reusability.svg')
+    &.doc
+      background-image url('/features/doc.svg')
+    &.management
+      background-image url('/features/management.svg')
     background-position center
     background-repeat no-repeat
-    background-size cover
+    background-size contain
 @media (max-width: $SCMobile)
   .features
     flex-direction: column;

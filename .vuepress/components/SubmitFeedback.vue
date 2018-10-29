@@ -120,8 +120,14 @@ export default {
     background transparent
     outline none
     padding 0.4rem 1rem
-    font-size: $inputSize
-    max-width: 30rem
+    font-size $inputSize
+    font-family inherit
+    max-width 90%
+    width 90%
+    min-width 90%
+  textarea
+    min-height 150px
+    max-height 150px
   h1,p
     margin-bottom 30px
   form div 
@@ -134,13 +140,13 @@ export default {
     height calc(100% + 10px)
     background-image url('/footer_graphic.svg')
     background-size cover
-@media (max-width: $SCMedium) 
+@media (max-width: $SCMedium)
+  html
+    font-size 16px
   .feedback
     .feedback-img 
         display none
-   input,textarea
-     max-width 20rem
 @media (max-width: $SCMobileNarrow)
-    input,textarea
-        max-width 15rem
+  html
+    font-size 14px
 </style>

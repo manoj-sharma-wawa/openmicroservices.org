@@ -3,14 +3,14 @@
       <h1>OMG Supporters</h1>
       <p>Here are some of the top companies that uphold the OMG standard:</p>
       <div class="supporters">
-        <div class="supporter">
-          <img src="/supporter-asyncy.png" alt="Asyncy" />
-          <h2>Asyncy</h2>
-          <p>Build smarter applications.</p>
-          <a href="//asyncy.com" target="_blank" title="Asyncy">Visit Site →</a>
+        <div class="supporter" v-for="s of supporters">
+          <img :src="`/supporters/${s.name}.png`" :alt="s.name" />
+          <h2 v-text="s.name" />
+          <p v-text="s.description" />
+          <a :href="`//${s.url}`" target="_blank" :title="s.name">Visit Site →</a>
         </div>
         <div class="supporter">
-          <img src="/supporter-generic.png" alt="Contact" />
+          <img src="/supporters/generic.png" alt="Contact" />
           <h2>Your company</h2>
           <p>Open a PR or contact us if you'd like to be featured here.</p>
           <a href="#feedback" title="Contact">Contact</a>
@@ -21,7 +21,18 @@
 
 <script>
   export default {
-    name: 'Supporters'
+    name: 'Supporters',
+    data: () => ({
+      supporters: [{
+        name: 'Asyncy',
+        description: 'Build smarter applications',
+        url: 'asyncy.com'
+      }, {
+        name: 'Storyscript',
+        description: 'A Goal-oriented Cloud Native Programming Language that choreographs microservices.',
+        url: 'storyscript.org'
+      }]
+    })
   }
 </script>
 
@@ -50,10 +61,9 @@
         border none
       a
         color #0fc065
-        padding-bottom .2rem
+        padding-bottom .25rem
+        margin-bottom .25rem
         &:hover
-          padding-bottom 4px
-          margin-bottom 3px
           text-decoration underline
           text-underline-position under
 </style>
