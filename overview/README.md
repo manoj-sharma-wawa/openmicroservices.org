@@ -10,11 +10,11 @@ It's on the developer to decide on the underlying infrastructure.
 
 If you'd like to contribute, please feel free to [reach out](https://microservice.guide/#contact)!
 
-## Microservice Definition
+### Microservice Definition
 A `microservice.yml` file **MUST** be provided which outlines the structure and operations 
 of the container as in the [anatomy](/overview/anatomy/).
 
-## Keywords
+### Keywords
 
 - **MUST** - Required for a service to contain this functionality
 - **SHOULD** - Recommended for a service to contain this functionality
