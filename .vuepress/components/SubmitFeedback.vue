@@ -7,11 +7,11 @@
         Reach out to us.
       </p>
       <form name="contact" method="POST" @submit.prevent="handleSubmit">
-        <div v-if="form.sent" class="contact-message">
-          <p>We'll get in touch with you shortly.</p>
+        <div v-if="form.sent">
+          <micro-modal text="<h3>Thank you !</h3><p>We'll get in touch with you shortly</p>" @close="form.sent = false" />
         </div>
-        <div v-if="form.error" class="contact-message error">
-          <p>Please, try again</p>
+        <div v-if="form.error">
+          <micro-modal text="<h3>Error !</h3><p>Please, try again</p>" @close="form.error = false" />
         </div>
         <div>
           <input v-model="form.email" required type="email" name="email" placeholder="Email">
@@ -29,8 +29,11 @@
 </template>
 
 <script>
+import MicroModal from './MicroModal'
+
 export default {
   name: 'SubmitFeedback',
+  components: { MicroModal },
   data: () => ({
     form: {
       email: '',
