@@ -7,12 +7,6 @@
         Reach out to us.
       </p>
       <form name="contact" method="POST" @submit.prevent="handleSubmit">
-        <div v-if="form.sent">
-          <micro-modal text="<h3>Thank you !</h3><p>We'll get in touch with you shortly</p>" @close="form.sent = false" />
-        </div>
-        <div v-if="form.error">
-          <micro-modal text="<h3>Error !</h3><p>Please, try again</p>" @close="form.error = false" />
-        </div>
         <div>
           <input v-model="form.email" required type="email" name="email" placeholder="Email">
         </div>
@@ -21,7 +15,19 @@
         </div>
         <div>
           <button :disabled="form.sending" class="round-button" type="submit">Send</button>
-        </div> 
+        </div>
+        <div class="contact-messages">
+          <div v-if="form.sent" class="contact-message">
+            <p><b>Thank you !</b> We'll get in touch with you shortly</p>
+            <span class="close" @click="form.sent = false">&times;</span>
+            <!-- <micro-modal text="<h3>Thank you !</h3><p>We'll get in touch with you shortly</p>" @close="form.sent = false" /> -->
+          </div>
+          <div v-if="form.error" class="contact-message error">
+            <p><b>Error !</b> Please, try again</p>
+            <span class="close" @click="form.error = false">&times;</span>
+            <!-- <micro-modal text="<h3>Error !</h3><p>Please, try again</p>" @close="form.error = false" /> -->
+          </div>
+        </div>
       </form>
     </div>
     <div class="feedback-img" />
@@ -68,22 +74,40 @@ export default {
 <style lang="stylus" scoped>
 @import "../config.styl"
 
+.contact-messages
+  margin-top 3rem
+
 .contact-message.error
-  border-color #b94242
+  border-color #F82E2E
+  color #F82E2E
+  p
+    color #F82E2E
 
 .contact-message
   width 460px
   max-width 80%
-  background rgba(255,255,255,0.4)
-  border-radius 4px
-  padding 0.1rem 1.5rem
-  border-left-width 0.5rem
-  border-left-style solid
+  border-width 1px
+  border-style solid
+  border-color $green
+  border-radius .75rem
+  padding 0.5rem 1.5rem
   margin 1rem 0
-  border-color #42b983
+  position relative
+  color $green
+  .close
+    position absolute
+    right 1rem
+    height 100%
+    top 0
+    align-items center
+    display flex
+    font-size 1.3rem
+    font-weight bold
+    cursor pointer
   p
-    color #000
-    margin 0
+    color $green
+    margin .5rem 0 !important
+    padding 0
 
 .feedback 
   position relative
@@ -126,8 +150,8 @@ export default {
     font-size $inputSize
     font-family inherit
     max-width 90%
-    width 90%
-    min-width 90%
+    width 460px
+    min-width 460px
   textarea
     min-height 150px
     max-height 150px
