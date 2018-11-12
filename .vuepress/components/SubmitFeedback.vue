@@ -18,7 +18,7 @@
         </div>
         <div class="contact-messages">
           <div v-if="form.sent" class="contact-message">
-            <p><b>Thank you !</b> We'll get in touch with you shortly</p>
+            <p><b>Thank you!</b> We'll get in touch with you shortly</p>
             <span class="close" @click="form.sent = false">&times;</span>
             <!-- <micro-modal text="<h3>Thank you !</h3><p>We'll get in touch with you shortly</p>" @close="form.sent = false" /> -->
           </div>
