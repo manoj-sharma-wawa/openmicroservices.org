@@ -22,18 +22,18 @@ The Service **MUST** define all of its events in the `microservice.yml` file.
 actions:
   user:
     help: Subscribe to user events
-    http:
-      port: 5000
-      subscribe:
-        path: /subscribe
-        method: post
-        contentType: application/json
-      unsubscribe:
-        path: /unsubscribe
-        method: post
     events:
       signup:
         help: When a customer signs up
+        http:
+          port: 5000
+          subscribe:
+            path: /subscribe
+            method: post
+            contentType: application/json
+          unsubscribe:
+            path: /unsubscribe
+            method: post
         output: &user
           type: object
           contentType: application/json
