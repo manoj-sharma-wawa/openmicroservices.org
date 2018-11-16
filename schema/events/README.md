@@ -18,14 +18,14 @@ The Service **MUST** define all of its events in the `microservice.yml` file.
 
 ### Configuration
 
-```yaml {14,24,27}
+```yaml {5,24,30}
 actions:
   user:
     help: Subscribe to user events
     events:
       signup:
         help: When a customer signs up
-        http:
+        http: &http
           port: 5000
           subscribe:
             path: /subscribe
@@ -44,10 +44,16 @@ actions:
               type: string
       login:
         help: When a user logs in.
-        output: <<*user  # yaml magic to reuse the object declared above
+        http:
+          <<: *http  # yaml magic to reuse the object declared above
+        output: 
+          <<: *user
       logout:
         help: When a user logs out.
-        output: <<*user
+        http:
+          <<: *http
+        output:
+          <<: *user
 ```
 
 <json-table>
