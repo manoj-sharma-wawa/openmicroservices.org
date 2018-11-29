@@ -1,7 +1,7 @@
 # Validate
 When ran in a directory of a microservice (a directory containing a `microservice.guide`), validation will be ran against that file.
 ```sh
-omg utils
+omg validate
 ```
 #### Example output
 ##### Valid `microservice.yml`
