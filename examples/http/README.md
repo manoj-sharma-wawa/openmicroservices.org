@@ -10,7 +10,8 @@ actions:
         type: string
       right:
         type: string
-    output: string
+    output:
+      type: string
     http:
       method: get
       endpoint: /concat
