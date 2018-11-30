@@ -1,24 +1,28 @@
 # HTTP Server
 
-## Query Arguments
+## GET Example
 
 ```yaml
+omg: 1
+info: ...
+lifecycle:
+  startup:
+    command: ["FLASK_APP=example.py", "flask", "run", "--host=0.0.0.0"]
 actions:
   concat:
     arguments:
       left:
         type: string
+        in: query
       right:
         type: string
-    output: string
+        in: query
+    output:
+      type: string
     http:
       method: get
       endpoint: /concat
-
-lifecycle:
-  run:
-    command: ["FLASK_APP=example.py", "flask", "run", "--host=0.0.0.0"]
-    port: 5000
+      port: 5000
 ```
 
 ```python
@@ -50,46 +54,49 @@ $ curl -X GET http://service:5000/concat?left=a&right=b
 ab
 ```
 
-## Post Body
+## POST Example
 
-Using [PostGraphile](https://github.com/graphile/postgraphile) as the GraphQL service.
+Using the same example above, here's a sample of the `microservice.yaml` for 
+having the `left` and `right` arguments in the request body of a POST request.
 
-```yaml
-actions:
-  query:
-    arguments:
-      query:
-        type: string
-    http:
-      method: post
-      endpoint: /graphql
+The lines changed have been highlighted for your convenience below: 
 
+```yaml{11,14,18,21}
+omg: 1
+info: ...
 lifecycle:
   startup:
-    command: ["postgraphile", \
-              "-n", "0.0.0.0", \
-              "-c", "$DATABASE_URL"]
-    port: 5000
-
-environment:
-  database_url:
-    type: string
-    help: The PostgreSQL url to connect to.
+    command: ["FLASK_APP=example.py", "flask", "run", "--host=0.0.0.0"]
+actions:
+  concat:
+    arguments:
+      left:
+        type: string
+        in: requestBody
+      right:
+        type: string
+        in: requestBody
+    output:
+      type: string
+    http:
+      method: post
+      endpoint: /concat
+      port: 5000
+      contentType: application/json
 ```
 
 ```javascript
 // Request
 {
-  "query": "{allUsers{...}}"
+  "left": "a",
+  "right": "b"
 }
 ```
 
 ```bash
 # Platform Translation
-$ curl -X POST -d '{"query":"{allUsers{...}}"}' http://service:5000/query
+$ curl -X POST -d '{"left": "a", "right": "b"}' -H "Content-Type: application/json" http://service:5000/concat
 
 # Response
-{
-  "data": {...}
-}
+ab
 ```
