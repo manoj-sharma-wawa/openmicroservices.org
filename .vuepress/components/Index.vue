@@ -176,7 +176,7 @@ export default {
             &:before
               background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NSIgaGVpZ2h0PSI3NCIgdmlld0JveD0iMCAwIDY1IDc0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM3NkRBQzIiIHN0cm9rZS13aWR0aD0iLjY0OCI+PHBhdGggZD0iTTEwLjMyNCA5LjQwNGg0NS4zNTJ2NjMuOTg4SDEwLjMyNHoiLz48cGF0aCBzdHJva2UtZGFzaGFycmF5PSIxLjk0NCIgZD0iTTU2LjIxNCAwTC0uMTQ0IDU4Ljk4Nk04Ljg1NiAwbDU2LjM1OCA1OC45ODYiLz48L2c+PC9zdmc+')
               left -19px
-    h1, .description, .action
+    h1, .description
       margin 0 auto
     .description
       margin-top .5rem
@@ -185,19 +185,8 @@ export default {
       font-size 1.125rem
       line-height 1.5
       letter-spacing 1px
+      text-align center
       color $lightColor
-    .action-button
-      display inline-block
-      font-size 1.2rem
-      color #fff
-      background-color $accentColor
-      padding 0.8rem 1.6rem
-      border-radius 4px
-      transition background-color .1s ease
-      box-sizing border-box
-      border-bottom 1px solid darken($accentColor, 10%)
-      &:hover
-        background-color lighten($accentColor, 10%)
 
 @media (max-width: $MQMobile)
   .home
