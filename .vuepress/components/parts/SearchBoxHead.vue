@@ -153,7 +153,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './styles/config.styl'
+@import '../../override.styl'
 
 .search-box-head
   display inline-block
@@ -175,7 +175,7 @@ export default {
     letter-spacing 1.5px
     outline none
     padding .75rem .75rem .5rem
-    background rgba(255, 255, 255, .15) url(img/search.svg) no-repeat
+    background rgba(255, 255, 255, .15) url(/assets/img/search.svg) no-repeat
     background-position 95% 47.5%
     &::placeholder
       color #fff

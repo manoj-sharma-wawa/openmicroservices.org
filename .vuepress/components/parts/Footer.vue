@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import NavLink from './NavLink.vue'
+import NavLink from '../NavLink.vue'
 
 export default {
   name: 'Footer',
@@ -62,9 +62,9 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './styles/config.styl'
+@import '../../override.styl'
 
-.footer
+.home .footer
   position relative
   background-color #0c1039
   display flex
@@ -74,6 +74,7 @@ export default {
   flex 1 1 100%
   flex-wrap wrap
   flex-direction row
+  padding 0
   padding-bottom 1rem
   @media (min-width: ($MQMobile + 1px))
     flex-wrap nowrap
@@ -92,6 +93,7 @@ export default {
     height 100%
   .footer-left
     justify-content space-between
+    text-align left
     position relative
     padding 1rem 2rem
   .footer-left, .footer-right

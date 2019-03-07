@@ -36,13 +36,11 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './styles/config.styl'
+@import '../../override.styl'
 
 .has-background-light
   background-color $borderColor
-
-
-.features
+.home .features
   display flex
   padding 12.5rem 0
   margin 0

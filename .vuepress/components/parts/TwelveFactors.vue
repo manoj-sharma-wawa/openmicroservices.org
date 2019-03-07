@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './styles/config.styl'
+@import '../../override.styl'
 
 .container
   h2

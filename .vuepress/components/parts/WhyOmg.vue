@@ -32,10 +32,10 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './styles/config.styl'
+@import '../../override.styl'
 
 .cube-bg
-  background-image url('img/cube-bg.png')
+  background-image url('/assets/img/cube-bg.png')
   background-size cover
   background-repeat no-repeat
   background-position center
@@ -44,7 +44,7 @@ export default {
     color $lightColor
 
 .cube-bg2
-  background-image url('img/cube-bg2.png')
+  background-image url('/assets/img/cube-bg2.png')
   background-size cover
   background-repeat no-repeat
   background-position center

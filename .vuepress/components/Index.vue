@@ -55,12 +55,12 @@
 
 <script>
 import NavLink from './NavLink.vue'
-import SearchBox from './Home/SearchBoxHead.vue'
-import TwelveFactors from './Home/TwelveFactors.vue'
-import WhyOmg from './Home/WhyOmg.vue'
-import Features from './Home/Features.vue'
-import Contact from './Home/Contact.vue'
-import Footer from './Home/Footer.vue'
+import SearchBox from './parts/SearchBoxHead.vue'
+import TwelveFactors from './parts/TwelveFactors.vue'
+import WhyOmg from './parts/WhyOmg.vue'
+import Features from './parts/Features.vue'
+import Contact from './parts/Contact.vue'
+import Footer from './parts/Footer.vue'
 
 export default {
   components: { NavLink, SearchBox, TwelveFactors, WhyOmg, Features, Contact, Footer },
@@ -84,9 +84,10 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './styles/config.styl'
+@import '../override.styl'
 
 .home
+  max-width unset
   padding 0
   margin 0px auto
   .container
@@ -114,7 +115,7 @@ export default {
         right 0
         bottom 0
         @media (min-width: ($MQMobile + 1px))
-          background-image url('img/OMG@3x.png')
+          background-image url('/assets/img/OMG@3x.png')
         background-repeat no-repeat
         background-size 70% auto
         background-position center top
@@ -153,6 +154,7 @@ export default {
           font-weight 600
           margin 1rem auto
     h1
+      color #fff
       span
         @media (min-width: ($MQMobile + 1px))
           position relative
