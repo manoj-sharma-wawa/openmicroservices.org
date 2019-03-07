@@ -62,11 +62,11 @@ export default {
   textarea
     margin 1rem 0
   .button
-    @media (min-width: ($MQNarrow + 1px))
-      width 28.125rem
+    width 100%
     cursor pointer
   textarea
     max-height 12.5rem
+    resize vertical
   input, textarea
     @media (min-width: ($MQNarrow + 1px))
       width calc(28.125rem - 2rem)
