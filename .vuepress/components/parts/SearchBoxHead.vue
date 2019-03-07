@@ -181,7 +181,7 @@ export default {
       color #fff
   .suggestions
     text-align left
-    background rgba(255, 255, 255, .15)
+    background #0c1039
     width 20rem
     position absolute
     top 2rem
@@ -208,7 +208,7 @@ export default {
     &.focused
       background-color rgba(255, 255, 255, .3)
       a
-        color $accentColor
+        color #fff
 
 @media (max-width: $MQNarrow)
   .search-box
