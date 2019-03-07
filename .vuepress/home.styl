@@ -1,0 +1,430 @@
+.home
+  max-width unset
+  padding 0
+  h1, h2, h3, h4, h5
+    font-family Autoscape, sans-serif
+    font-weight normal
+    border none !important
+  .container
+    max-width 75rem
+    padding 0
+    margin 0 auto
+    @media screen and (max-width: ($MQMobile))
+      padding 0 1rem
+  .hero
+    min-height 100vh
+    &.head
+      position relative
+      background-image linear-gradient(312deg, #000b5e, #070b28)
+      background-repeat no-repeat
+      background-size cover
+      &:before
+        content: ''
+        position absolute
+        top 0
+        left 0
+        right 0
+        bottom 0
+        @media (min-width: ($MQMobile + 1px))
+          background-image url('/assets/img/OMG@3x.png')
+        background-repeat no-repeat
+        background-size 70% auto
+        background-position center top
+    .head-navbar
+      position absolute
+      z-index 1000
+      top 0
+      left 0
+      right 0
+      max-width 75rem
+      padding 3rem 2rem
+      width auto
+      display flex
+      flex-direction row
+      justify-content space-between
+      align-items center
+      margin 0 auto
+    .head-container
+      position relative
+      display flex
+      flex-direction column
+      justify-content space-between
+      align-items center
+      min-height 100vh
+      .head-container-content
+        padding-top 47.5vh
+      .head-container-footer
+        padding-bottom 2rem
+        p
+          color #fff
+          text-transform uppercase
+          font-size .75rem
+          line-height 2
+          letter-spacing 1px
+          text-align center
+          font-weight 600
+          margin 1rem auto
+    h1
+      color #fff
+      span
+        @media (min-width: ($MQMobile + 1px))
+          position relative
+          display inline
+          &:before
+            content: ''
+            z-index 0
+            background-repeat no-repeat
+            background-size contain
+            width 65px
+            height 80px
+            position absolute
+            top -9.5px
+          &:first-child, &:last-child
+            &:before
+              background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MyIgaGVpZ2h0PSI3OCIgdmlld0JveD0iMCAwIDUzIDc4Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM3NkRBQzIiIHN0cm9rZS13aWR0aD0iLjkiPjxyZWN0IHdpZHRoPSI0Mi4yMTkiIGhlaWdodD0iNjMuODE5IiB4PSI0Ljk0MiIgeT0iNy42NDEiIHJ4PSIxNy4xIi8+PHBhdGggc3Ryb2tlLWRhc2hhcnJheT0iMS43OTk5OTk5NTIzMTYyODQsMS43OTk5OTk5NTIzMTYyODQiIGQ9Ik0yNi41LjQ1djc5LjFNNTIuMjUyIDM2Ljk4OEguMjgiLz48L2c+PC9zdmc+')
+              left -14px
+          &:nth-child(2)
+            &:before
+              background-image url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NSIgaGVpZ2h0PSI3NCIgdmlld0JveD0iMCAwIDY1IDc0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiM3NkRBQzIiIHN0cm9rZS13aWR0aD0iLjY0OCI+PHBhdGggZD0iTTEwLjMyNCA5LjQwNGg0NS4zNTJ2NjMuOTg4SDEwLjMyNHoiLz48cGF0aCBzdHJva2UtZGFzaGFycmF5PSIxLjk0NCIgZD0iTTU2LjIxNCAwTC0uMTQ0IDU4Ljk4Nk04Ljg1NiAwbDU2LjM1OCA1OC45ODYiLz48L2c+PC9zdmc+')
+              left -19px
+    h1, .description
+      margin 0 auto
+    .description
+      margin-top .5rem
+      margin-bottom 3rem
+      max-width 35rem
+      font-size 1.125rem
+      line-height 1.5
+      letter-spacing 1px
+      text-align center
+      color $lightColor
+  .form
+    display flex
+    flex-direction column
+    &.error
+      animation shake 0.82s cubic-bezier(.36,.07,.19,.97) both
+      transform translate3d(0, 0, 0)
+      backface-visibility hidden
+      perspective 1000px
+    textarea
+      margin 1rem 0
+    .button
+      width 100%
+      cursor pointer
+    textarea
+      max-height 12.5rem
+      resize vertical
+    input, textarea
+      @media (min-width: ($MQNarrow + 1px))
+        width calc(28.125rem - 2rem)
+        max-width calc(28.125rem - 2rem)
+      display block
+      cursor text
+      color #fff
+      display inline-flex
+      flex-direction row
+      align-items center
+      justify-content flex-start
+      border none
+      border-radius 0
+      font-family Poppins
+      font-weight 500
+      font-size 0.875rem
+      line-height 1.43
+      letter-spacing 1.5px
+      outline none
+      padding 1rem
+      background rgba(255, 255, 255, .15)
+      &::placeholder
+        color rgba(255, 255, 255, .6)
+  .features
+    display flex
+    padding 12.5rem 0
+    margin 0
+    flex-direction column
+    flex-wrap nowrap
+    @media (min-width: ($MQMobile + 1px))
+      flex-wrap wrap
+      flex-direction row
+    flex 1 1 100%
+    --columnGap: 3.5rem;
+    .feature
+      margin-bottom 1rem
+      margin-left 0
+      margin-right 0
+      @media (min-width: ($MQMobile + 1px))
+        &:not(:first-child)
+          margin-left var(--columnGap)
+        &:not(:last-child)
+          margin-right var(--columnGap)
+      padding 0
+      background $borderColor
+      flex 1 1 calc(33% - 2 * var(--columnGap))
+      width auto
+      svg
+        display block
+        &:not(.line)
+          margin 2rem 0 1.5rem
+          padding 0
+      h3
+        margin 0
+        margin-bottom 1.5rem !important
+        padding 0
+      p
+        margin-top 2rem
+        padding 0
+        padding-right 2rem
+        b
+          font-weight 600
+          color $primaryColor
+
+  .footer
+    position relative
+    background-color #0c1039
+    display flex
+    align-items center
+    flex-grow 1
+    flex-shrink 1
+    flex 1 1 100%
+    flex-wrap wrap
+    flex-direction row
+    padding 0
+    padding-bottom 1rem
+    @media (min-width: ($MQMobile + 1px))
+      flex-wrap nowrap
+      overflow hidden
+      height 5rem
+      padding-bottom 0
+    margin 2rem 0 0
+    border 1px solid $primaryColor
+    border-bottom none
+    .footer-left, .footer-centered, .footer-right
+      display inline-flex
+      align-items center
+      justify-content center
+      flex-shrink 1
+      flex-grow 1
+      height 100%
+    .footer-left
+      justify-content space-between
+      text-align left
+      position relative
+      padding 1rem 2rem
+    .footer-left, .footer-right
+      flex 1 1 100%
+      @media (min-width: ($MQMobile + 1px))
+        flex 1 1 20%
+    .footer-centered
+      flex 1 1 100%
+      @media (min-width: ($MQMobile + 1px))
+        flex 1 1 60%
+        border-left 1px solid $primaryColor
+        border-right 1px solid $primaryColor
+      p, p a
+        font-size .75rem
+        line-height 1
+        @media (min-width: ($MQMobile + 1px))
+          margin 0
+        letter-spacing 1.3px
+        text-transform uppercase
+        color #fff
+        font-weight 600
+        a
+          color $accentColor
+  .container
+    &.large
+      padding 2rem !important
+      @media (min-width: ($MQMobile + 1px))
+        padding 7.5rem !important
+    &.divided
+      display flex
+      flex 1 1 100%
+      flex-direction column
+      flex-wrap nowrap
+      @media (min-width: ($MQMobile + 1px))
+        flex-wrap wrap
+        flex-direction row
+      justify-content space-between
+      &.centered
+        align-items center
+      .container-content-right
+        *
+          @media (min-width: ($MQNarrow + 1px))
+            float right
+      .container-content-left, .container-content-right
+        flex 1 1 50%
+        width 100%
+        h2
+          margin-top 0 !important
+        p
+          margin 3rem 0
+          @media (min-width: ($MQMobile + 1px))
+            padding-right 5rem
+        svg
+          text-align right
+          @media (max-width: $MQMobile)
+            display none
+    h2
+      padding 0
+      &.title
+        margin 12.5rem 0 2rem !important
+      span
+        border 3px solid $accentColor
+        padding 0 .5rem
+        display inline-block
+      & + svg
+        display block
+  .factors
+    display flex
+    margin 5rem 0 11.75rem
+    padding 0
+    flex-direction column
+    flex-wrap nowrap
+    @media (min-width: ($MQMobile + 1px))
+      flex-wrap wrap
+      flex-direction row
+    flex 1 1 100%
+    --columnGap: .375rem;
+    .factor
+      margin-bottom .75rem
+      min-height 18rem
+      margin-left 0
+      margin-right 0
+      @media (min-width: ($MQMobile + 1px))
+        margin-left var(--columnGap)
+        margin-right var(--columnGap)
+      padding 1rem .5rem 0
+      background $borderColor
+      flex 1 1 calc(25% - 2 * var(--columnGap) - 2rem)
+      width auto
+      svg
+        display block
+        margin 0 auto
+        padding 1rem
+      h4
+        text-align center
+        margin .5rem 0 !important
+        padding 0
+      p
+        margin-top 1rem
+        padding 1rem
+        padding-bottom 0
+        text-align center
+        b
+          font-weight 600
+          color $primaryColor
+.cube-bg
+  background-image url('/assets/img/cube-bg.png')
+  background-size cover
+  background-repeat no-repeat
+  background-position center
+  color #fff
+  p
+    color $lightColor
+
+.cube-bg2
+  background-image url('/assets/img/cube-bg2.png')
+  background-size cover
+  background-repeat no-repeat
+  background-position center
+  color #fff
+  p
+    color $lightColor
+.search-box-head
+  display inline-block
+  position relative
+  input
+    cursor text
+    width 13.5rem
+    color #fff
+    display inline-flex
+    flex-direction row
+    align-items center
+    justify-content flex-start
+    border none
+    border-radius 0
+    font-family Poppins
+    font-weight 500
+    font-size 0.825rem
+    line-height 2
+    letter-spacing 1.5px
+    outline none
+    padding .75rem .75rem .5rem
+    background rgba(255, 255, 255, .15) url(/assets/img/search.svg) no-repeat
+    background-position 95% 47.5%
+    &::placeholder
+      color #fff
+  .suggestions
+    text-align left
+    background #0c1039
+    width 20rem
+    position absolute
+    top 2rem
+    box-shadow 0 0 0 2px inset #fff
+    border none
+    border-radius 0
+    padding 0.4rem
+    list-style-type none
+    &.align-right
+      right 0
+  .suggestion
+    line-height 1.4
+    padding 0.4rem 0.6rem
+    border-radius 0px
+    cursor pointer
+    a
+      white-space normal
+      color $lightColor
+      .page-title
+        font-weight 600
+      .header
+        font-size 0.9rem
+        margin-left 0.25rem
+    &.focused
+      background-color rgba(255, 255, 255, .3)
+      a
+        color #fff
+
+@media (max-width: $MQNarrow)
+  .search-box
+    input
+      cursor pointer
+      width 0
+      border-color transparent
+      position relative
+      &:focus
+        cursor text
+        left 0
+        width 10rem
+
+@media (max-width: $MQNarrow) and (min-width: $MQMobile)
+  .search-box
+    .suggestions
+      left 0
+
+@media (max-width: $MQMobile)
+  .search-box
+    margin-right 0
+    input
+      left 1rem
+    .suggestions
+      right 0
+
+@media (max-width: $MQMobileNarrow)
+  .search-box
+    .suggestions
+      width calc(100vw - 4rem)
+    input:focus
+      width 8rem
+.has-background-light
+  background-color $borderColor
+
+@keyframes shake
+  10%, 90%
+    transform translate3d(-1px, 0, 0)
+  20%, 80%
+    transform translate3d(2px, 0, 0)
+  30%, 50%, 70%
+    transform translate3d(-4px, 0, 0)
+  40%, 60%
+    transform translate3d(4px, 0, 0)
