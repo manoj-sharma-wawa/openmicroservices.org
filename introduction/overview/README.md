@@ -12,7 +12,7 @@ If you'd like to contribute, please feel free to [reach out](https://microservic
 
 ### Microservice Definition
 A `microservice.yml` file **MUST** be provided which outlines the structure and operations 
-of the container as in the [anatomy](/overview/anatomy/).
+of the container as in the [anatomy](/introduction/anatomy/).
 
 ### Keywords
 
@@ -23,4 +23,4 @@ of the container as in the [anatomy](/overview/anatomy/).
 See [RFC 2119](https://tools.ietf.org/html/rfc2119) for details
 
 ### Next
-Create your first `microservice.yml` by referring to it's [anatomy](/overview/anatomy/).
+Create your first `microservice.yml` by referring to it's [anatomy](/introduction/anatomy/).
