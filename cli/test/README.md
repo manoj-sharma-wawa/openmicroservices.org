@@ -1,6 +1,6 @@
 # Test
 ## Exec
-When ran in a directory of a microservice (a directory containing a `microservice.guide` and `Dockerfile`) this command will build
+When ran in a directory of a microservice (a directory containing a `microservice.yml` and `Dockerfile`) this command will build
 the microservice and execute a given command.
 ### Usage
 ```
