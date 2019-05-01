@@ -1,10 +1,10 @@
 # Test
-## Exec
-When ran in a directory of a microservice (a directory containing a `microservice.guide` and `Dockerfile`) this command will build
+## Run
+When ran in a directory of a microservice (a directory containing a `microservice.yml` and `Dockerfile`) this command will build
 the microservice and execute a given command.
 ### Usage
 ```
-exec [options] <action>
+omg run [options] <action>
 
   Options:
 
@@ -19,15 +19,15 @@ Action is a required argument. The microservice will be executed with the given 
 
 #### [options]
 ##### Arguments
-If a command required arguments they can be passed as follows: `-a key='val'`. If required arguments are not given `exec` will fail.
+If a command required arguments they can be passed as follows: `-a key='val'`. If required arguments are not given `run` will fail.
 
 ##### Environment variables
-If the microservice has any required environment variables they must be passed in with the `exec` command. Much like Docker,
-environment variables can be passed as follows: `-e FOO='bar'`. If a required environment variable is not supplied `exec` will fail.
+If the microservice has any required environment variables they must be passed in with the `run` command. Much like Docker,
+environment variables can be passed as follows: `-e FOO='bar'`. If a required environment variable is not supplied `run` will fail.
 
-### Example `exec` call
+### Example `run` call
 ```sh
-omg exec -e BOT_TOKEN='xoxb-****' send  -a message='Hello, World!' -a to=CAFAF9C
+omg run -e BOT_TOKEN='xoxb-****' send  -a message='Hello, World!' -a to=CAFAF9C
 ```
 ```sh
 ℹ Building Docker image
