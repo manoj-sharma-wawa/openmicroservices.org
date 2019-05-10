@@ -25,7 +25,7 @@
         <div class="head-container-footer">
           <p>
             This guide is under active development, we welcome<br>
-            your input and contributions in GitHub</p>
+            your input and contributions on GitHub</p>
           <div class="arrow-down" />
         </div>
       </div>
@@ -69,7 +69,7 @@ export default {
     data () {
       return this.$page.frontmatter
     },
-    
+
     repoLink () {
       const { repo } = this.$site.themeConfig
       if (repo) {
