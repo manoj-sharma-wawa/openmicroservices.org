@@ -1,4 +1,4 @@
-# System Requirements <Badge text="future" type="warn"/>
+# System Requirements <Badge text="FUTURE" type="error" tip="middle"/>
 
 Define containers system requirements.
 

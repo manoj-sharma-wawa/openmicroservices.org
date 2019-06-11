@@ -1,4 +1,4 @@
-# Authentication <Badge text="future" type="warn"/>
+# Authentication <Badge text="FUTURE" type="error" tip="middle"/>
 
 Services **SHOULD** support TLS authentication.
 

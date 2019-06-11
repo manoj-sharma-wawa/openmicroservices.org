@@ -1,4 +1,4 @@
-# Logs <Badge text="future" type="warn"/>
+# Logs <Badge text="FUTURE" type="error" tip="middle"/>
 
 Services **MUST** write logs to a specific location in a specific format.
 
