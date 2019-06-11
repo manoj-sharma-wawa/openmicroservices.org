@@ -1,4 +1,4 @@
-# Health Checks <Badge text="FUTURE" type="error" tip="middle"/>
+# Health Checks <Badge text="FUTURE" type="error" vertical="middle"/>
 
 A service **SHOULD** provide health checks to ensure that the Platform knows of it's current state.
 Services are consistently down will be terminated and restarted.

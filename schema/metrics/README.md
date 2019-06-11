@@ -1,4 +1,4 @@
-# Metrics <Badge text="FUTURE" type="error" tip="middle"/>
+# Metrics <Badge text="FUTURE" type="error" vertical="middle"/>
 
 Services **SHOULD** support metric delivery to [Prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
 
