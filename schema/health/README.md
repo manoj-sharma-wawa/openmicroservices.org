@@ -1,15 +1,16 @@
-# Health Checks
+# Health Checks <Badge text="FUTURE" type="error" vertical="middle"/>
 
 A service **SHOULD** provide health checks to ensure that the Platform knows of it's current state.
 Services are consistently down will be terminated and restarted.
 
 **Sample**
+
 ```yaml
 health:
   interval: 30s
   timeout: 30s
   retries: 3
-  command: ["curl", "-f", "http://localhost:8080"]
+  command: ['curl', '-f', 'http://localhost:8080']
 ```
 
 <json-table>
