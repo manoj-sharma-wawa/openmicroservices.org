@@ -1,4 +1,4 @@
-# Metrics
+# Metrics <Badge text="future" type="warn"/>
 
 Services **SHOULD** support metric delivery to [Prometheus](https://prometheus.io). Ingestion can be accomplished in many different ways.
 
@@ -9,6 +9,7 @@ There are many ways to organize metrics. It is important to always properly name
 See [Prometheus Metric and Label Naming](https://prometheus.io/docs/practices/naming/) to get a better understanding of best practices.
 
 ## StatsD
+
 Containers can send metrics to StatsD for aggregation and delivery.
 
 #### StatsD basic usage
@@ -25,10 +26,9 @@ echo "accounts.authentication.password.failure.no_email_found:1|c|#tag:value,ano
 | nc -u -w1 $OMG_STATSD_HOSTNAME $OMG_STATSD_PORT
 ```
 
-| Endpoint | Port | Protocol |
-| --- | --- | --- |
+| Endpoint               | Port               | Protocol      |
+| ---------------------- | ------------------ | ------------- |
 | `$OMG_STATSD_HOSTNAME` | `$OMG_STATSD_PORT` | `tcp` + `udp` |
-
 
 See [https://github.com/etsy/statsd](https://github.com/etsy/statsd) for usage details.
 
@@ -67,7 +67,6 @@ metrics:
 ```
 
 See the official [Prometheus](https://prometheus.io/docs/instrumenting/exporters/) documentation to understand how to write an exporter
-
 
 <!--
 # Details

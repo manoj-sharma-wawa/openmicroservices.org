@@ -1,12 +1,12 @@
-# Authentication
+# Authentication <Badge text="future" type="warn"/>
 
 Services **SHOULD** support TLS authentication.
 
 Services **MAY** support basic authentication.
 
 ```yaml
-auth: 
-  server: 
+auth:
+  server:
     tls:
       cert: /path/to/cert.pem
       key: /path/to/key.pem

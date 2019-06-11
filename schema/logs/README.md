@@ -1,4 +1,4 @@
-# Logs
+# Logs <Badge text="future" type="warn"/>
 
 Services **MUST** write logs to a specific location in a specific format.
 
@@ -68,13 +68,12 @@ Syslog environment variables:
 - `OMG_LOG_HOST`
 - `OMG_LOG_PORT`
 
-
 ### Logging Levels
 
 Levels **SHOULD** be one of the following.
 
 | Level    |
-|----------|
+| -------- |
 | CRITICAL |
 | ERROR    |
 | WARNING  |
