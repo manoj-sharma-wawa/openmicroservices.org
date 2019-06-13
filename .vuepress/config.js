@@ -1,9 +1,7 @@
 module.exports = {
   title: 'Open Microservice Guide',
   description: 'The open standard for reusable microservices',
-  head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]
-  ],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }]],
   themeConfig: {
     repo: 'microservices/microservice.guide',
     repoLabel: 'Edit on Github',
@@ -30,20 +28,15 @@ module.exports = {
           '/schema/interface/',
           '/schema/environment/',
           '/schema/volumes/',
-          '/schema/authentication/',
           '/schema/health/',
-          '/schema/requirements/',
           '/schema/metrics/',
-          '/schema/logs/',
+          '/schema/logs/'
         ]
       },
       {
         title: 'Examples',
         collapsable: false,
-        children: [
-          '/examples/http/',
-          '/examples/http/pubsub/'
-        ]
+        children: ['/examples/http/', '/examples/http/pubsub/']
       },
       {
         title: 'CLI',
@@ -57,4 +50,4 @@ module.exports = {
       }
     ]
   }
-};
+}
