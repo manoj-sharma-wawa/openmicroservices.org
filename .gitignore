@@ -2,3 +2,4 @@
 .vuepress/dist/
 .idea/
 node_modules/
+.vscode/

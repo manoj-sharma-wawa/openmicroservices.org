@@ -12,6 +12,10 @@ health:
     port: 5000
 ```
 
+## What's considered healthy
+
+Your health endpoint **MUST** return a HTTP `2xx` code when it's `healthy` and anything else when it's not. (e.g. 5xx, 4xx)
+
 <json-table>
 <p>
 {
