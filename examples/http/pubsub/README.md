@@ -1,6 +1,7 @@
 # Event-driven HTTP Service
 
 Building an event-driven HTTP service involves the following:
+
 1. Expose a HTTP endpoint when a container is started
 2. Accept subscription requests
 3. Deliver events via the subscription metadata provided in (2) above
@@ -8,13 +9,15 @@ Building an event-driven HTTP service involves the following:
 In this example, let's build a simple pub/sub service.
 
 ## Handling event subscription
+
 In microservice.yml:
+
 ```yaml
 version: 1
 lifecycle:
   startup:
-    command: ["node", "app.js"]
-commands:
+    command: ['node', 'app.js']
+actions:
   listen:
     events:
       help: Subscribe to events
@@ -40,7 +43,7 @@ commands:
       eventName:
         type: string
         in: requestBody
-        required: true  
+        required: true
       data:
         type: map
         in: requestBody
@@ -53,43 +56,47 @@ commands:
 ```
 
 To publish an event, the HTTP call made by the Platform to the service will be:
+
 ```sh
-curl -X POST \ 
-     -d '{"eventName": "foo", "data": {"foo": "bar"}}' \ 
-     -H 'Content-Type: application/json; charset=utf-8' \ 
+curl -X POST \
+     -d '{"eventName": "foo", "data": {"foo": "bar"}}' \
+     -H 'Content-Type: application/json; charset=utf-8' \
      http://service:5000/publish
 ```
 
 When the Platform wants to subscribe to an event emitted from the service, the
 Platform will make the following HTTP request:
+
 ```sh
-curl -X POST \ 
-     -d '{"endpoint": "http://platform:8000/foo/bar/event", \ 
-          "id": "subscription uuid", "data": {"name": "foo", "id": "uuid"}}' \ 
-     -H 'Content-Type: application/json; charset=utf-8' \ 
+curl -X POST \
+     -d '{"endpoint": "http://platform:8000/foo/bar/event", \
+          "id": "subscription uuid", "data": {"name": "foo", "id": "uuid"}}' \
+     -H 'Content-Type: application/json; charset=utf-8' \
      http://service:5000/subscribe
 ```
 
 ## Delivering events
+
 After the Platform has subscribed to events via the subscription HTTP request above,
-it's time for the service to deliver these events to the Platform. 
+it's time for the service to deliver these events to the Platform.
 The service MUST make an HTTP request to the platform, to the endpoint
 specified during the subscription HTTP call.
 
-The HTTP payload must follow the 
-[CloudEvents](https://github.com/cloudevents/spec/blob/master/json-format.md) 
+The HTTP payload must follow the
+[CloudEvents](https://github.com/cloudevents/spec/blob/master/json-format.md)
 JSON specification.
+
 ```sh
-curl -X POST \ 
+curl -X POST \
      -d '{ \
         "eventType": "foo", \
         "cloudEventsVersion": "0.1", \
         "source": "/context", \
         "eventID": "1234-1234-1234", \
         "eventTime": "2018-08-06T17:53:09Z" \
-        "contentType": "application/vnd.omg.object+json", \ 
+        "contentType": "application/vnd.omg.object+json", \
         "data": {"data": {"foo": "bar"}} \
         }' \
-     -H 'Content-Type: application/json; charset=utf-8' \ 
+     -H 'Content-Type: application/json; charset=utf-8' \
      http://platform:8000/foo/bar/event
 ```
