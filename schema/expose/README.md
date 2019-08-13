@@ -12,14 +12,33 @@ omg: 1
 lifecycle: ...
 expose:
   management_ui:
+    help: The management interface
     http:
       path: /management_ui
-      port: 8080
+      port: 8080      
   control_interface:
+    help: The control interface
     http:
       path: /control
       port: 8081
 ```
+
+<Badge text="expose.$" type="tip"/>
+
+<json-table>
+<p>
+{
+    "http": {
+        "required": true, 
+        "desc": "The HTTP configuration for this `expose`"
+    },
+    "help": {
+        "required": false, 
+        "desc": "A short description about this `expose` which can provide clarity to the end user."
+    }
+}
+</p>
+</json-table>
 
 ## HTTP
 <Badge text="expose.$.http" type="tip"/>
