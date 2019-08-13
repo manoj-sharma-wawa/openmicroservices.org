@@ -45,8 +45,7 @@ module.exports = {
         children: [
           '/cli/overview/',
           '/cli/validate/',
-          '/cli/test/',
-          '/cli/debug/'
+          '/cli/test/'
         ]
       }
     ]
