@@ -19,8 +19,8 @@ lifecycle:
     command: ['node', 'app.js']
 actions:
   listen:
+    help: Subscribe to events
     events:
-      help: Subscribe to events
       event:
         http:
           port: 5000
