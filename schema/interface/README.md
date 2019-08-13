@@ -18,7 +18,7 @@ actions:
       port: 8080
       method: get
       path: /convert
-      url: https://example.com/api/full/path/with/query/parameters
+      url: https://example.com/api/full/path/without/query/parameters
 ```
 
 <json-table>
