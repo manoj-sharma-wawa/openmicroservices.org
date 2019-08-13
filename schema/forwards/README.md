@@ -7,7 +7,7 @@ section MAY be declared. This section MUST appear in the root of the `microservi
 Any HTTP traffic coming to this endpoint from an external source (the internet)
 SHOULD be directly proxied to your microservice.
 
-A `forwards` section may be defined as the following:
+A `forwards` section may be defined as:
 ```yaml
 omg: 1
 lifecycle: ...
