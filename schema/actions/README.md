@@ -25,7 +25,7 @@ Here's an action called `convert` which accepts `units`, `from` and `to` returni
 actions:
   convert:
     help: Convert a currency into another currency
-    http: # defining how to execute this action, more below
+    http:  # Defining how to execute this action, more below.
     arguments:
       units:
         type: number
@@ -33,11 +33,16 @@ actions:
         type: string
       to:
         type: string
+      conversionAttributes:
+        type: object
+        properties:  # Required if the type is object.
+          decimals:
+            type: int
     output:
       type: object
       properties:
         units:
-          type: number
+          type: float
         currency:
           type: string
 ```
@@ -84,8 +89,11 @@ An `action` **MUST** declare all arguments it accepts. Each argument, will have 
         "desc": "A short description of the argument which can provide clarity to end user."
     },
     "type": {
-        "desc": "The type of this argument. It must be one of `int`, `float`, `string`, `list`, `map`, `boolean`, `enum`, or `any`",
+        "desc": "The type of this argument. It must be one of `object`, `int`, `float`, `string`, `list`, `map`, `boolean`, `enum`, or `any`",
         "required": true
+    },
+    "properties": {
+        "desc": "If the value for `type` is `object`, this field **MUST** be specified. These properties will be serialised according to the execution strategy specified (eg: for the `http` strategy, the fields under `properties` will be serialised based on the `contentType` specified). `object`s MAY be nested in other `object`s"
     },
     "in": {
         "desc": "The location of this argument. Each execution strategy provides different possible values for this. For possible values, see [Interfacing](/schema/interface/)",
