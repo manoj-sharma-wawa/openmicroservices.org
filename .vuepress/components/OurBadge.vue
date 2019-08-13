@@ -34,7 +34,7 @@ export default {
   color white
   background-color #42b983
   &.tip, &.green
-    background-color #42b983
+    background-color red
   &.error
     background-color #DA5961 //#f66
   &.warning, &.warn, &.yellow
