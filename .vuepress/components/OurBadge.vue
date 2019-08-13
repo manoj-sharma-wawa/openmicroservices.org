@@ -1,6 +1,5 @@
 <script>
 export default {
-  functional: true,
   props: {
     type: {
       type: String,
