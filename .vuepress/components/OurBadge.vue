@@ -1,25 +1,24 @@
 <script>
-export default {
-  props: {
-    type: {
-      type: String,
-      default: 'tip'
-    },
-    text: String,
-    vertical: {
-      type: String,
-      default: 'top'
+    export default {
+        name: 'OurBadge',
+        render: function (h) {
+            let type = 'tip';
+            let vertical = 'top';
+            if (this.$options._parentVnode.data) {
+                if (this.$options._parentVnode.data.attrs) {
+                    type = this.$options._parentVnode.data.attrs.type || type;
+                    vertical = this.$options._parentVnode.data.attrs.vertical || vertical;
+                }
+            }
+            let text = this.$options._renderChildren[0].text;
+            return h('span', {
+                class: ['badge', type],
+                style: {
+                    verticalAlign: vertical
+                }
+            }, text)
+        }
     }
-  },
-  render (h, { props, slots }) {
-    return h('span', {
-      class: ['badge', props.type],
-      style: {
-        verticalAlign: props.vertical
-      }
-    }, props.text || slots().default)
-  }
-}
 </script>
 
 <style lang="stylus" scoped>
@@ -33,7 +32,7 @@ export default {
   color white
   background-color #42b983
   &.tip, &.green
-    background-color red
+    background-color #42b983
   &.error
     background-color #DA5961 //#f66
   &.warning, &.warn, &.yellow

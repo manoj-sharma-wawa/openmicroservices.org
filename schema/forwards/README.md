@@ -24,7 +24,7 @@ forwards:
       port: 8081
 ```
 
-<OurBadge>forwards.S</OurBadge>
+<OurBadge type='tip'>forwards.$</OurBadge>
 
 <json-table>
 <p>
@@ -42,7 +42,7 @@ forwards:
 </json-table>
 
 ## HTTP
-<OurBadge>forwards.S.http</OurBadge>
+<OurBadge type='tip'>forwards.$.http</OurBadge>
 
 <json-table>
 <p>
