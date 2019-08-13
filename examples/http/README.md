@@ -34,7 +34,7 @@ app = Flask(__name__)
 @app.route('/concat')
 def concat():
     left = request.args.get('left', '')
-    left = request.args.get('right', '')
+    right = request.args.get('right', '')
     return f'{left}{right}'
 ```
 
