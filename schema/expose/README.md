@@ -1,7 +1,8 @@
 # Expose
 
-To indicate to a cloud provider that certain endpoints of your micrservice
-may be exposed to the public internet, an `expose` MAY be declared.
+To indicate to a cloud provider that certain endpoints of your microservice
+may be exposed to the public internet, an `expose` section MAY be declared.
+This section MUST appear in the root of the `microservice.yaml`.
 
 Any HTTP traffic coming to this endpoint from an external source (the internet)
 SHOULD be directly proxied to your container.
