@@ -7,7 +7,7 @@ each action **MUST** provide an interface for it to be executed:
 
 ## HTTP
 
-<Badge text="actions.$.http" type="info"/>
+<SBadge text="actions.$.http" type="info"/>
 
 An `action` **MAY** use the HTTP protocol to execute it's function.
 
@@ -118,7 +118,7 @@ $ curl -X POST http://service:8080/path -H "Content-Type: application/json" -d '
 
 ## Command
 
-<Badge text="actions.$.format" type="info"/>
+<SBadge text="actions.$.format" type="info"/>
 
 If the container provider is Docker, then `docker exec` is used:
 
@@ -195,7 +195,7 @@ $ docker run --rm alpine /app/count.sh '{"word": "hello"}'
 
 ## RPC
 
-<Badge text="actions.$.rpc" type="info"/>
+<SBadge text="actions.$.rpc" type="info"/>
 
 The Service **MAY** communicate via RPC.
 
