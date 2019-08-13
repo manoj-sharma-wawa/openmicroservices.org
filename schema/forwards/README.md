@@ -1,11 +1,11 @@
 # Forwards
 
-To indicate to a cloud provider that certain endpoints of your microservice
-may be exposed to the public internet, a `forwards` section MAY be declared.
-This section MUST appear in the root of the `microservice.yaml`.
+To indicate to a cloud provider that traffic from the outside world (the internet)
+MAY be forwarded to certain endpoints of your microservice, a `forwards`
+section MAY be declared. This section MUST appear in the root of the `microservice.yaml`.
 
 Any HTTP traffic coming to this endpoint from an external source (the internet)
-SHOULD be directly proxied to your container.
+SHOULD be directly proxied to your microservice.
 
 A `forwards` section may be defined as the following:
 ```yaml
