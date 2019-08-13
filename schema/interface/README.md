@@ -18,6 +18,7 @@ actions:
       port: 8080
       method: get
       path: /convert
+      url: https://example.com/api/full/path/with/query/parameters
 ```
 
 <json-table>
@@ -28,11 +29,15 @@ actions:
         "required": true
     },
     "port": {                                                          
-        "desc": "The port on which the connection must be established.",
+        "desc": "If specified, `url` **MUST NOT** be specified. The port on which the connection must be established (to your microservice).",
         "required": true
     },
     "path": {                                                          
-        "desc": "The path for this action to be executed",
+        "desc": "If specified, `url` **MUST NOT** be specified. The path for this action to be executed.",
+        "required": true
+    },
+    "url": {
+        "desc": "If specified, `port` and `path` **MUST NOT** be specified. To be used when your action invokes a resource which is external to your microservice. The URL specified MUST BE absolute (with the scheme, host, port, and path). No query parameters should be included in the URL. Path parameters may be used (eg: `https://example.com/api/{apiVersion}/foo`)",
         "required": true
     },
     "contentType": {                                                              
