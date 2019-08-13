@@ -88,7 +88,7 @@ An `action` **MUST** declare all arguments it accepts. Each argument, will have 
         "required": true
     },
     "in": {
-        "desc": "The location of this argument. Each execution strategy provides different possible values for this. Possible values are `requestBody`, `query`, and `path`. (**Required** for `http` interface)",
+        "desc": "The location of this argument. Each execution strategy provides different possible values for this. For possible values, see [Interfacing](/schema/interface/)",
         "required": true
     },
     "required": {

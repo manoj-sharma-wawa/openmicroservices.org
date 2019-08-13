@@ -64,7 +64,7 @@ The Platform will make HTTP requests to the server which results in a response b
 
 ### Location of arguments in the HTTP request
 
-All types of HTTP requests will apply arguments based on the specified `in` of the argument.
+All types of HTTP requests will apply arguments based on the value of `in` for that argument.
 
 The below example shows a `GET` request with a query and path parameter.
 
@@ -85,6 +85,21 @@ actions:
       method: get
       path: /fetch_usd/{currency}
 ```
+
+<SBadge>actions.$.arguments.$</SBadge>
+In addition to the fields documented [here](/schema/actions/#arguments), the following fields are required for
+interfacing via HTTP:
+
+<json-table>
+<p>
+{
+    "in": {
+        "required": true,
+        "desc": "The location of this argument in the HTTP request. It MUST be one of `query`, `requestBody`, `path`, or `header`."
+    }
+}
+</p>
+</json-table>
 
 *Path parameters **MUST** be specified in the `path`*
 
