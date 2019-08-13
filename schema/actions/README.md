@@ -62,7 +62,7 @@ Within a named `action`, the following fields are available:
         "required": true
     },
     "http | rpc | format": {
-        "desc": "How to call the action. [Read more](/schema/interface)",
+        "desc": "How to call the action. [Read more](/schema/interface/)",
         "required": true
     }
 }
