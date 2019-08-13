@@ -24,7 +24,6 @@ forwards:
       port: 8081
 ```
 
-## forwards.$
 <Badge text="forwards.$" type="tip"/>
 
 <json-table>
