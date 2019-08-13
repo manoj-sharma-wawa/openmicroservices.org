@@ -158,7 +158,7 @@ Below are a few services that publish events.
 
 ## Arguments
 
-<Badge text="actions.$.events.$.arguments" type="info"/>
+<SBadge text="actions.$.events.$.arguments" type="info"/>
 
 Subscribing to an event **MAY** include `arguments` which can be used to define certain parameters
 concerning the subscription. For example, filtering the content before the event is published.
@@ -168,7 +168,7 @@ See [Action Arguments](/schema/actions/#arguments) for details.
 
 ## Output
 
-<Badge text="actions.$.events.$.output" type="info"/>
+<SBadge text="actions.$.events.$.output" type="info"/>
 
 The event published to the Platform **MUST** include the `output` detailing the structure of the event data published.
 

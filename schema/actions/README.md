@@ -71,7 +71,7 @@ Within a named `action`, the following fields are available:
 
 ## Arguments
 
-<Badge text="actions.$.arguments" type="tip"/> <Badge text="actions.$.events.$.arguments" type="tip"/>
+<SBadge text="actions.$.arguments" type="tip"/> <SBadge text="actions.$.events.$.arguments" type="tip"/>
 
 Define the `arguments` (input data) that the action accepts.
 
@@ -139,7 +139,7 @@ $ curl -H "Content-Type: application/json" -d '{"text":"einstein"}' http://servi
 
 ### Patterns
 
-<Badge text="actions.$.arguments.$.pattern" type="tip"/> <Badge text="actions.$.events.$.arguments.$.pattern" type="tip"/>
+<SBadge text="actions.$.arguments.$.pattern" type="tip"/> <SBadge text="actions.$.events.$.arguments.$.pattern" type="tip"/>
 
 The argument `color` must match the regexp `pattern`.
 
@@ -154,7 +154,7 @@ actions:
 
 ### Enums
 
-<Badge text="actions.$.arguments.$.enum" type="tip"/> <Badge text="actions.$.events.$.arguments.$.enum" type="tip"/>
+<SBadge text="actions.$.arguments.$.enum" type="tip"/> <SBadge text="actions.$.events.$.arguments.$.enum" type="tip"/>
 
 
 The argument `color` must match one of the values under `enum`.
@@ -173,7 +173,7 @@ actions:
 
 ### Range
 
-<Badge text="actions.$.arguments.$.range" type="tip"/> <Badge text="actions.$.events.$.arguments.$.range" type="tip"/>
+<SBadge text="actions.$.arguments.$.range" type="tip"/> <SBadge text="actions.$.events.$.arguments.$.range" type="tip"/>
 
 The argument `threshold` must be within a `range`.
 
@@ -192,7 +192,7 @@ actions:
 ## Output
 
 
-<Badge text="actions.$.arguments.$.output" type="tip"/> <Badge text="actions.$.events.$.arguments.$.output" type="tip"/>
+<SBadge text="actions.$.arguments.$.output" type="tip"/> <SBadge text="actions.$.events.$.arguments.$.output" type="tip"/>
 
 
 Outputs are what the action returns as its result.
@@ -222,7 +222,7 @@ An `action` **MUST** define it's `output`.
 
 ### Properties
 
-<Badge text="actions.$.arguments.$.output.properties" type="tip"/> <Badge text="actions.$.events.$.arguments.$.output.properties" type="tip"/>
+<SBadge text="actions.$.arguments.$.output.properties" type="tip"/> <SBadge text="actions.$.events.$.arguments.$.output.properties" type="tip"/>
 
 
 A map of properties this object has defined.
@@ -244,7 +244,7 @@ The `output` of this `action` returns an object that has two properties that can
 
 ### Next Actions
 
-<Badge text="actions.$.arguments.$.output.actions" type="tip"/> <Badge text="actions.$.events.$.arguments.$.output.actions" type="tip"/>
+<SBadge text="actions.$.arguments.$.output.actions" type="tip"/> <SBadge text="actions.$.events.$.arguments.$.output.actions" type="tip"/>
 
 An `output` **MAY** define other `actions` the user may perform. 
 

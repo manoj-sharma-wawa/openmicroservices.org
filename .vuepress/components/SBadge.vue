@@ -1,16 +1,20 @@
 <script>
     export default {
-        name: 'OurBadge',
+        name: 'SBadge',
         render: function (h) {
             let type = 'tip';
             let vertical = 'top';
-            if (this.$options._parentVnode.data) {
-                if (this.$options._parentVnode.data.attrs) {
-                    type = this.$options._parentVnode.data.attrs.type || type;
-                    vertical = this.$options._parentVnode.data.attrs.vertical || vertical;
-                }
+            let text = null;
+            if (this.$attrs) {
+                type = this.$attrs.type || type;
+                vertical = this.$attrs.vertical || vertical;
+                text = this.$attrs.text || this.$slots.default[0].text;
             }
-            let text = this.$options._renderChildren[0].text;
+
+            if (!text) {
+                text = this.$slots.default[0].text;
+            }
+
             return h('span', {
                 class: ['badge', type],
                 style: {
