@@ -1,17 +1,17 @@
-# Expose
+# Forwards
 
 To indicate to a cloud provider that certain endpoints of your microservice
-may be exposed to the public internet, an `expose` section MAY be declared.
+may be exposed to the public internet, a `forwards` section MAY be declared.
 This section MUST appear in the root of the `microservice.yaml`.
 
 Any HTTP traffic coming to this endpoint from an external source (the internet)
 SHOULD be directly proxied to your container.
 
-An `expose` may be defined as the following:
+A `forwards` section may be defined as the following:
 ```yaml
 omg: 1
 lifecycle: ...
-expose:
+forwards:
   management_ui:
     help: The management interface
     http:
@@ -24,36 +24,36 @@ expose:
       port: 8081
 ```
 
-<Badge text="expose.$" type="tip"/>
+<Badge text="forwards.$" type="tip"/>
 
 <json-table>
 <p>
 {
     "http": {
         "required": true, 
-        "desc": "The HTTP configuration for this `expose`"
+        "desc": "The HTTP configuration for this `forward`"
     },
     "help": {
         "required": false, 
-        "desc": "A short description about this `expose` which can provide clarity to the end user."
+        "desc": "A short description about this `forward` which can provide clarity to the end user."
     }
 }
 </p>
 </json-table>
 
 ## HTTP
-<Badge text="expose.$.http" type="tip"/>
+<Badge text="forwards.$.http" type="tip"/>
 
 <json-table>
 <p>
 {
     "path": {
         "required": true, 
-        "desc": "The HTTP path for this `expose`"
+        "desc": "The HTTP path for this `forward`"
     },
     "port": {
         "required": true, 
-        "desc": "The port for this `expose`"
+        "desc": "The port for this `forward`"
     }
 }
 </p>
