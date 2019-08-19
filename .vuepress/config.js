@@ -40,6 +40,13 @@ module.exports = {
         children: ['/examples/http/', '/examples/http/pubsub/']
       },
       {
+        title: 'Interoperability',
+        collapsable: false,
+        children: [
+          '/interoperability/openapi/'
+        ]
+      },
+      {
         title: 'CLI',
         collapsable: false,
         children: [
