@@ -1,5 +1,5 @@
 <template>
-  <div class="contact container divided large">
+  <div class="contact container large">
     <h2 class="title">Contribute With OMG!</h2>
     <p class="text">
       We are under development and opent to contribution. 100% open source.
@@ -37,6 +37,7 @@ export default {
 
   .title
     text-align: center
+    color: white
 
   .text
     text-align: center

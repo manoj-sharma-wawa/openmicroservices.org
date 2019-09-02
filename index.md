@@ -1,5 +1,5 @@
 ---
 layout: Index
 home: true
-navbar: false
+navbar: true
 ---

@@ -1,0 +1,49 @@
+<template>
+  <div class="libraries">
+    <h3 class="title">OMG Libraries</h3>
+    <p class="text">
+      It can be tedious to write your own microservice.yml so we want to write libraries for all the popular languages so that it all happens automatically. 
+      <br>
+      We already have written one for <span class="indigo">Python</span>, and would love your contributions for other languages.
+    </p>
+    <s-button 
+      class="repo"
+      secondary
+      arrow
+      lightShadow
+    >
+      OMG Repo
+    </s-button>
+  </div>
+</template>
+
+<script>
+import SButton from '../../components/Button.vue'
+
+export default {
+  name: 'CommunityLibraries',
+  components: {
+    SButton
+  }
+}
+</script>
+
+<style lang="stylus" scoped>
+@require '../../../override'
+@require '../../../fonts'
+
+.libraries
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin-top: 5rem
+  @media (min-width: $MQMobile + 1px)
+    align-items: flex-start
+    justify-content: flex-start
+  .text
+    text-align: center
+    @media (min-width: $MQMobile + 1px)
+      text-align: left
+    .indigo
+      color: rgb(119, 122, 255)
+</style>

@@ -5,11 +5,11 @@
       { secondary },
       { 'dark-shadow': darkShadow },
       { 'light-shadow': lightShadow },
-      { arrow }
+      { 'arrow-icon': arrow }
     ]"
     @click="$emit('click')"
   >
-    {{ $slots.default[0].text }}
+    <span>{{ $slots.default[0].text }}</span>
     <svg 
       v-if="arrow"
       width="19"
@@ -22,19 +22,19 @@
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M5 5.36621C5 4.81393 5.44772 4.36621 6 4.36621H15.5C16.0523 4.36621 16.5 4.81393 16.5 5.36621C16.5 5.9185 16.0523 6.36621 15.5 6.36621H6C5.44772 6.36621 5 5.9185 5 5.36621Z"
-        fill="#213056"
+        :fill="primary ? 'white' : '#213056'"
       />
       <path 
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M0 5.36621C0 4.81393 0.447715 4.36621 1 4.36621H3C3.55228 4.36621 4 4.81393 4 5.36621C4 5.9185 3.55228 6.36621 3 6.36621H1C0.447715 6.36621 0 5.9185 0 5.36621Z"
-        fill="#213056"
+        :fill="primary ? 'white' : '#213056'"
       />
       <path 
         fill-rule="evenodd"
         clip-rule="evenodd"
         d="M12.9408 0.275565C13.3967 -0.124709 14.0948 -0.0841481 14.5 0.366159L19 5.36636L14.5 10.3662C14.0947 10.8165 13.3966 10.8571 12.9407 10.4568C12.4848 10.0565 12.4438 9.367 12.849 8.91669L16.0446 5.36636L12.8491 1.81568C12.4438 1.36537 12.4849 0.675838 12.9408 0.275565Z"
-        fill="#213056"
+        :fill="primary ? 'white' : '#213056'"
       />
     </svg>
   </button>
@@ -69,11 +69,12 @@ button
   cursor: pointer
   min-width: fit-content
   min-height: fit-content
+  max-width: fit-content
   svg
     margin-left: 1.5rem
-  &.arrow
+  &.arrow-icon
     justify-content: space-between
-  &:not(.arrow)
+  &:not(.arrow-icon)
     justify-content: center
   &.primary
     background: $primaryColor

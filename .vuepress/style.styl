@@ -18,19 +18,19 @@ a
   color $primaryColor
   text-decoration none
 
-.home p
-  letter-spacing .5px
-  text-align left
+// .home p
+//   letter-spacing .5px
+//   text-align left
 
-p
-  font-size 1rem
-  text-align left
-  line-height 1.69
-  font-weight 400
-  &.larger
-    font-weight 500
-    font-size 1.125rem
-    line-height 1.5
+// p
+//   font-size 1rem
+//   text-align left
+//   line-height 1.69
+//   font-weight 400
+//   &.larger
+//     font-weight 500
+//     font-size 1.125rem
+//     line-height 1.5
 
 p a code
   font-size 1rem
@@ -41,11 +41,21 @@ p a code
 
 h1, h2, h3, h4, h5, h6
   font-family: DM Bold Sans
-  color: white
+  color: $darkColor
   border: none
   margin: 0
+h1
+  font-size: 3.5rem
+  line-height: 4rem
+  @media (min-width: ($MQMobile + 1px))
+    font-size 3.125rem
 h2
   font-size: 2.625rem
+h3
+  font-size: 2.375rem
+h4
+  font-size: 1.5rem
+
 
 // h1, h2, h3, h4, h5, h6
 //   font-weight 600
@@ -62,15 +72,15 @@ h2
 //   &:hover .header-anchor
 //     opacity: 1
 
-.home h1
-  letter-spacing .375rem
-  font-size 1.4rem
-  @media (min-width: ($MQMobile + 1px))
-    font-size 3.125rem
-  font-style normal
-  font-stretch normal
-  line-height 1.8
-  text-transform uppercase
+// .page h1
+//   letter-spacing .375rem
+//   font-size 1.4rem
+//   @media (min-width: ($MQMobile + 1px))
+//     font-size 3.125rem
+//   font-style normal
+//   font-stretch normal
+//   line-height 1.8
+//   text-transform uppercase
 
 // .home h2
 //   font-size 1.5rem
@@ -80,17 +90,17 @@ h2
 //   letter-spacing 5px
 //   text-transform uppercase
 
-.home h3
-  font-size 1.5rem
-  line-height 1.33
-  letter-spacing 3.2px
-  text-transform uppercase
+// .home h3
+//   font-size 1.5rem
+//   line-height 1.33
+//   letter-spacing 3.2px
+//   text-transform uppercase
 
-.home h4
-  font-size 1.25rem
-  line-height 1.2
-  letter-spacing 1px
-  text-transform uppercase
+// .home h4
+//   font-size 1.25rem
+//   line-height 1.2
+//   letter-spacing 1px
+//   text-transform uppercase
 
 @media (min-width: ($MQMobile + 1px))
   .theme-container.no-sidebar

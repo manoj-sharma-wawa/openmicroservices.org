@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import NavLink from '../NavLink.vue'
+import NavLink from './NavLink.vue'
 
 export default {
   name: 'Footer',

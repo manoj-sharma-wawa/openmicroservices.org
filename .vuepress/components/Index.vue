@@ -54,13 +54,13 @@
 </template>
 
 <script>
-import NavLink from './NavLink.vue'
-import SearchBox from './parts/SearchBoxHead.vue'
-import TwelveFactors from './parts/TwelveFactors.vue'
-import WhyOmg from './parts/WhyOmg.vue'
-import Features from './parts/Features.vue'
-import Contact from './parts/Contact.vue'
-import Footer from './parts/Footer.vue'
+import NavLink from './components/NavLink.vue'
+import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
+import SearchBox from './pages/home/SearchBoxHead.vue'
+import TwelveFactors from './pages/home/TwelveFactors.vue'
+import WhyOmg from './pages/home/WhyOmg.vue'
+import Features from './pages/home/Features.vue'
 
 export default {
   components: { NavLink, SearchBox, TwelveFactors, WhyOmg, Features, Contact, Footer },
