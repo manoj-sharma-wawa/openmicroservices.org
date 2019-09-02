@@ -38,7 +38,7 @@
 
     <Features />
 
-    <div class="cube-bg2">
+    <div class="dark-bg">
       <Contact />
       <Footer />
     </div>

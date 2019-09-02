@@ -1,54 +1,51 @@
 <template>
-  <div class="container divided large">
-    <div class="container-content-left">
-      <h2>GET <span>INVOLVED</span></h2>
-      <p class="larger">
-        Do you have feedback, questions<br>
-        or an inquiry to support the OMG standard? Reach out to us.
-      </p>
-    </div>
-    <div class="container-content-right">
-      <form :class="['form', {'error': error}]" @submit.prevent="submit">
-        <input required v-model="email" class="input" type="email" placeholder="E-MAIL" />
-        <textarea required v-model="message" placeholder="TYPE A MESSAGE" rows="8" />
-        <button type="submit" class="button button-primary" :disabled="sending">{{ success ? 'Thanks !' : 'Send' }}</button>
-      </form>
-    </div>
+  <div class="contact container divided large">
+    <h2 class="title">Contribute With OMG!</h2>
+    <p class="text">
+      We are under development and opent to contribution. 100% open source.
+      <br>
+      A part of the Linux Fountdation and under the CNCF.
+    </p>
+    <s-button 
+      primary 
+      lightShadow 
+      class="contribute"
+    >
+      Contribute to OMG
+    </s-button>
+    <img class="cloud-native" src="/assets/img/cncf_color@2x.png" />
   </div>
 </template>
 
 <script>
+import SButton from './Button.vue'
+
 export default {
   name: 'Contact',
-  data: () => ({
-    sending: false,
-    success: false,
-    error: false,
-    email: '',
-    message: ''
-  }),
-  watch: {
-    error: function () { setTimeout(() => (this.error = this.sending = false), 820) },
-    success: function () { setTimeout(() => (this.success = this.sending = false), 1000) }
-  },
-  methods: {
-    submit: function () {
-      if (!this.email || !this.message || this.sending) return
-      this.sending = true
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `form-name=contact&email=${encodeURIComponent(this.email)}&message=${encodeURIComponent(this.message)}`
-      }).then((res) => {
-        if (res.status !== 200) {
-          this.error = true
-        } else {
-          this.success = true
-          this.email = ''
-          this.message = ''
-        }
-      })
-    }
+  components: {
+    SButton
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.contact
+  display: flex
+  flex-direction: column !important
+  align-items: center
+  justify-content: flex-start
+
+  .title
+    text-align: center
+
+  .text
+    text-align: center
+    margin: 1rem 0 2rem 0
+  
+  .contribute
+    margin-bottom: 1.5rem
+
+  .cloud-native
+    width: 130px
+    height: 42px
+</style>

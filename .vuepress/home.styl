@@ -24,10 +24,10 @@ backgroundImage(name, ext, imagePath = '/assets/img/')
 .home
   max-width unset
   padding 0
-  h1, h2, h3, h4, h5
-    font-family Autoscape, sans-serif 
-    font-weight normal
-    border none !important
+  // h1, h2, h3, h4, h5
+  //   font-family Autoscape, sans-serif 
+  //   font-weight normal
+  //   border none !important
   .container
     max-width 75rem
     padding 0
@@ -201,59 +201,59 @@ backgroundImage(name, ext, imagePath = '/assets/img/')
           font-weight 600
           color $primaryColor
 
-  .footer
-    position relative
-    background-color #0c1039
-    display flex
-    align-items center
-    flex-grow 1
-    flex-shrink 1
-    flex 1 1 100%
-    flex-wrap wrap
-    flex-direction row
-    padding 0
-    padding-bottom 1rem
-    @media (min-width: ($MQMobile + 1px))
-      flex-wrap nowrap
-      overflow hidden
-      height 5rem
-      padding-bottom 0
-    margin 2rem 0 0
-    border 1px solid $primaryColor
-    border-bottom none
-    .footer-left, .footer-centered, .footer-right
-      display inline-flex
-      align-items center
-      justify-content center
-      flex-shrink 1
-      flex-grow 1
-      height 100%
-    .footer-left
-      justify-content space-between
-      text-align left
-      position relative
-      padding 1rem 2rem
-    .footer-left, .footer-right
-      flex 1 1 100%
-      @media (min-width: ($MQMobile + 1px))
-        flex 1 1 20%
-    .footer-centered
-      flex 1 1 100%
-      @media (min-width: ($MQMobile + 1px))
-        flex 1 1 60%
-        border-left 1px solid $primaryColor
-        border-right 1px solid $primaryColor
-      p, p a
-        font-size .75rem
-        line-height 1
-        @media (min-width: ($MQMobile + 1px))
-          margin 0
-        letter-spacing 1.3px
-        text-transform uppercase
-        color #fff
-        font-weight 600
-        a
-          color $accentColor2
+  // .footer
+  //   position relative
+  //   background-color #0c1039
+  //   display flex
+  //   align-items center
+  //   flex-grow 1
+  //   flex-shrink 1
+  //   flex 1 1 100%
+  //   flex-wrap wrap
+  //   flex-direction row
+  //   padding 0
+  //   padding-bottom 1rem
+  //   @media (min-width: ($MQMobile + 1px))
+  //     flex-wrap nowrap
+  //     overflow hidden
+  //     height 5rem
+  //     padding-bottom 0
+  //   margin 2rem 0 0
+  //   border 1px solid $primaryColor
+  //   border-bottom none
+  //   .footer-left, .footer-centered, .footer-right
+  //     display inline-flex
+  //     align-items center
+  //     justify-content center
+  //     flex-shrink 1
+  //     flex-grow 1
+  //     height 100%
+  //   .footer-left
+  //     justify-content space-between
+  //     text-align left
+  //     position relative
+  //     padding 1rem 2rem
+  //   .footer-left, .footer-right
+  //     flex 1 1 100%
+  //     @media (min-width: ($MQMobile + 1px))
+  //       flex 1 1 20%
+  //   .footer-centered
+  //     flex 1 1 100%
+  //     @media (min-width: ($MQMobile + 1px))
+  //       flex 1 1 60%
+  //       border-left 1px solid $primaryColor
+  //       border-right 1px solid $primaryColor
+  //     p, p a
+  //       font-size .75rem
+  //       line-height 1
+  //       @media (min-width: ($MQMobile + 1px))
+  //         margin 0
+  //       letter-spacing 1.3px
+  //       text-transform uppercase
+  //       color #fff
+  //       font-weight 600
+  //       a
+  //         color $accentColor2
   .container
     &.large
       padding 2rem !important
@@ -287,16 +287,16 @@ backgroundImage(name, ext, imagePath = '/assets/img/')
           text-align right
           @media (max-width: $MQMobile)
             display none
-    h2
-      padding 0
-      &.title
-        margin 12.5rem 0 2rem !important
-      span
-        border 3px solid $accentColor2
-        padding 0 .5rem
-        display inline-block
-      & + svg
-        display block
+    // h2
+    //   padding 0
+    //   &.title
+    //     margin 12.5rem 0 2rem !important
+    //   span
+    //     border 3px solid $accentColor2
+    //     padding 0 .5rem
+    //     display inline-block
+    //   & + svg
+    //     display block
   .factors
     display flex
     margin 5rem 0 11.75rem
@@ -336,6 +336,11 @@ backgroundImage(name, ext, imagePath = '/assets/img/')
         b
           font-weight 600
           color $primaryColor
+
+.dark-bg
+  background: $darkColor
+  color: white
+
 .cube-bg
   backgroundImage('cube-bg', 'png')
   background-size cover
