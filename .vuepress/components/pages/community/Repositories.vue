@@ -48,9 +48,9 @@ export default {
   display: flex
   flex-direction: column
   align-items: center
-  padding: 4rem 1rem
+  padding: 4rem 1rem !important
   @media (min-width: $MQMobile + 1px)
-    padding: 4rem 0
+    padding: 4rem 0 !important
     flex-direction: row
     justify-content: space-between
     align-items: flex-end
