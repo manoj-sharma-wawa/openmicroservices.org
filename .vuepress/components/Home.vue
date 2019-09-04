@@ -1,15 +1,18 @@
 <template>
   <OMGPage>
-    TOTO
+    <OMGApp />
   </OMGPage>
 </template>
 
 <script>
 import OMGPage from './shared/OMGPage.vue'
 
+import OMGApp from './pages/home/OMGApp.vue'
+
 export default {
   components: {
-    OMGPage
+    OMGPage,
+    OMGApp
   }
 
   // computed: {
