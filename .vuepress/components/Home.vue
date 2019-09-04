@@ -1,6 +1,9 @@
 <template>
   <OMGPage>
-    <OMGApp />
+    <div class="container">
+      <Partners />
+    </div>
+    <OMGApp/>
   </OMGPage>
 </template>
 
@@ -8,11 +11,13 @@
 import OMGPage from './shared/OMGPage.vue'
 
 import OMGApp from './pages/home/OMGApp.vue'
+import Partners from './pages/home/Partners.vue'
 
 export default {
   components: {
     OMGPage,
-    OMGApp
+    OMGApp,
+    Partners,
   }
 
   // computed: {

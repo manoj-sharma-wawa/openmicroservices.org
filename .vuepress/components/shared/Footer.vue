@@ -95,7 +95,7 @@ export default {
     .made
     .storyscript
     .storyscript a
-      font-family: Muli, sans-serif
+      font-family: DM Sans
       font-size: .75rem
       color: white
       letter-spacing: 2px
