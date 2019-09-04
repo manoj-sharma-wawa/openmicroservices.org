@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-
     <community-header class="container"/>
     <section class="bg-gray">
       <community-repositories class="container-narrow"/>

@@ -85,7 +85,7 @@ export default {
       font-size: .625rem
       text-transform: uppercase
       .seafoam
-        color: #81DFC9
+        color: $accentGreen
   .center
     display: flex
     align-items: center
@@ -101,7 +101,7 @@ export default {
       letter-spacing: 2px
       text-transform: uppercase
     .storyscript a:hover
-      color: #81DFC9
+      color: $accentGreen
     .heart
       margin: 0 .25rem
 </style>

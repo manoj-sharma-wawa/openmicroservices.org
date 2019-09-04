@@ -85,12 +85,12 @@ button
       fill: white
   &.secondary
     background: white
-    color: $darkColor
+    color: $secondaryColor
     border: 1px solid #CDD5D6
     font-size: 1.125rem
     padding: .75rem 1.5rem
     svg 
-      fill: $darkColor
+      fill: $secondaryColor
   &.primary:hover
   &.primary:focus
     outline: none
