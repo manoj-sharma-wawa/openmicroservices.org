@@ -39,6 +39,10 @@ export default {
     .title
       margin-bottom: 2rem
     .text
-      padding-right: 7rem
-
+      padding-right: 0
+      @media screen and (min-width: ($MQMobile + 1px))
+        padding-right: 7rem
+  .illustration
+    img 
+      max-width 100%
 </style>
