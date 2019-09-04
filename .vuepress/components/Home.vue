@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import OMGPage from './components/OMGPage.vue'
+import OMGPage from './shared/OMGPage.vue'
 
 export default {
   components: {

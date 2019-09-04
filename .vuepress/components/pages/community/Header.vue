@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import SButton from '../../components/Button.vue'
+import SButton from '../../shared/Button.vue'
 export default {
   name: 'CommunityHeader',
   components: {
