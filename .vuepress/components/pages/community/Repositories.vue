@@ -41,8 +41,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '../../../override'
-@require '../../../fonts'
+@require '../../../styles/palette'
+@require '../../../styles/fonts'
 
 .community-repos
   display: flex

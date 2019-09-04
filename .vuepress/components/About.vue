@@ -1,19 +1,12 @@
 <template>
-  <div class="home">
+  <OMGPage>
     <why-omg class="container"/>
-
     <twelve-factors class="container"/>
-
-    <div class="dark-bg">
-      <Contact />
-      <Footer />
-    </div>
-  </div>
+  </OMGPage>
 </template>
 
 <script>
-import Contact from './components/Contact.vue'
-import Footer from './components/Footer.vue'
+import OMGPage from './shared/OMGPage.vue'
 
 import WhyOmg from './pages/about/WhyOMG.vue'
 import TwelveFactors from './pages/about/TwelveFactors.vue'
@@ -21,8 +14,7 @@ import TwelveFactors from './pages/about/TwelveFactors.vue'
 export default {
   name: 'About',
   components: {
-    Contact,
-    Footer,
+    OMGPage,
     WhyOmg,
     TwelveFactors
   }
