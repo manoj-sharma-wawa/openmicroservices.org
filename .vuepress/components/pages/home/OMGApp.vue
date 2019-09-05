@@ -33,7 +33,7 @@ export default {
 @require '../../../styles/fonts'
 
 .omg-app
-  background $borderColor
+  background $lightBgColor
   display flex
   flex-direction column
   padding: 3.5rem 0

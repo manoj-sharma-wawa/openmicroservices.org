@@ -1,5 +1,6 @@
 <template>
   <OMGPage>
+    <OMGSpec />
     <div class="container">
       <ThreeFactors />
       <Partners />
@@ -14,13 +15,15 @@ import OMGPage from './shared/OMGPage.vue'
 import OMGApp from './pages/home/OMGApp.vue'
 import Partners from './pages/home/Partners.vue'
 import ThreeFactors from './pages/home/ThreeFactors.vue'
+import OMGSpec from './pages/home/OMGSpec.vue'
 
 export default {
   components: {
     OMGPage,
     OMGApp,
     Partners,
-    ThreeFactors
+    ThreeFactors,
+    OMGSpec
   }
 
   // computed: {

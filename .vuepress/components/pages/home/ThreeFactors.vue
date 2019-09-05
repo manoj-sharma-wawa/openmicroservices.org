@@ -47,8 +47,9 @@ export default {
   flex-direction column
   flex-wrap nowrap
   @media (min-width: ($MQMobile + 1px))
+    margin -7.5rem 0 7.5rem
     flex-wrap wrap
     flex-direction row
     flex 1 1 100%
-    --columnGap: .375rem
+    --columnGap: 2rem
 </style>
