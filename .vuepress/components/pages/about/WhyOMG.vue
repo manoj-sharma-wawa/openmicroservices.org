@@ -36,6 +36,8 @@ export default {
     flex-direction: row
     justify-content: space-between
   .content
+    flex-basis 60%
+    margin-top 3rem
     .title
       margin-bottom: 2rem
     .text
@@ -43,6 +45,7 @@ export default {
       @media screen and (min-width: ($MQMobile + 1px))
         padding-right: 7rem
   .illustration
+    flex-basis 40%
     img 
       max-width 100%
 </style>
