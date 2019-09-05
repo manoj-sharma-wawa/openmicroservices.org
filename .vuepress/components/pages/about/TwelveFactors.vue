@@ -73,10 +73,11 @@ export default {
 @require '../../../styles/fonts'
 
 .twelve
-  margin-top 7.5rem
   display flex
   flex-direction column
   align-items center
+  @media (min-width: ($MQMobile + 1px))
+    margin-top 7.5rem !important
   .heading
     text-align center
     @media (min-width: ($MQMobile + 1px))
