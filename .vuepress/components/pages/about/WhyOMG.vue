@@ -32,18 +32,19 @@ export default {
   align-items center
   justify-content: flex-start
   @media screen and (min-width: ($MQMobile + 1px))
-    align-items: flex-start
-    flex-direction: row
-    justify-content: space-between
+    align-items flex-start
+    flex-direction row
+    justify-content space-between
+    margin-bottom 7.5rem
   .content
     flex-basis 60%
     margin-top 3rem
     .title
-      margin-bottom: 2rem
+      margin-bottom 2rem
     .text
       padding-right: 0
       @media screen and (min-width: ($MQMobile + 1px))
-        padding-right: 7rem
+        padding-right 7rem
   .illustration
     flex-basis 40%
     img 

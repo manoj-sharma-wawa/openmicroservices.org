@@ -45,44 +45,44 @@ export default {
 @require '../../../styles/fonts'
 
 .community-header
-  margin-bottom: 9.75rem
-  align-items: center
-  display: flex
-  flex-direction: column
-  @media (min-width: $MQMobile + 1px)
-    align-items: flex-start
+  margin-bottom 9.75rem !important
+  align-items center
+  display flex
+  flex-direction column
+  @media (min-width $MQMobile + 1px)
+    align-items flex-start
   .wrapper
-    display: flex
-    align-items: flex-start
-    justify-content: space-between
-    flex-direction: column-reverse
-    @media (min-width: $MQMobile + 1px)
-      flex-direction: row
+    display flex
+    align-items flex-start
+    justify-content space-between
+    flex-direction column-reverse
+    @media (min-width $MQMobile + 1px)
+      flex-direction row
     .community
-      flex-basis: 50%
-      margin-top: 5.875rem
+      flex-basis 50%
+      margin-top 5.875rem
       .title
-        margin-bottom: 2rem
-        text-align: center
-        @media (min-width: $MQMobile + 1px)
-          text-align: left
+        margin-bottom 2rem
+        text-align center
+        @media (min-width $MQMobile + 1px)
+          text-align left
       .text
-        text-align: center
-        @media (min-width: $MQMobile + 1px)
-          text-align: left
+        text-align center
+        @media (min-width $MQMobile + 1px)
+          text-align left
       .contribute
-        color: #333333
-        margin: 1rem 0
-        text-align: center
-        @media (min-width: $MQMobile + 1px)
-          text-align: left
+        color #333333
+        margin 1rem 0
+        text-align center
+        @media (min-width $MQMobile + 1px)
+          text-align left
       .text-contribute
-        margin-bottom: 2rem
-        text-align: center
-        @media (min-width: $MQMobile + 1px)
-          text-align: left
+        margin-bottom 2rem
+        text-align center
+        @media (min-width $MQMobile + 1px)
+          text-align left
     .illustration
-      flex-basis: 40%
+      flex-basis 40%
       img
-       max-width: 100%
+       max-width 100%
 </style>

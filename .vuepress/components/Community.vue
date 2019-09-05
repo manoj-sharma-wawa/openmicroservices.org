@@ -34,9 +34,9 @@ export default {
 
 <style lang="stylus" scoped>
 .bg-gray
-  background: #F9FBFD
+  background #F9FBFD
 .slack-bg
-  background: url('/assets/img/slack-bg.png') bottom right no-repeat #EEF3FA
-  border-radius: 10px
-  margin: 5rem auto 6.25rem auto
+  background url('/assets/img/slack-bg.png') bottom right no-repeat #EEF3FA
+  border-radius 10px
+  margin 5rem auto 6.25rem auto !important
 </style>

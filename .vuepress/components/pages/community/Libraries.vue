@@ -33,17 +33,17 @@ export default {
 @require '../../../styles/fonts'
 
 .libraries
-  display: flex
-  flex-direction: column
-  align-items: center
-  margin-top: 5rem
-  @media (min-width: $MQMobile + 1px)
-    align-items: flex-start
-    justify-content: flex-start
+  display flex
+  flex-direction column
+  align-items center
+  margin-top 5rem !important
+  @media (min-width $MQMobile + 1px)
+    align-items flex-start
+    justify-content flex-start
   .text
-    text-align: center
-    @media (min-width: $MQMobile + 1px)
-      text-align: left
+    text-align center
+    @media (min-width $MQMobile + 1px)
+      text-align left
     .indigo
-      color: rgb(119, 122, 255)
+      color rgb(119, 122, 255)
 </style>
