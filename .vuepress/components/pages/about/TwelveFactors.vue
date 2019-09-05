@@ -79,7 +79,8 @@ export default {
   align-items center
   .heading
     text-align center
-    width 34rem
+    @media (min-width: ($MQMobile + 1px))
+      width 34rem
     .hint
       font-size 1rem
       font-family DM Sans
