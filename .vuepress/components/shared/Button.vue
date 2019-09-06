@@ -1,5 +1,8 @@
 <template>
-  <button
+  <component :is="to ? 'router-link' : url ? 'a' : 'button'"
+    :to="to"
+    :href="url"
+    :target="url ? '_blank': ''"
     :class="[
       { primary },
       { secondary },
@@ -9,7 +12,7 @@
     ]"
     @click="$emit('click')"
   >
-    <span>{{ $slots.default[0].text }}</span>
+    <span><slot /></span>
     <svg 
       v-if="arrow"
       width="19"
@@ -37,7 +40,7 @@
         :fill="primary ? 'white' : '#213056'"
       />
     </svg>
-  </button>
+  </component>
 </template>
 
 <script>
@@ -48,7 +51,16 @@ export default {
     secondary: {type: Boolean, default: false},
     darkShadow: {type: Boolean, default: false},
     lightShadow: {type: Boolean, default: false},
-    arrow: {type: Boolean, default: false}
+    arrow: {type: Boolean, default: false},
+    to: {
+      type: Object, 
+      default: undefined, 
+      validator: x => Object.keys(to).includes('name' || 'path')
+    },
+    url: {
+      type: String,
+      default: undefined
+    }
   }
 }
 </script>
@@ -58,49 +70,53 @@ export default {
 @require '../../styles/fonts'
 
 button
-  display: flex
-  align-items: center
-  font-family: DM Bold Sans
-  font-style: normal
-  font-weight: bold
-  line-height: 1.5rem
-  border: none
-  border-radius: 5px
-  cursor: pointer
-  min-width: fit-content
-  min-height: fit-content
-  max-width: fit-content
-  svg
-    margin-left: 1.5rem
+  display flex
+  align-items center
+  font-family DM Bold Sans
+  font-style normal
+  font-weight bold
+  line-height 1.5rem
+  border none
+  border-radius 5px
+  cursor pointer
+  min-width fit-content
+  min-height fit-content
+  max-width fit-content
   &.arrow-icon
-    justify-content: space-between
+    justify-content space-between
   &:not(.arrow-icon)
-    justify-content: center
+    justify-content center
   &.primary
-    background: $primaryColor
-    color: white
-    font-size: 1.375rem
-    padding: 1.25rem 2rem
+    background $primaryColor
+    color white
+    font-size 1.375rem
+    padding 1.25rem 2rem
     svg
-      fill: white
+      fill white
   &.secondary
-    background: white
-    color: $secondaryColor
-    border: 1px solid #CDD5D6
-    font-size: 1.125rem
-    padding: .75rem 1.5rem
+    background white
+    color $secondaryColor
+    border 1px solid #CDD5D6
+    font-size 1.125rem
+    padding .75rem 1.5rem
     svg 
-      fill: $secondaryColor
+      fill $secondaryColor
   &.primary:hover
   &.primary:focus
-    outline: none
-    background: rgba($primaryColor, 0.8)
+    outline none
+    background rgba($primaryColor, 0.8)
   &.secondary:hover
   &.secondary:focus
-    outline: none  
-    background: rgba(white, 0.9)
+    outline none  
+    background rgba(white, 0.9)
   &.light-shadow
-    box-shadow: 0px 5px 10px rgba(56, 87, 159, 0.3)
+    box-shadow 0px 5px 10px rgba(56, 87, 159, 0.3)
   &.dark-shadow
-    box-shadow: 0px 5px 10px #DDE7EA
+    box-shadow 0px 5px 10px #DDE7EA
+svg
+  margin-left 1.5rem
+a
+  font-family DM Bold Sans
+  font-size 1rem
+  line-height 1.5rem
 </style>

@@ -9,6 +9,7 @@ module.exports = {
     editLinks: true,
     search: false,
     navbar: true,
+    // logo: '/assets/logo.svg',
     nav: [
       { text: 'About', link: '/about' },
       { text: 'Community', link: '/community' },

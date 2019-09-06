@@ -2,12 +2,7 @@
   <div class="container">
     <div class="footer">
       <div class="left">
-        <div class="logo"/>
-        <div class="text">
-          <div><span class="seafoam">O</span>pen</div>
-          <div><span class="seafoam">M</span>icroservice</div>
-          <div><span class="seafoam">G</span>uide</div>
-        </div>
+        <OMGLogo green long light />
       </div>
       <div class="center">
         <div class="made">Made with</div>
@@ -38,10 +33,14 @@
 
 <script>
 import NavLink from './NavLink.vue'
+import OMGLogo from './OMGLogo.vue'
 
 export default {
   name: 'Footer',
-  components: { NavLink },
+  components: { 
+    NavLink,
+    OMGLogo
+  },
   computed: {
     repoLink: function () {
       const { repo } = this.$site.themeConfig
@@ -72,20 +71,6 @@ export default {
   flex-direction: column
   @media (min-width: ($MQMobile + 1px))
     flex-direction: row
-  .left 
-    display: flex
-    align-items: center
-    .text 
-      display: flex
-      flex-direction: column
-      align-items: flex-start
-      margin-left: 1.5rem
-      color: white
-      font-family: Autoscape, sans-serif
-      font-size: .625rem
-      text-transform: uppercase
-      .seafoam
-        color: $accentGreen
   .center
     display: flex
     align-items: center

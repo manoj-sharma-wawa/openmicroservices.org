@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import Navbar from '@theme/components/Navbar.vue'
+// import Navbar from '@theme/components/Navbar.vue'
+import Navbar from './Navbar.vue'
 
 import Contact from './Contact.vue'
 import Footer from './Footer.vue'
@@ -30,4 +31,7 @@ export default {
 <style lang="stylus" scoped>
 .home
   overflow-x hidden
+  .dark-bg
+    background: $secondaryColor
+    color: white
 </style>
