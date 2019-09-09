@@ -117,6 +117,9 @@ $navbar-horizontal-padding = 8rem
     background-color white
     font-size 0.9rem
     display flex
+    position initial
+    top initial
+    left initial
     .search-box
       flex: 0 0 auto
       vertical-align top
