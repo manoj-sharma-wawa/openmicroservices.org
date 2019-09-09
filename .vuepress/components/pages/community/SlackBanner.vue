@@ -8,6 +8,7 @@
       primary
       arrow
       darkShadow
+      @click="go()"
     >
       Join OMG Slack
     </s-button>
@@ -21,6 +22,11 @@ export default {
   name: 'SlackBanner',
   components: {
     SButton
+  },
+  methods: {
+    go() {
+      window.location.assign('https://asyncy.click/slack')
+    }
   }
 }
 </script>

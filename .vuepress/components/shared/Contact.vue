@@ -9,6 +9,7 @@
     <s-button 
       primary 
       lightShadow 
+      @click="go()"
       class="contribute"
     >
       Contribute to OMG
@@ -24,6 +25,11 @@ export default {
   name: 'Contact',
   components: {
     SButton
+  },
+  methods: {
+    go() {
+      window.location.assign('https://github.com/microservices/omg')
+    }
   }
 }
 </script>

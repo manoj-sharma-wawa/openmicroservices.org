@@ -9,6 +9,7 @@
         secondary
         arrow
         lightShadow
+        @click="go('ui')"
       >
         UI Repo
       </s-button>
@@ -22,6 +23,7 @@
         secondary
         arrow
         lightShadow
+        @click="go('cli')"
       >
         CLI Repo
       </s-button>
@@ -36,6 +38,18 @@ export default {
   name: 'CommunityRepositories',
   components: {
     SButton
+  },
+  methods: {
+    go(target) {
+      switch (target) {
+        case 'ui':
+          window.location.assign('https://github.com/microservices/omg/packages/omg-ui')
+          break
+        case 'cli':
+          window.location.assign('https://github.com/microservices/omg/packages/omg')
+          break
+      }
+    }
   }
 }
 </script>

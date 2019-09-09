@@ -4,6 +4,7 @@
     :href="url"
     :target="url ? '_blank': ''"
     :class="[
+      'btn',
       { primary },
       { secondary },
       { 'dark-shadow': darkShadow },
@@ -55,12 +56,15 @@ export default {
     to: {
       type: Object, 
       default: undefined, 
-      validator: x => Object.keys(to).includes('name' || 'path')
+      validator: x => Object.keys(x).includes('name') || Object.keys(x).includes('path')
     },
     url: {
       type: String,
       default: undefined
     }
+  },
+  mounted () {
+    // console.log(this.to, this.url)
   }
 }
 </script>

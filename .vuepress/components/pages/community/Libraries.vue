@@ -11,6 +11,7 @@
       secondary
       arrow
       lightShadow
+      @click="go()"
     >
       OMG Repo
     </s-button>
@@ -24,6 +25,11 @@ export default {
   name: 'CommunityLibraries',
   components: {
     SButton
+  },
+  methods: {
+    go() {
+      window.location.assign('https://github.com/microservices/omg')
+    }
   }
 }
 </script>

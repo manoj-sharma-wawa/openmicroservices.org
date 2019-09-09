@@ -1,7 +1,14 @@
 <template>
   <div class="home-header">
     <h1 class="main-title">Turn containers into cloud-native libraries.</h1>
-    <s-button class="get-started" primary lightShadow>Get Started</s-button>
+    <s-button 
+      class="get-started" 
+      primary 
+      lightShadow
+      @click="$router.push({ path: '/introduction/overview' })"
+    >
+      Get Started
+    </s-button>
     <div class="cols">
       <div class="col">
         <div class="illustration">

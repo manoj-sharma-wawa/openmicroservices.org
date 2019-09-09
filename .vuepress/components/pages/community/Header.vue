@@ -24,6 +24,7 @@
       primary
       arrow
       lightShadow
+      @click="go()"
     >
       OMG GitHub
     </s-button>
@@ -36,6 +37,11 @@ export default {
   name: 'CommunityHeader',
   components: {
     SButton
+  },
+  methods: {
+    go() {
+      window.location.assign('https://github.com/microservices/omg')
+    }
   }
 }
 </script>
