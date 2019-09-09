@@ -73,8 +73,6 @@ button
   display flex
   align-items center
   font-family DM Bold Sans
-  font-style normal
-  font-weight bold
   line-height 1.5rem
   border none
   border-radius 5px

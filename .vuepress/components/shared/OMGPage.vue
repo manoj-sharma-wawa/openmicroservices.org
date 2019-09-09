@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Navbar />
+    <Navbar @toggle-mobile-navbar="$refs.mobileMenu.show($event)"/>
 
     <slot />
 
@@ -8,12 +8,14 @@
       <Contact />
       <Footer />
     </div>
+
+    <mobile-menu ref="mobileMenu"/>
   </div>
 </template>
 
 <script>
-// import Navbar from '@theme/components/Navbar.vue'
 import Navbar from './Navbar.vue'
+import MobileMenu from './MobileMenu.vue'
 
 import Contact from './Contact.vue'
 import Footer from './Footer.vue'
@@ -23,7 +25,8 @@ export default {
   components: {
     Navbar,
     Contact,
-    Footer
+    Footer,
+    MobileMenu
   }
 }
 </script>

@@ -1,6 +1,9 @@
 <template>
-  <div class="omg-logo">
-    <div class="logo" />
+  <div class="omg-logo" @click="$emit('logo-clicked')">
+    <div :class="[
+      'logo',
+      { small }
+    ]" />
     <div v-if="long" class="text">
       <div :class="[`${dark ? 'dark' : light ? 'light' : 'dark'}`]"><span :class="[`${blue ? 'blue' : green ? 'seafoam' : 'blue'}`]">O</span>pen</div>
       <div :class="[`${dark ? 'dark' : light ? 'light' : 'dark'}`]"><span :class="[`${blue ? 'blue' : green ? 'seafoam' : 'blue'}`]">M</span>icroservice</div>
@@ -32,6 +35,10 @@ export default {
     dark: {
       type: Boolean,
       default: false
+    },
+    small: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -50,6 +57,9 @@ export default {
     background-size contain
     width 2.75rem
     height 2.75rem
+    &.small 
+      width 1.5rem
+      height 1.5rem
   .text 
     display: flex
     flex-direction: column
@@ -58,6 +68,7 @@ export default {
     font-family: Autoscape, sans-serif
     font-size: .625rem
     text-transform: uppercase
+    line-height 1rem
     .dark
       color $secondaryColor
     .light
@@ -66,6 +77,7 @@ export default {
       font-family: Autoscape, sans-serif
       font-size: .625rem
       text-transform: uppercase
+      line-height 1rem
       &.seafoam
         color $accentGreen
       &.blue

@@ -14,6 +14,7 @@ module.exports = {
       { text: 'About', link: '/about' },
       { text: 'Community', link: '/community' },
       { text: 'Docs', link: '/introduction/overview' },
+      { text: 'Blog', link: 'https://storyscript.io/blog' },
     ],
     sidebar: [
       {

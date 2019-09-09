@@ -1,6 +1,6 @@
 <template>
   <header class="navbar">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+    <SidebarButton @toggle-mobile-navbar="$emit('toggle-mobile-navbar', $event)"/>
 
     <router-link
       :to="$localePath"
@@ -28,7 +28,7 @@
 <script>
 import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
-import SidebarButton from '@theme/components/SidebarButton.vue'
+import SidebarButton from './SidebarButton.vue'
 import NavLinks from './NavLinks.vue'
 import OMGLogo from './OMGLogo.vue'
 
@@ -89,9 +89,18 @@ $navbar-vertical-padding = 4rem
 $navbar-horizontal-padding = 8rem
 
 .navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
+  padding 0
+  @media (min-width: ($MQMobile + 1px))
+    padding $navbar-vertical-padding $navbar-horizontal-padding
+    display flex
+    justify-content space-between
   line-height $navbarHeight - 1.4rem
   border-bottom none
+  .home-link
+    display none 
+    max-width fit-content
+    @media (min-width: ($MQMobile + 1px))
+      display block
   a, span, img
     display inline-block
     color $secondaryColor
@@ -104,14 +113,9 @@ $navbar-horizontal-padding = 8rem
     color $textColor
     position relative
   .links
-    padding-left 1.5rem
     box-sizing border-box
     background-color white
-    white-space nowrap
     font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
     display flex
     .search-box
       flex: 0 0 auto
@@ -119,7 +123,6 @@ $navbar-horizontal-padding = 8rem
 
 @media (max-width: $MQMobile)
   .navbar
-    padding-left 4rem
     .can-hide
       display none
     .links

@@ -25,6 +25,7 @@
       secondary 
       arrow 
       url="https://github.com/microservices/microservice.guide"
+      class="repo-link"
     >
       Edit on Github
     </s-button>
@@ -122,19 +123,28 @@ export default {
 <style lang="stylus">
 .nav-links
   display inline-block
+  @media (max-width: $MQMobile)
+    display flex
+    flex-direction column
+    align-items center
+    margin-top 1rem
   a
     line-height 1.4rem
     color inherit
     &:hover, &.router-link-active
       color $accentColor
+    @media (max-width: $MQMobile)
+      font-size 1rem
   .nav-item
     position relative
     display inline-block
     margin-right 4rem
-    margin-left 1.5rem
     line-height 2rem
     &:first-child
       margin-left 0
+    @media (max-width: $MQMobile)
+      margin-right 0
+      margin-bottom 1.5rem
   .repo-link
     margin-left 1.5rem
 
@@ -142,6 +152,12 @@ export default {
   .nav-links
     .nav-item, .repo-link
       margin-left 0
+      width 100%
+      text-align center
+    .repo-link
+      padding-top 1.5rem 
+      margin-bottom .5rem
+      border-top 1px solid #E9E9EE
 
 @media (min-width: $MQMobile)
   .nav-links a
