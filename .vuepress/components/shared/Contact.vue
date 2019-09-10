@@ -46,7 +46,7 @@ export default {
     color white
     font-size 1.5rem
     @media (min-width: ($MQMobile + 1px))
-      font-size initial
+      font-size 2.625rem
   .text
     text-align center
     margin 1rem 0 2rem 0

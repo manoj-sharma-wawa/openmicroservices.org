@@ -53,4 +53,6 @@ export default {
     h3
       padding: 0
       margin-bottom: 1rem
+    .text
+      line-height 1.5rem
 </style>

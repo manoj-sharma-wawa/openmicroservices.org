@@ -129,4 +129,5 @@ export default {
         margin initial
     .text
       margin 1.5rem 0
+      line-height 2rem
 </style>

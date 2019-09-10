@@ -48,6 +48,7 @@ export default {
     justify-content flex-start
   .text
     text-align center
+    margin-bottom 2rem
     @media (min-width $MQMobile + 1px)
       text-align left
     .indigo
