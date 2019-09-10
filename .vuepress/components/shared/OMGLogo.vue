@@ -2,7 +2,8 @@
   <div class="omg-logo" @click="$emit('logo-clicked')">
     <div :class="[
       'logo',
-      { small }
+      { small },
+      { light }
     ]" />
     <div v-if="long" class="text">
       <div :class="[`${dark ? 'dark' : light ? 'light' : 'dark'}`]"><span :class="[`${blue ? 'blue' : green ? 'seafoam' : 'blue'}`]">O</span>pen</div>
@@ -52,7 +53,7 @@ export default {
   display: flex
   align-items: center
   .logo
-    background-image url(/assets/img/logo.svg)
+    background-image url(/assets/img/logo-dark.svg)
     background-repeat no-repeat
     background-size contain
     width 2.75rem
@@ -60,6 +61,8 @@ export default {
     &.small 
       width 1.5rem
       height 1.5rem
+    &.light
+      background-image url(/assets/img/logo.svg)
   .text 
     display: flex
     flex-direction: column
