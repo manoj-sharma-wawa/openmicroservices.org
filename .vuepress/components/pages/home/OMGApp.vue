@@ -58,10 +58,12 @@ export default {
     padding: 0
     background none
     border-radius 0
+    box-shadow none
     @media (min-width: $MQMobile + 1px)
       padding: 1.125rem
       background white
       border-radius 10px
+      box-shadow 0px 24.1047px 57.8512px rgba(39, 69, 104, 0.1)
     img 
       max-width 100%
   .content
