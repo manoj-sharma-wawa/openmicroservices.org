@@ -11,7 +11,7 @@
       </div>
     </div>
     <div class="illustration">
-      <img src="/assets/img/illustrations/about.png" alt="illustration showing how omg interacts with data" />
+      <img src="/assets/img/illustrations/about.svg" alt="illustration showing how omg interacts with data" />
     </div>
   </div>
 </template>
