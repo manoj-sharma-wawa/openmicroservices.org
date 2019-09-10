@@ -12,7 +12,7 @@
     <div class="cols">
       <div class="col">
         <div class="illustration">
-          <img src="/assets/img/illustrations/containers.png" alt="two containers on top of each other illustration">
+          <img src="/assets/img/illustrations/containers.svg" alt="two containers on top of each other illustration">
         </div>
         <div class="content">
           <h4 class="title">Containers are blackboxes</h4>
@@ -22,13 +22,13 @@
 
       <div class="col bigoudi">
         <div class="illustration">
-          <img src="/assets/img/illustrations/pigtail-arrow-1.png" alt="pigtail like arrow illustration">
+          <img src="/assets/img/illustrations/pigtail-arrow-1.svg" alt="pigtail like arrow illustration">
         </div>
       </div>
 
       <div class="col">
         <div class="illustration">
-          <img src="/assets/img/illustrations/services.png" alt="services inside a container illustration">
+          <img src="/assets/img/illustrations/services.svg" alt="services inside a container illustration">
         </div>
         <div class="content">
           <h4 class="title">OMG Specification</h4>
@@ -38,13 +38,13 @@
 
       <div class="col bigoudi">
         <div class="illustration">
-          <img src="/assets/img/illustrations/pigtail-arrow-2.png" alt="pigtail like arrow illustration">
+          <img src="/assets/img/illustrations/pigtail-arrow-2.svg" alt="pigtail like arrow illustration">
         </div>
       </div>
 
       <div class="col">
         <div class="illustration">
-          <img src="/assets/img/illustrations/app.png" alt="OMG Application illustration">
+          <img src="/assets/img/illustrations/app.svg" alt="OMG Application illustration">
         </div>
         <div class="content">
           <h4 class="title">Run anywhere</h4>
