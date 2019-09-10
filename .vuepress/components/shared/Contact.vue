@@ -41,6 +41,8 @@ export default {
   align-items center
   justify-content flex-start
   padding 3.5rem 1.8rem 5rem 1.8rem !important
+  @media (min-width: ($MQMobile + 1px))
+    padding 10rem 1.8rem 10rem 1.8rem !important
   .title
     text-align center
     color white

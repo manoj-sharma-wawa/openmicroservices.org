@@ -2,7 +2,7 @@
   <div class="omg-app">
     <h2 class="title">Test your microservice with OMG</h2>
     <div class="illustration">
-      <img src="/assets/img/omg-app.png" alt="OMG App design" >
+      <img src="/assets/img/omg-app.svg" alt="OMG App design" >
     </div>
     <div class="content">
       <h2 class="title">Test your microservice with OMG</h2>
@@ -62,9 +62,11 @@ export default {
     @media (min-width: $MQMobile + 1px)
       padding: 1.125rem
       background white
+      flex-basis 60%
       border-radius 10px
       box-shadow 0px 24.1047px 57.8512px rgba(39, 69, 104, 0.1)
     img 
+      width 100%
       max-width 100%
   .content
     align-items center
