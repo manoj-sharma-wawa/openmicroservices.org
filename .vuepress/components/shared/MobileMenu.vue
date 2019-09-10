@@ -1,20 +1,5 @@
 <template>
   <div :class="['mobile-menu-modal', { open }]">
-    <!-- <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Community</li>
-      <li>Docs</li>
-      <li>Blog</li>
-    </ul>
-    <div class="divider"></div>
-    <s-button 
-      secondary 
-      arrow 
-      url="https://github.com/microservices/microservice.guide"
-    >
-      Edit on Github
-    </s-button> -->
     <NavLinks />
   </div>
 </template>
@@ -32,6 +17,7 @@ export default {
   data: () => ({ open: false, user: {} }),
   watch: {
     open: function () {
+      console.log(this.open)
       if (this.open) {
         document.documentElement.classList.add('is-clipped')
       } else {

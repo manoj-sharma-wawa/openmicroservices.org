@@ -150,15 +150,16 @@ export default {
     margin-left 1.5rem
 
 @media (max-width: $MQMobile)
-  .nav-links
-    .nav-item, .repo-link
-      margin-left 0
-      width 100%
-      text-align center
-    .repo-link
-      padding-top 1.5rem 
-      margin-bottom .5rem
-      border-top 1px solid #E9E9EE
+  .home
+    .nav-links
+      .nav-item, .repo-link
+        margin-left 0
+        width 100%
+        text-align center
+      .repo-link
+        padding-top 1.5rem 
+        margin-bottom .5rem
+        border-top 1px solid #E9E9EE
 
 @media (min-width: $MQMobile)
   .nav-links a
