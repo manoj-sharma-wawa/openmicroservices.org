@@ -105,10 +105,12 @@ button
       fill $secondaryColor
   &.primary:hover
   &.primary:focus
+    box-shadow none
     outline none
     background rgba($primaryColor, 0.8)
   &.secondary:hover
   &.secondary:focus
+    box-shadow none
     outline none  
     background rgba(white, 0.9)
   &.light-shadow

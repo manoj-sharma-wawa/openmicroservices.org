@@ -10,6 +10,7 @@
       <s-button
         secondary
         arrow
+        darkShadow
       >
         Launch OMG app
       </s-button>
