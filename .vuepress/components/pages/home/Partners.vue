@@ -5,7 +5,10 @@
       <div
         v-for="(partner, idx) in partners"
         :key="`parter-list-${idx}`"
-        class="partner"
+        :class="[
+          'partner',
+          `${partner}`
+        ]"
       >
         <img :src="`/assets/img/partners/${partner}.png`" :alt="`${partner} logo`">
       </div>
@@ -52,14 +55,32 @@ export default {
     @media (min-width: $MQMobile + 1px)
       justify-content space-evenly
       width 100%
-    .partner:last-child
-      margin 0 auto
-      @media (min-width: $MQMobile + 1px)
-        margin initial
     .partner
       flex-basis initial
+      width 50%
+      display flex
+      justify-content center
+      margin-bottom 2.75rem
+      &.gh
+        order 1
+      &.docker
+        order 2
+      &.rkt
+        order 3
+      &.gcp
+        order 4
+      &.k8s
+        order 5
+        width 100%
       @media (min-width: $MQMobile + 1px)
         flex-basis 13%
+        margin-bottom 0
+        &.gh,
+        &.docker,
+        &.rkt,
+        &.gcp,
+        &.k8s
+          order 0
       img 
         width auto
         height 1.5rem

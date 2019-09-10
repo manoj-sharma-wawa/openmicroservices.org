@@ -35,7 +35,6 @@
 <script>
 import DropdownLink from '@theme/components/DropdownLink.vue'
 import { resolveNavLinkItem } from '../util'
-// import NavLink from '@theme/components/NavLink.vue'
 import NavLink from './NavLink.vue'
 import SButton from './Button.vue'
 
@@ -136,15 +135,17 @@ export default {
     @media (max-width: $MQMobile)
       font-size 1rem
   .nav-item
+    margin-right 4rem
+    margin-bottom 1.5rem
     position relative
     display inline-block
-    margin-right 4rem
     line-height 2rem
     &:first-child
       margin-left 0
+    @media (max-width: $MQNarrow)
+      margin-right 1rem  
     @media (max-width: $MQMobile)
       margin-right 0
-      margin-bottom 1.5rem
   .repo-link
     margin-left 1.5rem
 

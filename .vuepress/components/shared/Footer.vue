@@ -71,6 +71,10 @@ export default {
   flex-direction: column
   @media (min-width: ($MQMobile + 1px))
     flex-direction: row
+  .left
+    margin-bottom 1.5rem
+    @media (min-width: ($MQMobile + 1px))
+      margin-bottom 0
   .center
     display: flex
     align-items: center
@@ -89,4 +93,8 @@ export default {
       color: $accentGreen
     .heart
       margin: 0 .25rem
+  .right
+    display none
+    @media (min-width: ($MQMobile + 1px))
+      display block
 </style>

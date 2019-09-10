@@ -120,6 +120,7 @@ export default {
         .text
           text-align center
           margin-top 1rem
+          line-height 1.5rem
           @media (min-width: $MQMobile + 1px)
             text-align left
       &.bigoudi

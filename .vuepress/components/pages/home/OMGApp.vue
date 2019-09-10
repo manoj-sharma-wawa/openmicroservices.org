@@ -54,9 +54,13 @@ export default {
   .title
     text-transform capitalize
   .illustration
-    padding: 1.125rem
-    background white
-    border-radius 10px
+    padding: 0
+    background none
+    border-radius 0
+    @media (min-width: $MQMobile + 1px)
+      padding: 1.125rem
+      background white
+      border-radius 10px
     img 
       max-width 100%
   .content

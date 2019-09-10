@@ -89,13 +89,15 @@ $navbar-vertical-padding = 4rem
 $navbar-horizontal-padding = 8rem
 
 .navbar
-  padding 0
-  @media (min-width: ($MQMobile + 1px))
-    padding $navbar-vertical-padding $navbar-horizontal-padding
-    display flex
-    justify-content space-between
+  padding $navbar-vertical-padding $navbar-horizontal-padding
+  display flex
+  justify-content space-between
   line-height $navbarHeight - 1.4rem
   border-bottom none
+  @media (max-width: $MQNarrow)
+    padding $navbar-vertical-padding $navbar-vertical-padding
+  @media (max-width: $MQMobile)
+    padding 0
   .home-link
     display none 
     max-width fit-content

@@ -36,6 +36,11 @@ export default {
 .sidebar-button
   display none
   padding 2rem 1.5rem
+  width: calc(100% - 4rem);
+  position: initial;
+  height: initial;
+  top: initial;
+  left: initial;
   @media (max-width: $MQMobile)
     display flex
     justify-content space-between

@@ -36,23 +36,26 @@ export default {
 
 <style lang="stylus" scoped>
 .contact
-  display: flex
-  flex-direction: column !important
-  align-items: center
-  justify-content: flex-start
-
+  display flex
+  flex-direction column !important
+  align-items center
+  justify-content flex-start
+  padding 3.5rem 1.8rem 5rem 1.8rem !important
   .title
-    text-align: center
-    color: white
-
+    text-align center
+    color white
+    font-size 1.5rem
+    @media (min-width: ($MQMobile + 1px))
+      font-size initial
   .text
-    text-align: center
-    margin: 1rem 0 2rem 0
-  
+    text-align center
+    margin 1rem 0 2rem 0
+    font-size 1.125rem
+    @media (min-width: ($MQMobile + 1px))
+      font-size initial
   .contribute
-    margin-bottom: 1.5rem
-
+    margin-bottom 1.5rem
   .cloud-native
-    width: 130px
-    height: 42px
+    width 130px
+    height 42px
 </style>
