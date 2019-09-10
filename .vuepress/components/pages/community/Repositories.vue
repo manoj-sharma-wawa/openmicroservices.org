@@ -8,7 +8,7 @@
       <s-button
         secondary
         arrow
-        lightShadow
+        darkShadow
         @click="go('ui')"
       >
         UI Repo
@@ -22,7 +22,7 @@
       <s-button
         secondary
         arrow
-        lightShadow
+        darkShadow
         @click="go('cli')"
       >
         CLI Repo

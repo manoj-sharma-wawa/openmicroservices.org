@@ -7,7 +7,7 @@
     <s-button
       primary
       arrow
-      darkShadow
+      lightShadow
       @click="go()"
     >
       Join OMG Slack

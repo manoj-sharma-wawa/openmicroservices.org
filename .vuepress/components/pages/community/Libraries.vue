@@ -10,7 +10,7 @@
       class="repo"
       secondary
       arrow
-      lightShadow
+      darkShadow
       @click="go()"
     >
       OMG Repo
