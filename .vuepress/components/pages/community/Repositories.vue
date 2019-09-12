@@ -41,12 +41,15 @@ export default {
   },
   methods: {
     go(target) {
+      // This switch case is useless for now
+      // But once the READMEs will be better in the
+      // we can redirect to the exact package.
       switch (target) {
         case 'ui':
-          window.location.assign('https://github.com/microservices/omg/packages/omg-ui')
+          window.location.assign('https://github.com/microservices/omg')
           break
         case 'cli':
-          window.location.assign('https://github.com/microservices/omg/packages/omg')
+          window.location.assign('https://github.com/microservices/omg')
           break
       }
     }
