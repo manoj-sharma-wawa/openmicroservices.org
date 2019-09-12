@@ -120,34 +120,35 @@ export default {
 </script>
 
 <style lang="stylus">
-.nav-links
-  display inline-block
-  @media (max-width: $MQMobile)
-    display flex
-    flex-direction column
-    align-items center
-    margin-top 1rem
-  a
-    line-height 1.4rem
-    color inherit
-    &:hover, &.router-link-active
-      color $accentColor
-    @media (max-width: $MQMobile)
-      font-size 1rem
-  .nav-item
-    margin-right 4rem
-    margin-bottom 1.5rem
-    position relative
+.home
+  .nav-links
     display inline-block
-    line-height 2rem
-    &:first-child
-      margin-left 0
-    @media (max-width: $MQNarrow)
-      margin-right 1rem  
     @media (max-width: $MQMobile)
-      margin-right 0
-  .repo-link
-    margin-left 1.5rem
+      display flex
+      flex-direction column
+      align-items center
+      margin-top 1rem
+    a
+      line-height 1.4rem
+      color inherit
+      &:hover, &.router-link-active
+        color $accentColor
+      @media (max-width: $MQMobile)
+        font-size 1rem
+    .nav-item
+      margin-right 4rem
+      margin-bottom 1.5rem
+      position relative
+      display inline-block
+      line-height 2rem
+      &:first-child
+        margin-left 0
+      @media (max-width: $MQNarrow)
+        margin-right 1rem  
+      @media (max-width: $MQMobile)
+        margin-right 0
+    .repo-link
+      margin-left 1.5rem
 
 @media (max-width: $MQMobile)
   .home
@@ -162,11 +163,12 @@ export default {
         border-top 1px solid #E9E9EE
 
 @media (min-width: $MQMobile)
-  .nav-links a
-    &:hover, &.router-link-active
-      color $textColor
-  .nav-item > a:not(.external)
-    &:hover, &.router-link-active
-      margin-bottom -2px
-      border-bottom 2px solid lighten($accentColor, 8%)
+  .home
+    .nav-links a
+      &:hover, &.router-link-active
+        color $textColor
+    .nav-item > a:not(.external)
+      &:hover, &.router-link-active
+        margin-bottom -2px
+        border-bottom 2px solid lighten($accentColor, 8%)
 </style>
