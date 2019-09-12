@@ -88,43 +88,44 @@ function css (el, property) {
 $navbar-vertical-padding = 4rem
 $navbar-horizontal-padding = 8rem
 
-.navbar
-  padding $navbar-vertical-padding $navbar-horizontal-padding
-  display flex
-  justify-content space-between
-  line-height $navbarHeight - 1.4rem
-  border-bottom none
-  @media (max-width: $MQNarrow)
-    padding $navbar-vertical-padding $navbar-vertical-padding
-  @media (max-width: $MQMobile)
-    padding 0
-  .home-link
-    display none 
-    max-width fit-content
-    @media (min-width: ($MQMobile + 1px))
-      display block
-  a, span, img
-    display inline-block
-    color $secondaryColor
-    font-family DM Bold Sans
-    font-size 1rem
-    line-height 1.5rem
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    box-sizing border-box
-    background-color white
-    font-size 0.9rem
+.home
+  .navbar
+    padding $navbar-vertical-padding $navbar-horizontal-padding
     display flex
-    position initial
-    top initial
-    left initial
-    .search-box
-      flex: 0 0 auto
-      vertical-align top
+    justify-content space-between
+    line-height $navbarHeight - 1.4rem
+    border-bottom none
+    @media (max-width: $MQNarrow)
+      padding $navbar-vertical-padding $navbar-vertical-padding
+    @media (max-width: $MQMobile)
+      padding 0
+    .home-link
+      display none 
+      max-width fit-content
+      @media (min-width: ($MQMobile + 1px))
+        display block
+    a, span, img
+      display inline-block
+      color $secondaryColor
+      font-family DM Bold Sans
+      font-size 1rem
+      line-height 1.5rem
+    .site-name
+      font-size 1.3rem
+      font-weight 600
+      color $textColor
+      position relative
+    .links
+      box-sizing border-box
+      background-color white
+      font-size 0.9rem
+      display flex
+      position initial
+      top initial
+      left initial
+      .search-box
+        flex: 0 0 auto
+        vertical-align top
 
 @media (max-width: $MQMobile)
   .navbar
