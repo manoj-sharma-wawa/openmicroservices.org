@@ -11,8 +11,9 @@
         secondary
         arrow
         darkShadow
+        @click="go()"
       >
-        Launch OMG app
+        View on GitHub
       </s-button>
     </div>
   </div>
@@ -25,6 +26,11 @@ export default {
   name: 'OMGApp',
   components: {
     SButton
+  },
+  methods: {
+    go() {
+      window.location.assign('https://github.com/microservices/omg/tree/master/packages/omg-ui')
+    }
   }
 }
 </script>
