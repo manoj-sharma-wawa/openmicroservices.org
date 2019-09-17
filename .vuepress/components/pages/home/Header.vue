@@ -32,7 +32,7 @@
         </div>
         <div class="content">
           <h4 class="title">OMG Specification</h4>
-          <div class="text">The OMG specification is a standard for communicationg & documenting these services that turn your microservice into a cloud-native library!</div>
+          <div class="text">The OMG specification is a standard for communicating & documenting these services that turn your microservice into a cloud-native library!</div>
         </div>
       </div>
 
