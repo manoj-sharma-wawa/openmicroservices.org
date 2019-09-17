@@ -1,0 +1,131 @@
+@require './palette'
+@require './fonts'
+
+html
+  &.is-clipped
+    overflow hidden
+
+body
+  font-family Graphik, Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-size 16px
+  color $textColor
+
+.home a
+  font-size 1.125rem
+  font-weight 600
+
+a
+  line-height 1.69
+  font-weight 500
+  color $primaryColor
+  text-decoration none
+
+p a code
+  font-size 1rem
+  letter-spacing .5px
+  line-height 1.69
+  font-weight 400
+  color $accentColor
+
+h1, h2, h3, h4, h5, h6
+  font-family: DM Bold Sans
+  color: $secondaryColor
+  border: none
+  margin: 0
+h1
+  font-size: 3.5rem
+  line-height: 4rem
+  @media (min-width: ($MQMobile + 1px))
+    font-size 3.125rem
+h2
+  font-size: 2.625rem
+h3
+  font-size: 2.375rem
+h4
+  font-size: 1.5rem
+
+@media (min-width: ($MQMobile + 1px))
+  .theme-container.no-sidebar
+    .sidebar
+      display none
+    .page
+      padding-left 0
+
+.buttons
+  display flex
+  flex-direction column
+  @media (max-width: $MQMobile)
+    .button + .button
+      margin-top 1rem
+  @media (min-width: ($MQMobile + 1px))
+    flex-direction row
+    .button + .button
+      margin-left 1rem
+  align-items center
+  justify-content center
+.home .button
+  width 13.75rem
+  height 3.5rem
+  font-size .875rem
+  padding 0
+  text-transform uppercase
+  letter-spacing 1.5px
+  font-weight 700
+  text-align center
+  color #1d2361
+  display flex
+  align-items center
+  justify-content center
+  flex-direction row
+  border none
+  :first-child:not(:last-child)
+    margin-right .5rem
+  svg
+    display block
+    vertical-align top
+    padding-bottom: .25rem
+  &.button-primary
+    &, &:active
+    background #fff
+    &:hover
+      background #e7ebf0
+    &:focus
+      background #c6cdd6
+  &.button-secondary
+    color #fff
+    &, &:active, &:focus
+      background rgba(255, 255, 255, .1)
+    &:hover
+      background rgba(255, 255, 255, .2)
+    &:focus
+      box-shadow 0 0 0 2px inset #fff
+  &.button-full
+    width 100%
+    height 100%
+  &.button-tertiary
+    background transparent
+    color #fff
+
+.theme-container
+  .navbar
+    position fixed
+    padding .7rem 1.5rem
+    border-bottom 1px solid #eef3fa
+.home
+  .navbar
+    position initial
+
+.arrow-down
+  border-width 0
+  border-right-width 1px
+  border-bottom-width 1px
+  border-style solid
+  border-color #fff
+  transform rotate(45deg)
+  height 16px
+  width 16px
+  margin 0 auto
+
+@require './home'

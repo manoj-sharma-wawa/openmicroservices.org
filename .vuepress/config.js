@@ -7,6 +7,15 @@ module.exports = {
     repoLabel: 'Edit on Github',
     editLinkText: 'Edit this page on GitHub',
     editLinks: true,
+    search: false,
+    navbar: true,
+    // logo: '/assets/logo.svg',
+    nav: [
+      { text: 'About', link: '/about' },
+      { text: 'Community', link: '/community' },
+      { text: 'Docs', link: '/introduction/overview' },
+      { text: 'Blog', link: 'https://storyscript.io/blog' },
+    ],
     sidebar: [
       {
         title: 'Introduction',
