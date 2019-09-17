@@ -8,8 +8,9 @@
         secondary
         arrow
         darkShadow
+        @click="go()"
       >
-        Launch OMG app
+        View on GitHub
       </s-button>
     </div>
     <computer
@@ -61,6 +62,11 @@ export default {
   components: {
     SButton,
     Computer
+  },
+  methods: {
+    go() {
+      window.location.assign('https://github.com/microservices/omg')
+    }
   }
 }
 </script>

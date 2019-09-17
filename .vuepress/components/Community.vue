@@ -5,10 +5,6 @@
       <community-repositories class="container-narrow"/>
     </section>
     <community-libraries class="container-narrow"/>
-    
-    <section class="slack-bg container">
-      <slack-banner />
-    </section>
   </OMGPage>
 </template>
 
