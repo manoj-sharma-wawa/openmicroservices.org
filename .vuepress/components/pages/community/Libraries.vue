@@ -42,7 +42,8 @@ export default {
   display flex
   flex-direction column
   align-items center
-  margin 5rem 0 !important
+  margin-top 5rem !important
+  margin-bottom 5rem !important
   @media (min-width $MQMobile + 1px)
     align-items flex-start
     justify-content flex-start
