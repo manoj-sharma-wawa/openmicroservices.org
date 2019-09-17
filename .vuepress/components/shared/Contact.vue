@@ -2,9 +2,9 @@
   <div class="contact container large">
     <h2 class="title">Contribute With OMG!</h2>
     <p class="text">
-      We are under development and opent to contribution. 100% open source.
+      We are under development and open to contribution. 100% open source.
       <br>
-      A part of the Linux Fountdation and under the CNCF.
+      A part of the Linux Foundation and under the CNCF.
     </p>
     <s-button 
       primary 
