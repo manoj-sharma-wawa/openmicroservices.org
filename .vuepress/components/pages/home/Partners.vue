@@ -1,6 +1,5 @@
 <template>
   <div class="partners">
-    <div class="title">Partners</div>
     <div class="list">
       <div
         v-for="(partner, idx) in partners"
