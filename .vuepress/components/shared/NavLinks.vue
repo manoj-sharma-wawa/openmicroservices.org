@@ -136,7 +136,7 @@ export default {
       @media (max-width: $MQMobile)
         font-size 1rem
     .nav-item
-      margin-right 4rem
+      margin-right 2.75rem
       margin-bottom 1.5rem
       position relative
       display inline-block
@@ -147,8 +147,6 @@ export default {
         margin-right 1rem  
       @media (max-width: $MQMobile)
         margin-right 0
-    .repo-link
-      margin-left 1.5rem
 
 @media (max-width: $MQMobile)
   .home

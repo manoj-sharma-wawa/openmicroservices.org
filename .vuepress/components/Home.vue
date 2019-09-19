@@ -1,7 +1,9 @@
 <template>
   <OMGPage>
     <Header class="container"/>
-    <OMGSpec />
+    <OMGSpec>
+      <Content />
+    </OMGSpec>
     <div class="container">
       <ThreeFactors />
       <Partners />

@@ -11,7 +11,7 @@
       ]"
     >
       <div class="screen">
-        <pre v-if="code" class="code"><code><slot /></code></pre>
+        <slot v-if="code" />
       </div>
     </div>
     <div class="deck">
