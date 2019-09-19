@@ -69,4 +69,15 @@ export default {
     padding 2rem 2.5rem
   .sidebar-wrapper
     top 112px !important
+
+.docs h1,
+.docs h2,
+.docs h3,
+.docs h4,
+.docs h5,
+.docs h6
+  margin-top -3.1rem
+  padding-top 4.6rem
+  margin-bottom 0
+
 </style>
