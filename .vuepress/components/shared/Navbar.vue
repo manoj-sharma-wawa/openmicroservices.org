@@ -88,7 +88,14 @@ function css (el, property) {
 $navbar-vertical-padding = 4rem
 $navbar-horizontal-padding = 8rem
 
-.home
+.docs
+  .navbar
+    border-bottom 1px solid #eef3fa !important 
+    padding: 2.5rem 8rem !important
+    height 7rem !important
+
+.home,
+.docs
   .navbar
     padding $navbar-vertical-padding $navbar-horizontal-padding
     display flex

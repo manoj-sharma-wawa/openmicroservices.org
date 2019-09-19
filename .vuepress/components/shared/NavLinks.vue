@@ -123,6 +123,10 @@ export default {
 .home
   .nav-links
     display inline-block
+
+.home,
+.docs
+  .nav-links
     @media (max-width: $MQMobile)
       display flex
       flex-direction column
@@ -149,7 +153,8 @@ export default {
         margin-right 0
 
 @media (max-width: $MQMobile)
-  .home
+  .home,
+  .docs
     .nav-links
       .nav-item, .repo-link
         margin-left 0
@@ -161,7 +166,8 @@ export default {
         border-top 1px solid #E9E9EE
 
 @media (min-width: $MQMobile)
-  .home
+  .home,
+  .docs
     .nav-links a
       &:hover, &.router-link-active
         color $textColor

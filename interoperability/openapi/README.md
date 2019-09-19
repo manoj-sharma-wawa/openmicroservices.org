@@ -1,3 +1,8 @@
+---
+layout: Docs
+home: false
+sidebar: true
+---
 # OpenAPI
 The [`openapi2omg`](https://github.com/microservices/openapi2omg) tool aims to be able to 
 convert an OpenAPI spec to an OMG spec.

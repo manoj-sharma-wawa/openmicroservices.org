@@ -1,3 +1,9 @@
+---
+layout: Docs
+home: false
+sidebar: true
+---
+
 # Overview
 
 The Open Microservice Guide is an open standard for annotating reusable microservices. 

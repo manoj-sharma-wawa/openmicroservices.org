@@ -1,3 +1,8 @@
+---
+layout: Docs
+home: false
+sidebar: true
+---
 # Test
 ## Run
 When ran in a directory of a microservice (a directory containing a `microservice.yml` and `Dockerfile`) this command will build
