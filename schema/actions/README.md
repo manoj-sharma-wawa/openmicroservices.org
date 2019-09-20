@@ -308,7 +308,9 @@ An `action` **MUST** define it's `output`.
 </p>
 </json-table>
 
-> <small>If there is no output then it must use `output: null` explicitly.</small>
+> <small>If there is no output then it must use `output: none` explicitly.
+> `output: none` can also be used if the output should be ignored (e.g. for debug output).
+> </small>
 
 ### Properties
 
@@ -346,7 +348,7 @@ actions:
     arguments:
       tweetid:
         type: int
-    output: null
+    output: none
 
   stream:
     events:
