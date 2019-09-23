@@ -3,7 +3,7 @@
     <div class="list">
       <div
         v-for="(partner, idx) in partners"
-        :key="`parter-list-${idx}`"
+        :key="`partner-list-${idx}`"
         :class="[
           'partner',
           `${partner}`
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'Patners',
+  name: 'Partners',
   data: () => ({
     partners: [
       'gcp',

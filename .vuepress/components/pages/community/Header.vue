@@ -6,7 +6,7 @@
           Community
         </h1>
         <p class="text">
-          OMG has an active community of developers who are using the OMG spec to build their reusable applications within their organisations and for developers around the world. We'd love your help to improve and extend the project.
+          OMG has an active community of developers who are using the OMG spec to build their reusable applications within their organizations and for developers around the world. We'd love your help to improve and extend the project.
         </p>
         <h4 class="contribute">
           Contribute on GitHub

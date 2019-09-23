@@ -3,7 +3,7 @@
     <h2 class="title">OMG Spec</h2>
     <div class="content">
       <h2 class="title">OMG Spec</h2>
-      <div class="text">A Spec to write higky reusable self documenting microservices.</div>
+      <div class="text">A Spec to write highly reusable self documenting microservices.</div>
       <s-button
         secondary
         arrow
@@ -46,7 +46,7 @@
           output:
             type: int
 
-    lifecyle:
+    lifecycle:
       startup:
         command: ['flask', 'run', '--host=0.0.0.0']
     </computer>

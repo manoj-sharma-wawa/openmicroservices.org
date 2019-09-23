@@ -3,7 +3,7 @@
     <div class="ui">
       <h3 class="title">OMG UI</h3>
       <p class="text">
-        We build a UI tool so that you can test and build your micro services flawlessly.
+        We build a UI tool so that you can test and build your microservices flawlessly.
       </p>
       <s-button
         secondary
