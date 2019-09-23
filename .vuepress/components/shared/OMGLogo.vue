@@ -68,6 +68,7 @@ export default {
     flex-direction: column
     align-items: flex-start
     margin-left: 1.5rem
+    min-width: 105px
     font-family: Autoscape, sans-serif
     font-size: .625rem
     text-transform: uppercase
