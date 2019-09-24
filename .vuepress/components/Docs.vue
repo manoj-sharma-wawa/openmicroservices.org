@@ -62,11 +62,14 @@ export default {
   justify-content flex-start
   .content-wrapper
     position relative 
-    top 112px
-    left 160px
+    top 0
+    left 0
     max-width 740px
     margin 0 auto
     padding 2rem 2.5rem
+    @media (min-width: ($MQMobile + 1px))
+      top 112px
+      left 160px
   .sidebar-wrapper
     top 112px !important
 
