@@ -49,8 +49,6 @@ export default {
       background #1C215B
       border-radius 8px
       color white
-      .code
-        font-size .6rem
     @media (min-width: $MQMobile + 1px)
       background #242B7A
       position relative

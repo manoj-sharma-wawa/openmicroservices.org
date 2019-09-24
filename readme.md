@@ -33,7 +33,7 @@ home: true
           output:
             type: int
 
-    lifecyle:
+    lifecycle:
       startup:
         command: ['flask', 'run', '--host=0.0.0.0']
 ```
