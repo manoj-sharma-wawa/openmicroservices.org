@@ -6,14 +6,24 @@
       <br>
       A part of the Linux Foundation and under the CNCF.
     </p>
-    <s-button 
-      primary 
-      lightShadow 
-      @click="go()"
-      class="contribute"
-    >
-      Contribute to OMG
-    </s-button>
+    <div class="buttons">
+      <s-button 
+        primary 
+        lightShadow 
+        @click="go('contribute')"
+        class="contribute"
+      >
+        Contribute to OMG
+      </s-button>
+      <s-button 
+        primary 
+        lightShadow 
+        @click="go('slack')"
+        class="slack"
+      >
+        Join OMG Slack
+      </s-button>
+    </div>
     <img class="cloud-native" src="/assets/img/cncf_color@2x.png" />
   </div>
 </template>
@@ -27,8 +37,15 @@ export default {
     SButton
   },
   methods: {
-    go() {
-      window.location.assign('https://github.com/microservices/omg')
+    go(path) {
+      switch (path) {
+        case 'contribute':
+          window.location.assign('https://github.com/microservices/omg')
+          break
+        case 'slack':
+          window.location.assign('https://asyncy.click/slack')
+          break
+      }
     }
   }
 }
@@ -55,8 +72,19 @@ export default {
     font-size 1.125rem
     @media (min-width: ($MQMobile + 1px))
       font-size initial
-  .contribute
+  .buttons
+    display flex
+    justify-content space-between
+    align-items center
     margin-bottom 1.5rem
+    .slack,
+    .contribute
+      min-width 16rem
+    .slack
+      background #C5DCFC
+      color $secondaryColor
+    .contribute
+      margin-right 1.5rem
   .cloud-native
     width 130px
     height 42px
