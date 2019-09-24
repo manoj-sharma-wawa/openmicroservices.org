@@ -140,13 +140,12 @@ export default {
       @media (max-width: $MQMobile)
         font-size 1rem
     .nav-item
-      margin-right 2.75rem
+      margin-right 2.625rem
       margin-bottom 1.5rem
       position relative
       display inline-block
       line-height 2rem
-      &:first-child
-        margin-left 0
+      margin-left 0
       @media (max-width: $MQNarrow)
         margin-right 1rem  
       @media (max-width: $MQMobile)
