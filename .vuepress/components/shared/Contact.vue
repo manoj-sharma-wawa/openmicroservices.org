@@ -4,7 +4,9 @@
     <p class="text">
       We are under development and open to contribution. 100% open source.
       <br>
-      A part of the Linux Foundation and under the CNCF.
+      <!-- Hidden until joined
+        A part of the Linux Foundation and under the CNCF.
+      -->
     </p>
     <s-button 
       primary 
