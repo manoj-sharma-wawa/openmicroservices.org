@@ -4,7 +4,9 @@
     <p class="text">
       We are under development and open to contribution. 100% open source.
       <br>
-      A part of the Linux Foundation and under the CNCF.
+      <!-- Hidden until joined
+        A part of the Linux Foundation and under the CNCF.
+      -->
     </p>
     <div class="buttons">
       <s-button
@@ -24,10 +26,10 @@
         Join OMG Slack
       </s-button>
     </div>
-    <img
-      class="cloud-native"
-      src="/assets/img/cncf_color@2x.png"
-    />
+    <!--
+      Hidden until joined
+      <img class="cloud-native" src="/assets/img/cncf_color@2x.png" />
+    --> 
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="home-header">
-    <h1 class="main-title">Turn containers into cloud-native libraries.</h1>
+    <h1 class="main-title">Turn containers into libraries.</h1>
     <s-button 
       class="get-started" 
       primary 
