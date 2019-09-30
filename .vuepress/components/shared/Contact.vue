@@ -14,7 +14,10 @@
     >
       Contribute to OMG
     </s-button>
-    <img class="cloud-native" src="/assets/img/cncf_color@2x.png" />
+    <!--
+      Hidden until joined
+      <img class="cloud-native" src="/assets/img/cncf_color@2x.png" />
+    --> 
   </div>
 </template>
 
