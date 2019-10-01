@@ -1,3 +1,8 @@
+---
+layout: Docs
+home: false
+sidebar: true
+---
 # Environment
 
 Services **MUST** list environment variables that may be used to 

@@ -1,3 +1,8 @@
+---
+layout: Docs
+home: false
+sidebar: true
+---
 # Overview
 The Open Microservice Guide command-line interface, *omg* for short, allows you to validate, test, and debug your `microservice.yml` implementation.
 

@@ -1,3 +1,8 @@
+---
+layout: Docs
+home: false
+sidebar: true
+---
 # Actions
 Defining actions is a way to organize which APIs are exposed 
 and how they are used within an application or platform.
