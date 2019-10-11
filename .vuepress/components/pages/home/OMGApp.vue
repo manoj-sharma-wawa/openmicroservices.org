@@ -2,7 +2,7 @@
   <div class="omg-app">
     <h2 class="title">Test your microservice with OMG</h2>
     <div class="illustration">
-      <img src="/assets/img/omg-app.png" alt="OMG App design" >
+      <img src="/assets/img/omg-app.png" alt="OMG App design" />
     </div>
     <div class="content">
       <h2 class="title">Test your microservice with OMG</h2>

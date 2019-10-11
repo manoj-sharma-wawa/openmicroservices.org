@@ -62,7 +62,7 @@ export default {
   justify-content flex-start
   .content-wrapper
     position relative 
-    top 0
+    top 4rem
     left 0
     max-width 740px
     margin 0 auto
@@ -72,15 +72,5 @@ export default {
       left 160px
   .sidebar-wrapper
     top 112px !important
-
-.docs h1,
-.docs h2,
-.docs h3,
-.docs h4,
-.docs h5,
-.docs h6
-  margin-top -3.1rem
-  padding-top 4.6rem
-  margin-bottom 0
 
 </style>
