@@ -1,6 +1,6 @@
 <template>
   <div class="contact container large">
-    <h2 class="title">Contribute With OMG!</h2>
+    <h2 class="title">Contribute With OMS!</h2>
     <p class="text">
       We are under development and open to contribution. 100% open source.
       <br>
@@ -15,7 +15,7 @@
         @click="go('contribute')"
         class="contribute"
       >
-        Contribute to OMG
+        Contribute to OMS
       </s-button>
       <s-button
         primary
@@ -23,7 +23,7 @@
         @click="go('spectrum')"
         class="spectrum"
       >
-        Join OMG on Spectrum
+        Join OMS on Spectrum
       </s-button>
     </div>
     <!--
@@ -45,7 +45,7 @@ export default {
     go(path) {
       switch (path) {
         case 'contribute':
-          window.location.assign('https://github.com/microservices/omg')
+          window.location.assign('https://github.com/microservices/oms')
           break
         case 'spectrum':
           window.location.assign('https://spectrum.chat/open-microservices')
