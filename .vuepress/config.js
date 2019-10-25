@@ -14,7 +14,7 @@ module.exports = {
       { text: 'About', link: '/about' },
       { text: 'Community', link: '/community' },
       { text: 'Docs', link: '/introduction/overview' },
-      { text: 'Blog', link: 'https://storyscript.io/blog' },
+      { text: 'Blog', link: 'https://storyscript.io/blog' }
     ],
     sidebar: [
       {
@@ -51,17 +51,19 @@ module.exports = {
       {
         title: 'Interoperability',
         collapsable: false,
-        children: [
-          '/interoperability/openapi/'
-        ]
+        children: ['/interoperability/openapi/']
       },
       {
         title: 'CLI',
         collapsable: false,
         children: [
           '/cli/overview/',
+          '/cli/run/',
           '/cli/validate/',
-          '/cli/test/'
+          '/cli/build/',
+          '/cli/list/',
+          '/cli/subscribe/',
+          '/cli/ui/'
         ]
       }
     ]
