@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Contributor%20Covenant-v1.4%20adopted-ff69b4.svg">
   </a>
   <a href="https://allcontributors.org/">
-    <img src="https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square">
+    <img src="https://img.shields.io/badge/all_contributors-12-orange.svg">
   </a>
   <a href="http://commitizen.github.io/cz-cli/">
     <img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg">
