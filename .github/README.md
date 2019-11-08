@@ -25,12 +25,6 @@
   </p>
 </div>
 
-## Contributing
-
-All suggestions in how to improve the specification and this guide are very welcome. Feel free share your thoughts in the Issue tracker, or even better, fork the repository to implement your own ideas and submit a pull request.
-
-This project is guided by [Contributor Covenant](https://github.com/microservices/.github/blob/master/CODE_OF_CONDUCT.md). Please read out full [Contribution Guidelines](https://github.com/microservices/.github/blob/master/CONTRIBUTING.md).
-
 ## Example OMS Implementations
 
 ### Basic Examples
@@ -71,6 +65,29 @@ These templates are intended to be lightweight example implementations of the Op
 * [Example Language Implementations](https://github.com/microservices) - Find tooling & language implementations in Node, Python, Scala, Java, Clojure.
 * [Storyscript Hub](https://hub.storyscript.io) - A public registry of OMS services.
 * [Community Chat](https://spectrum.chat/open-microservices) - Have ideas? Question? Join us on Spectrum.
+
+## Contributing
+
+All suggestions in how to improve the specification and this guide are very welcome. Feel free share your thoughts in the Issue tracker, or even better, fork the repository to implement your own ideas and submit a pull request.
+
+This project is guided by [Contributor Covenant](https://github.com/microservices/.github/blob/master/CODE_OF_CONDUCT.md). Please read out full [Contribution Guidelines](https://github.com/microservices/.github/blob/master/CONTRIBUTING.md).
+
+## Contributors âœ¨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table>
+  <tr>
+    <td align="center"><a href="http://hudson.dev"><img src="https://avatars2.githubusercontent.com/u/320194?v=4" width="100px;" alt="Matthew Hudson"/><br /><sub><b>Matthew Hudson</b></sub></a><br /><a href="https://github.com/microservices/openmicroservices.org/commits?author=matthewhudson" title="Code">ðŸ’»</a> <a href="#maintenance-matthewhudson" title="Maintenance">ðŸš§</a></td>
+    <td align="center"><a href="https://seb.wilzba.ch"><img src="https://avatars3.githubusercontent.com/u/4370550?v=4" width="100px;" alt="Sebastian Wilzbach"/><br /><sub><b>Sebastian Wilzbach</b></sub></a><br /><a href="https://github.com/microservices/openmicroservices.org/commits?author=wilzbach" title="Code">ðŸ’»</a> <a href="#maintenance-wilzbach" title="Maintenance">ðŸš§</a></td>
+  </tr>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
 
 ## License
 
