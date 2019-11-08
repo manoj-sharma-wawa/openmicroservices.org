@@ -72,7 +72,7 @@ All suggestions in how to improve the specification and this guide are very welc
 
 This project is guided by [Contributor Covenant](https://github.com/microservices/.github/blob/master/CODE_OF_CONDUCT.md). Please read out full [Contribution Guidelines](https://github.com/microservices/.github/blob/master/CONTRIBUTING.md).
 
-## Contributors âœ¨
+### Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
