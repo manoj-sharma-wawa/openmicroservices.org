@@ -53,7 +53,11 @@
     <div class="table-mobile">
       <div class="selectors">
         <div class="selector" v-for="(l, idx) in logos" :class="{'active': selected === l.name}" @click="selected = l.name">
-          <img :src="`assets/img/${l.src}`" :alt="`${l.name} logo`">
+          <img 
+            :src="`assets/img/${l.src}`" 
+            :alt="`${l.name} logo`" 
+            loading="lazy"
+          />
         </div>
       </div>
       <div class="content">
@@ -158,7 +162,7 @@
         .name
           font-family DM Sans 
           font-size 1rem
-          color #5675a0
+          color #455e82
           padding-left 2.75rem
           min-width calc(20% - 2.75rem)
           align-items center
@@ -167,7 +171,7 @@
           flex-basis 20%
           text-align center
           font-family DM Sans
-          font-size 1.125rem
+          font-size 1rem
           color black
           &.border-l
             border-left 1px solid #C5DCFC
@@ -266,7 +270,7 @@
             padding-left 1rem
             font-family DM Sans
             font-size .875rem
-            color #5675A0
+            color #455e82
           .value
             flex-basis 65%
             font-family DM Sans
