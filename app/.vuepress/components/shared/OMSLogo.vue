@@ -62,7 +62,7 @@ export default {
       width 1.5rem
       height 1.5rem
     &.light
-      background-image url(/assets/img/logo.svg)
+      background-image url(/assets/img/logo-light.svg)
   .text 
     display: flex
     flex-direction: column
