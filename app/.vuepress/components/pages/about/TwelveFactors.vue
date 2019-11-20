@@ -86,7 +86,7 @@ export default {
       font-size 1rem
       font-family DM Sans
       a
-        color #477BF3
+        color #296aff
         font-size 1rem 
         font-family DM Sans
   .factors

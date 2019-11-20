@@ -236,9 +236,9 @@
         padding 1rem
         cursor pointer
         &:hover
-          border 1.2px solid #477BF3
+          border 1.2px solid #3370ff
         &.active
-          border 1.2px solid #477BF3
+          border 1.2px solid #3370ff
           box-shadow 0px 2.4px 24px rgba(5, 11, 55, 0.07)
         img 
           width 1.5rem
