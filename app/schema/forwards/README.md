@@ -6,12 +6,12 @@ sidebar: true
 # Forwards
 
 To indicate to a cloud provider that traffic from the outside world (the
-internet) MAY be forwarded to certain endpoints of your microservice, a
-`forwards` section MAY be declared. This section MUST appear in the root of the
-`oms.yaml`.
+internet) **MAY** be forwarded to certain endpoints of your microservice, a
+`forwards` section **MAY** be declared. This section **MUST** appear in the root of the
+`oms.yml`.
 
 Any HTTP traffic coming to this endpoint from an external source (the internet)
-SHOULD be directly proxied to your microservice.
+**SHOULD** be directly proxied to your microservice.
 
 A `forwards` section may be defined as:
 
@@ -31,17 +31,17 @@ forwards:
       port: 8081
 ```
 
-<SBadge type='tip' text="forwards.$"/>
+<Badge type="tip" text="forwards.$"/>
 
 <json-table>
 <p>
 {
     "http": {
-        "required": true, 
+        "required": true,
         "desc": "The HTTP configuration for this `forward`"
     },
     "help": {
-        "required": false, 
+        "required": false,
         "desc": "A short description about this `forward` which can provide clarity to the end user."
     }
 }
@@ -50,17 +50,17 @@ forwards:
 
 ## HTTP
 
-<SBadge type='tip'>forwards.\$.http</SBadge>
+<Badge type="tip" text="forwards.$.http" />
 
 <json-table>
 <p>
 {
     "path": {
-        "required": true, 
+        "required": true,
         "desc": "The HTTP path for this `forward`"
     },
     "port": {
-        "required": true, 
+        "required": true,
         "desc": "The port for this `forward`"
     }
 }
